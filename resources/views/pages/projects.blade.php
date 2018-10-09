@@ -16,7 +16,7 @@
                     <!-- Project -->
                     <article class="fly-card fly-project fly-flip-effect" itemscope itemtype="http://schema.org/DonateAction">
                         <div class="boxed flip-front">
-                            <a class="project-media js-wave" href="tubewell_sanitation.php" itemprop="url">
+                            <a class="project-media js-wave" href="{{route('tubewellSanitation')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/thumb_img_1.png')}}" alt="" itemprop="image" />
                                 <span class="progress">
                                     <span class="progress-label">0%</span>
@@ -26,7 +26,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="tubewell_sanitation.php">Tube Well & Santitation</a>
+                                    <a href="{{route('tubewellSanitation')}}">Tube Well & Santitation</a>
                                 </h3>
 
                                 <div class="project-location">
@@ -52,7 +52,7 @@
                                     </ul>
 
                                     <div class="project-buttons">
-                                        <a href="tubewell_sanitation.php#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                        <a href="{{route('tubewellSanitation')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                     <!-- Project -->
                     <article class="fly-card fly-project fly-flip-effect" itemscope itemtype="http://schema.org/DonateAction">
                         <div class="boxed flip-front">
-                            <a class="project-media js-wave" href="multimedia.php" itemprop="url">
+                            <a class="project-media js-wave" href="{{route('multimedia')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/Multimedia-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />
                                 <span class="progress">
                                     <span class="progress-label">0%</span>
@@ -97,7 +97,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="multimedia.php">Multimedia Program</a>
+                                    <a href="{{route('multimedia')}}">Multimedia Program</a>
                                 </h3>
 
                                 <div class="project-location">
@@ -123,7 +123,7 @@
                                     </ul>
 
                                     <div class="project-buttons">
-                                        <a href="multimedia.php#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                        <a href="{{route('multimedia')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@
                     <!-- Project -->
                     <article class="fly-card fly-project fly-flip-effect" itemscope itemtype="http://schema.org/DonateAction">
                         <div class="boxed flip-front">
-                            <a class="project-media js-wave" href="food.php" itemprop="url">
+                            <a class="project-media js-wave" href="{{route('food')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/Food-Bank-small-Banner21-300x200.jpg')}}" alt="" itemprop="image" />
                                 <span class="progress">
                                     <span class="progress-label">0%</span>
@@ -168,7 +168,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="food.php">Food Bank</a>
+                                    <a href="{{route('food')}}">Food Bank</a>
                                 </h3>
 
                                 <div class="project-location">
@@ -194,7 +194,7 @@
                                     </ul>
 
                                     <div class="project-buttons">
-                                        <a href="food.php#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                        <a href="{{route('food')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +229,7 @@
                     <!-- Project -->
                     <article class="fly-card fly-project fly-flip-effect" itemscope itemtype="http://schema.org/DonateAction">
                         <div class="boxed flip-front">
-                            <a class="project-media js-wave" href="health.php" itemprop="url">
+                            <a class="project-media js-wave" href="{{route('health')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/Eyecampt-small-Banner1-300x200.jpg')}}" alt="" itemprop="image" />
                                 <span class="progress">
                                     <span class="progress-label">0%</span>
@@ -239,7 +239,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="health.php">Health Care</a>
+                                    <a href="{{route('health')}}">Health Care</a>
                                 </h3>
 
                                 <div class="project-location">
@@ -265,7 +265,7 @@
                                     </ul>
 
                                     <div class="project-buttons">
-                                        <a href="health.php#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                        <a href="{{route('health')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -300,7 +300,7 @@
                     <!-- Project -->
                     <article class="fly-card fly-project fly-flip-effect" itemscope itemtype="http://schema.org/DonateAction">
                         <div class="boxed flip-front">
-                            <a class="project-media js-wave" href="children_welfare.php" itemprop="url">
+                            <a class="project-media js-wave" href="{{route('childrenwelfare')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/Childwelfaret-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />
                                 <span class="progress">
                                     <span class="progress-label">0%</span>
@@ -310,7 +310,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="children_welfare.php">Children Welfare Program</a>
+                                    <a href="{{route('childrenwelfare')}}">Children Welfare Program</a>
                                 </h3>
 
                                 <div class="project-location">
@@ -336,7 +336,7 @@
                                     </ul>
 
                                     <div class="project-buttons">
-                                        <a href="children_welfare.php#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                        <a href="{{route('childrenwelfare')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -371,7 +371,7 @@
                     <!-- Project -->
                     <article class="fly-card fly-project fly-flip-effect" itemscope itemtype="http://schema.org/DonateAction">
                         <div class="boxed flip-front">
-                            <a class="project-media js-wave" href="ramadan_food.php" itemprop="url">
+                            <a class="project-media js-wave" href="{{route('ramadanFood')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/Ramadhanfood-small-Banner212-300x200.jpg')}}" alt="" itemprop="image" />
                                 <span class="progress">
                                     <span class="progress-label">0%</span>
@@ -381,7 +381,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="ramadan_food.php">Ramadan Food Basket</a>
+                                    <a href="{{route('ramadanFood')}}">Ramadan Food Basket</a>
                                 </h3>
 
                                 <div class="project-location">
@@ -407,7 +407,7 @@
                                     </ul>
 
                                     <div class="project-buttons">
-                                        <a href="ramadan_food.php#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                        <a href="{{route('ramadanFood')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                     </div>
                                 </div>
                             </div>

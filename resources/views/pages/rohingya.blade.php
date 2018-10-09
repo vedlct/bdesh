@@ -53,7 +53,8 @@
 
                             <div class="boxed flip-back">
                                 <div class="card-map" data-placeholder="waiting for map">
-                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="images/marker.png" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
+                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222"
+                                         data-map-marker="{{asset('public/images/marker.png')}}" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
                                         <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
                                     </div>
                                 </div>
@@ -98,7 +99,8 @@
 
                             <div class="boxed flip-back">
                                 <div class="card-map" data-placeholder="waiting for map">
-                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="images/marker.png" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
+                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope"
+                                         data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="{{asset('public/images/marker.png')}}" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
                                         <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
                                     </div>
                                 </div>
@@ -172,7 +174,8 @@
 
                             <div class="boxed flip-back">
                                 <div class="card-map" data-placeholder="waiting for map">
-                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="images/marker.png" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
+                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope"
+                                         data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="{{asset('public/images/marker.png')}}" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
                                         <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
                                     </div>
                                 </div>
@@ -248,7 +251,9 @@
 
                             <div class="boxed flip-back">
                                 <div class="card-map" data-placeholder="waiting for map">
-                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="images/marker.png" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
+                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope"
+                                         data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="{{asset('public/images/marker.png')}}
+                                            " data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
                                         <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
                                     </div>
                                 </div>
@@ -346,7 +351,8 @@
 
                             <div class="boxed flip-back">
                                 <div class="card-map" data-placeholder="waiting for map">
-                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="images/marker.png" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
+                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222"
+                                         data-map-marker="{{asset('public/images/marker.png')}}" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
                                         <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
                                     </div>
                                 </div>

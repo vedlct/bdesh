@@ -11,8 +11,8 @@
                     <div class="widget-footer">
                         <!-- Logo TODO: Use image or text -->
                         <div class="logo">
-                            <a href="index.html">
-                                <img class="logo-normal" src="images/logo.png" alt=""/>
+                            <a href="{{route('home')}}">
+                                <img class="logo-normal" src="{{asset('public/images/logo.png')}}" alt=""/>
                             </a>
                         </div>
                         <!--/ Logo -->
@@ -191,7 +191,7 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <!-- FroogaLoop for Vimeo  -->
-<script src="{{asset('public/../../f.vimeocdn.com/js/froogaloop2.min.js')}}"></script>
+{{--<script src="{{url('public/../../f.vimeocdn.com/js/froogaloop2.min.js')}}"></script>--}}
 
 <!-- Waves -->
 <script src="{{asset('public/js/waves.min.js')}}"></script>

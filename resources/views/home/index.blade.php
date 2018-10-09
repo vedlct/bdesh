@@ -42,7 +42,7 @@
                 </div>
             </section>
 
-            <section class="slide" style="background-image: url({{asset('images/temp/slide-4.jpg')}});">
+            <section class="slide" style="background-image: url({{url('public/images/temp/slide-4.jpg')}});">
                 <div class="slide-content">
                     <h2 class="page-title">Helping Hands for Everyone</h2>
 
@@ -155,7 +155,7 @@
                                 </ul>
 
                                 <div class="project-buttons">
-                                    <a href="{{route('tubewellSanitation')}}" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                    <a href="{{route('tubewellSanitation')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                 </div>
                             </div>
                         </div>
@@ -221,7 +221,7 @@
                                 </ul>
 
                                 <div class="project-buttons">
-                                    <a href="{{route('multimedia')}}" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                    <a href="{{route('multimedia')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +287,7 @@
                                 </ul>
 
                                 <div class="project-buttons">
-                                    <a href="{{route('food')}}" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                    <a href="{{route('food')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +356,7 @@
                                 </ul>
 
                                 <div class="project-buttons">
-                                    <a href="{{route('health')}}" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                    <a href="{{route('health')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                 </div>
                             </div>
                         </div>
@@ -422,7 +422,7 @@
                                 </ul>
 
                                 <div class="project-buttons">
-                                    <a href="{{route('childrenwelfare')}}" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                    <a href="{{route('childrenwelfare')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                 </div>
                             </div>
                         </div>
@@ -490,7 +490,7 @@
                                 </ul>
 
                                 <div class="project-buttons">
-                                    <a href="{{route('ramadanFood')}}" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                    <a href="{{route('ramadanFood')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                 </div>
                             </div>
                         </div>
