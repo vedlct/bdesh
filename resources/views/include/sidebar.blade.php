@@ -85,3 +85,10 @@
     <!--/ Widget Facebook -->
 </aside>
 <!--/ SideBar -->
+
+@if(Session::has('SuccessMessage'))
+    <p class="alert alert-success">{{ Session::get('SuccessMessage') }}</p>
+@endif
+@if(Session::has('ErrorMessage'))
+    <p class="alert alert-danger">{{ Session::get('ErrorMessage') }}</p>
+@endif

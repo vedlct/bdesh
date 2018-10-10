@@ -1,4 +1,5 @@
-<form action="#" method="post" id="donateForm" class="donate-form">
+{{--<form action="{{route('payment.donationPay')}}" method="post" id="donateForm" class="donate-form">--}}
+    {{--{{csrf_field()}}--}}
     <h4 class="title-styled">Make a donation</h4>
 
     <div class="row">
@@ -246,14 +247,14 @@
         <div class="col-sm-4">
             <div class="form-group required">
                 <label for="first-name">First Name</label>
-                <input class="form-control" type="text" id="first-name" name="firstName" placeholder="first name" required />
+                <input class="form-control" type="text" id="firstName" name="firstName" placeholder="first name" required />
             </div>
         </div>
 
         <div class="col-sm-4">
             <div class="form-group required">
                 <label for="last-name">Last Name</label>
-                <input class="form-control" type="text" id="last-name" name="lastName" placeholder="last name" required />
+                <input class="form-control" type="text" id="lastName" name="lastName" placeholder="last name" required />
             </div>
         </div>
 
@@ -285,79 +286,203 @@
         <div class="col-sm-8">
             <div class="form-group required">
                 <label for="address1">address</label>
-                <input class="form-control" type="text" id="address1" name="addr1" placeholder="Enter your address" required />
-                <input class="form-control" type="text" id="address2" name="addr2" placeholder="Second address line" />
+                <input class="form-control" type="text" id="addr1" name="addr1" placeholder="Enter your address" required />
+                <input class="form-control" type="text" id="addr2" name="addr2" placeholder="Second address line" />
             </div>
 
-            <div class="form-group required">
-                <label for="payment">pAYMENT mETHOD</label>
+            {{--<div class="form-group required">--}}
+                {{--<label for="payment">pAYMENT mETHOD</label>--}}
 
-                <ul class="payment-method clearfix">
-                    <li class="active">
-                        <div class="payment-logo"><img src="{{asset('public/images/payment-1.png')}}" alt=""/></div>
-                        <input type="radio" name="payment" id="payment" value="1" checked />
-                    </li>
+                {{--<ul class="payment-method clearfix">--}}
+                    {{--<li class="active">--}}
+                        {{--<div class="payment-logo"><img src="{{asset('public/images/payment-1.png')}}" alt=""/></div>--}}
+                        {{--<input type="radio" name="payment" id="payment" value="1" checked />--}}
+                    {{--</li>--}}
 
-                    <li>
-                        <div class="payment-logo"><img src="{{asset('public/images/payment-2.png')}}" alt=""/></div>
-                        <input type="radio" name="payment" value="2" />
-                    </li>
+                    {{--<li>--}}
+                        {{--<div class="payment-logo"><img src="{{asset('public/images/payment-2.png')}}" alt=""/></div>--}}
+                        {{--<input type="radio" name="payment" value="2" />--}}
+                    {{--</li>--}}
 
-                    <li>
-                        <div class="payment-logo"><img src="{{asset('public/images/payment-3.png')}}" alt=""/></div>
-                        <input type="radio" name="payment" value="3" />
-                    </li>
+                    {{--<li>--}}
+                        {{--<div class="payment-logo"><img src="{{asset('public/images/payment-3.png')}}" alt=""/></div>--}}
+                        {{--<input type="radio" name="payment" value="3" />--}}
+                    {{--</li>--}}
 
-                    <li>
-                        <div class="payment-logo"><span>Direct Bank Transfer</span></div>
-                        <input type="radio" name="payment" value="4" />
-                    </li>
-                </ul>
-            </div>
+                    {{--<li>--}}
+                        {{--<div class="payment-logo"><span>Direct Bank Transfer</span></div>--}}
+                        {{--<input type="radio" name="payment" value="4" />--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
         </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-4">
-            <div class="form-group required">
-                <label for="amount">amount</label>
-                <input class="form-control" type="text" id="amount" name="amount" placeholder="$ 100" required />
-            </div>
-        </div>
+
 
         <div class="col-sm-4">
             <div class="form-group">
                 <label for="message">Zip</label>
-                <input class="form-control" type="text" id="message" name="zip" placeholder="zipe" />
+                <input class="form-control" type="text" id="zip" name="zip" placeholder="zipe" />
             </div>
         </div>
 
+
         <div class="col-sm-12"><hr></div>
+
+
 
         <div class="col-sm-4">
             <div class="form-group">
                 <label for="message">Card Number</label>
-                <input class="form-control" type="text" id="message" name="cardNumber" placeholder="card number" />
+                <input class="form-control" type="text" id="cardNumber" name="cardNumber" placeholder="card number" />
             </div>
         </div>
 
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="message">Card Expire</label>
-                <input class="form-control" type="text" id="message" name="cardExpire" placeholder="card expire" />
+        <div class="form-group col-sm-8">
+
+
+            <div class="form-group col-sm-4">
+                <label for="">Card Expire</label>
+                <select class="select2" name="cardExpireMonth" id="cardExpireMonth">
+                    <option value="">Month</option>
+                    @for($i=1;$i<=12;$i++)
+                        <option value="{{$i}}">{{$i}}</option>
+                    @endfor
+                </select>
             </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="message">CVV2</label>
-                <input class="form-control" type="text" id="message" name="cvv2" placeholder="cvv2" />
+
+            <div class="form-group col-sm-4">
+                <label for="">&nbsp;</label>
+                <?php $curYear= date("Y"); ?>
+
+                <select class="select2" name="cardExpireYear" id="cardExpireYear">
+                    <option value="">Year</option>
+                    <?php for ($i=$curYear;($i<($curYear+15));$i++){?>
+                    <option value="<?php echo substr( $i, -2);?>"><?php echo $i?></option>
+                    <?php } ?>
+
+                </select>
+
             </div>
+
+
         </div>
+
+        <div class="form-group required">
+
+
+
+            <div class="col-sm-4">
+                <div class="form-group required">
+                    <label for="amount">amount</label>
+                    <input class="form-control" type="text" id="amount" name="amount" placeholder="$ 100" required />
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="message">CVV2</label>
+                    <input class="form-control" type="text" id="cvv2" name="cvv2" placeholder="cvv2" />
+                </div>
+            </div>
+
+
+
+        </div>
+
 
         <div class="col-sm-12">
             <div class="form-submit">
-                <button type="submit" class="btn btn-medium js-wave">Submit</button>
+                <button type="submit" onclick="makeDonation()" class="btn btn-medium js-wave">Submit</button>
             </div>
         </div>
     </div>
-</form>
+{{--</form>--}}
+
+<script>
+    function makeDonation() {
+
+        var firstName=$('#firstName').val()
+        var lastName=$('#lastName').val()
+        var addr1=$('#addr1').val()
+        var addr2=$('#addr2').val()
+        var city=$('#city').val()
+        var state=$('#state').val()
+        var zip=$('#zip').val()
+        var country=$('#country').val()
+        var phone=$('#phone').val()
+        var email=$('#email').val()
+        var cardNumber=$('#cardNumber').val()
+        var cardExpireMonth=$('#cardExpireMonth').val()
+        var cardExpireYear=$('#cardExpireYear').val()
+        var cvv2=$('#cvv2').val()
+        var amount=$('#amount').val()
+
+        $.ajax({
+            type: 'POST',
+            url: "{{route('payment.donationPay')}}",
+            cache: false,
+            data: {_token: "{{csrf_token()}}",
+                'firstName': firstName,
+                'lastName': lastName,
+                'addr1': addr1,
+                'addr2': addr2,
+                'city': city,
+                'state': state,
+                'zip': zip,
+                'country': country,
+                'phone': phone,
+                'email': email,
+                'cardNumber': cardNumber,
+                'cardExpireMonth': cardExpireMonth,
+                'cardExpireYear': cardExpireYear,
+                'cvv2': cvv2,
+                'amount': amount,
+            },
+            success: function (data) {
+
+                if (data.donateStatus==0){
+
+                    $.alert({
+                        title: 'Error',
+                        type: 'red',
+                        content: data.donateErrMsg,
+                        buttons: {
+                            tryAgain: {
+                                text: 'Ok',
+                                btnClass: 'btn-green',
+                                action: function () {
+
+                                    location.reload();
+
+                                }
+                            }
+                        }
+                    });
+
+                }else if(data.donateStatus==1) {
+
+                    $.alert({
+                        title: 'Success',
+                        type: 'red',
+                        content: data.donateSuccMsg,
+                        buttons: {
+                            tryAgain: {
+                                text: 'Ok',
+                                btnClass: 'btn-green',
+                                action: function () {
+                                    location.reload();
+                                }
+                            }
+                        }
+                    });
+
+                }
+                
+            }
+        });
+
+    }
+</script>

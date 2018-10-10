@@ -21,6 +21,8 @@
     <!-- Animate.css -->
     <link href="{{asset('public/css/animate.css')}}" media="screen" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+
     <!-- Modernizr Library -->
     <script src="{{asset('public/js/libs/modernizr-3.6.0.min.js')}}"></script>
 </head>
@@ -100,5 +102,8 @@
     </nav>
 
     <!--/ Navigation Bar -->
+
+
+
 </header>
 <!--/ Header -->

@@ -57,7 +57,9 @@ Route::get('/children-welfare',function (){
 Route::get('/ramadan-food',function (){
     return view('pages.ramadanFood');
 })->name('ramadanFood');
-
+/* test bluepay*/
 Route::get('/test','PaymentController@makePayment');
+/* end test bluePay*/
 
+Route::post('/Donation','PaymentController@makeDonation')->name('payment.donationPay');
 
