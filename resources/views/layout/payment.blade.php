@@ -404,21 +404,23 @@
 <script>
     function makeDonation() {
 
-        var firstName=$('#firstName').val()
-        var lastName=$('#lastName').val()
-        var addr1=$('#addr1').val()
-        var addr2=$('#addr2').val()
-        var city=$('#city').val()
-        var state=$('#state').val()
-        var zip=$('#zip').val()
-        var country=$('#country').val()
-        var phone=$('#phone').val()
-        var email=$('#email').val()
-        var cardNumber=$('#cardNumber').val()
-        var cardExpireMonth=$('#cardExpireMonth').val()
-        var cardExpireYear=$('#cardExpireYear').val()
-        var cvv2=$('#cvv2').val()
-        var amount=$('#amount').val()
+        $("#wait").css("display", "block");
+
+        var firstName=$('#firstName').val();
+        var lastName=$('#lastName').val();
+        var addr1=$('#addr1').val();
+        var addr2=$('#addr2').val();
+        var city=$('#city').val();
+        var state=$('#state').val();
+        var zip=$('#zip').val();
+        var country=$('#country').val();
+        var phone=$('#phone').val();
+        var email=$('#email').val();
+        var cardNumber=$('#cardNumber').val();
+        var cardExpireMonth=$('#cardExpireMonth').val();
+        var cardExpireYear=$('#cardExpireYear').val();
+        var cvv2=$('#cvv2').val();
+        var amount=$('#amount').val();
 
         $.ajax({
             type: 'POST',
@@ -443,6 +445,8 @@
             },
             success: function (data) {
 
+                $("#wait").css("display", "none");
+
                 if (data.donateStatus==0){
 
                     $.alert({
@@ -455,7 +459,7 @@
                                 btnClass: 'btn-green',
                                 action: function () {
 
-                                    location.reload();
+//                                    location.reload();
 
                                 }
                             }
@@ -480,7 +484,7 @@
                     });
 
                 }
-                
+
             }
         });
 
