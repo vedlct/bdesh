@@ -58,4 +58,6 @@ Route::get('/ramadan-food',function (){
     return view('pages.ramadanFood');
 })->name('ramadanFood');
 
+Route::get('/test','PaymentController@makePayment');
+
 

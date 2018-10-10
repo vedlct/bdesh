@@ -73,6 +73,7 @@ class ComposerStaticInit7049eb870b5b757552b5417ab2bcdcda
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Margules\\bplib\\' => 15,
         ),
         'L' => 
         array (
@@ -228,6 +229,10 @@ class ComposerStaticInit7049eb870b5b757552b5417ab2bcdcda
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Margules\\bplib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/margules/bplib/src',
         ),
         'League\\Flysystem\\' => 
         array (
@@ -1813,6 +1818,9 @@ class ComposerStaticInit7049eb870b5b757552b5417ab2bcdcda
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
         'League\\Flysystem\\Util\\MimeType' => __DIR__ . '/..' . '/league/flysystem/src/Util/MimeType.php',
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
+        'Margules\\bplib\\BluePay' => __DIR__ . '/..' . '/margules/bplib/src/BluePay.php',
+        'Margules\\bplib\\BluePayServiceProvider' => __DIR__ . '/..' . '/margules/bplib/src/BluePayServiceProvider.php',
+        'Margules\\bplib\\Facades\\BluePay' => __DIR__ . '/..' . '/margules/bplib/src/Facades/BluePay.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV5' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV5.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV6' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV6.php',

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "631ef8132ad19a98582fdeb5ecf8b48e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -737,6 +737,39 @@
                 "storage"
             ],
             "time": "2018-09-14T15:30:29+00:00"
+        },
+        {
+            "name": "margules/bplib",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ericmargules/bluepay-laravel.git",
+                "reference": "175bbea3dd052f58411595f794bb95e748cbe86a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ericmargules/bluepay-laravel/zipball/175bbea3dd052f58411595f794bb95e748cbe86a",
+                "reference": "175bbea3dd052f58411595f794bb95e748cbe86a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Margules\\bplib\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Margules",
+                    "homepage": "https://www.bluepay.com"
+                }
+            ],
+            "description": "Sample Laravel Integration of BluePay API",
+            "time": "2018-02-20T19:55:11+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3993,7 +4026,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "margules/bplib": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -977,6 +977,41 @@
         ]
     },
     {
+        "name": "margules/bplib",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ericmargules/bluepay-laravel.git",
+            "reference": "175bbea3dd052f58411595f794bb95e748cbe86a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ericmargules/bluepay-laravel/zipball/175bbea3dd052f58411595f794bb95e748cbe86a",
+            "reference": "175bbea3dd052f58411595f794bb95e748cbe86a",
+            "shasum": ""
+        },
+        "time": "2018-02-20T19:55:11+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Margules\\bplib\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Eric Margules",
+                "homepage": "https://www.bluepay.com"
+            }
+        ],
+        "description": "Sample Laravel Integration of BluePay API"
+    },
+    {
         "name": "mockery/mockery",
         "version": "1.2.0",
         "version_normalized": "1.2.0.0",
