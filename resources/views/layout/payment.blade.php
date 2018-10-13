@@ -402,10 +402,26 @@
 {{--</form>--}}
 
 <script>
+    function alertMsg(msg) {
+        $.alert({
+            title: 'Error',
+            type: 'red',
+            content: msg,
+            buttons: {
+                tryAgain: {
+                    text: 'Ok',
+                    btnClass: 'btn-green',
+                    action: function () {
+
+                    }
+                }
+            }
+        });
+
+    }
     function makeDonation() {
 
         $("#wait").css("display", "block");
-
         var firstName=$('#firstName').val();
         var lastName=$('#lastName').val();
         var addr1=$('#addr1').val();
@@ -422,6 +438,44 @@
         var cvv2=$('#cvv2').val();
         var amount=$('#amount').val();
 
+        if(firstName ==""){
+            alertMsg("First Name is required");
+            return false;
+        }
+        if(addr1 ==""){
+            alertMsg("Address is required");
+            return false;
+        }
+        if(city ==""){
+            alertMsg("City is required");
+            return false;
+        }
+        if(phone ==""){
+            alertMsg("Phone is required");
+            return false;
+        }
+        if(email ==""){
+            alertMsg("Email is required");
+            return false;
+        }
+
+        if(cardNumber ==""){
+            alertMsg("Card Number is required");
+            return false;
+        }
+        if(cardExpireMonth =="" || cardExpireYear =="" ){
+            alertMsg("Card Expire is required");
+            return false;
+        }
+        if(cvv2 ==""){
+            alertMsg("Cvv2 Number is required");
+            return false;
+        }
+
+        if(amount ==""){
+            alertMsg("Amount Number is required");
+            return false;
+        }
         $.ajax({
             type: 'POST',
             url: "{{route('payment.donationPay')}}",
