@@ -9,22 +9,22 @@
     <meta name="keywords" content="" />
 
     <!-- FontAwesome -->
-    <link href="{{asset('public/css/font-awesome.css')}}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/css/font-awesome.css')}}" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- Select 2 -->
-    <link href="{{asset('public/css/select2.css')}}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/css/select2.css')}}" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- Core CSS -->
-    <link href="{{asset('public/css/bootstrap.css')}}" media="screen" rel="stylesheet" type="text/css" />
-    <link href="{{asset('public/css/style.css')}}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/css/bootstrap.css')}}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/css/style.css')}}" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- Animate.css -->
-    <link href="{{asset('public/css/animate.css')}}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/css/animate.css')}}" media="screen" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
 
     <!-- Modernizr Library -->
-    <script src="{{asset('public/js/libs/modernizr-3.6.0.min.js')}}"></script>
+    <script src="{{url('public/js/libs/modernizr-3.6.0.min.js')}}"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -61,8 +61,8 @@
                 <!-- Logo TODO: Use 2 images for normal and sticky navigation, or just text -->
                 <div class="logo">
                     <a href="{{route('home')}}">
-                        <img class="logo-normal" src="{{asset('public/images/logo.png')}}" alt=""/>
-                        <img class="logo-sticky" src="{{asset('public/images/logo.png')}}" alt=""/>
+                        <img class="logo-normal" src="{{url('public/images/logo.png')}}" alt=""/>
+                        <img class="logo-sticky" src="{{url('public/images/logo.png')}}" alt=""/>
                     </a>
                 </div>
                 <!--/ Logo -->

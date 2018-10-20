@@ -181,8 +181,150 @@
 
 
 
-
+    </div>
+        </div>
     </section>
     <!--/ Our Mission -->
+@section('foot-js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        var calculateZakat = function(){
+
+            var amount_home = parseFloat($('#amount_home').val()) || 0;
+            var amount_bank = parseFloat($('#amount_bank').val()) || 0;
+            var amount_shares = parseFloat($('#amount_shares').val()) || 0;
+            var amount_merchandise = parseFloat($('#amount_merchandise').val()) || 0;
+            var amount_gold = parseFloat($('#amount_gold').val()) || 0;
+            var amount_property = parseFloat($('#amount_property').val()) || 0;
+            var amount_other = parseFloat($('#amount_other').val()) || 0;
+            var totalAmount = (amount_home + amount_bank + amount_shares + amount_merchandise + amount_gold + amount_property + amount_other).toFixed(2);
+
+            $('#amount_zakah1').val(totalAmount);
+
+            var amount_debts = parseFloat($('#amount_debts').val()) || 0;
+            var amount_expenses = parseFloat($('#amount_expenses').val()) || 0;
+            var totalExpenses = (amount_debts + amount_expenses).toFixed(2);
+
+            var amount_zakah2 = (totalAmount - totalExpenses).toFixed(2);
+            if(amount_zakah2 < 0) {
+                amount_zakah2 = 0.00;
+            }
+            $('#amount_zakah2').val(amount_zakah2);
+
+            var amount_nisab = parseFloat($('#amount_nisab').val()) || 0;
+
+            var zakatAmount = 0.00;
+            if(amount_zakah2 > amount_nisab) {
+                zakatAmount = (amount_zakah2 * 0.025).toFixed(2);
+            }
+            $('#amount').val(zakatAmount);
+        };
+
+        $(function() {
+            $('.decimal').keyup(function(){
+                var val = $(this).val();
+                if(isNaN(val)){
+                    val = val.replace(/[^0-9\.]/g,'');
+                    if(val.split('.').length>2)
+                        val =val.replace(/\.+$/,"");
+                }
+                $(this).val(val);
+            });
+
+            $('#amount_home').on('change', calculateZakat);
+            $('#amount_bank').on('change', calculateZakat);
+            $('#amount_shares').on('change', calculateZakat);
+            $('#amount_merchandise').on('change', calculateZakat);
+            $('#amount_gold').on('change', calculateZakat);
+            $('#amount_property').on('change', calculateZakat);
+            $('#amount_other').on('change', calculateZakat);
+            $('#amount_debts').on('change', calculateZakat);
+            $('#amount_expenses').on('change', calculateZakat);
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.search_icon').click(function () {
+                $('.nav-justified').toggleClass('search_opened');
+                $('.navbar_search').fadeToggle();
+            });
+            $('.navbar_search .overlay').click(function () {
+                $('.nav-justified').toggleClass('search_opened');
+                $('.navbar_search').fadeToggle();
+            })
+
+            $(window).scroll(function () {
+                var top_bar_height = $('.top_bar').height();
+                var header_height = $('.header').height();
+                var total_scroll = $(window).scrollTop();
+                if (total_scroll > top_bar_height + header_height) {
+                    $('.navbar-default').addClass('navbar-fixed-top');
+                } else {
+                    $('.navbar-default').removeClass('navbar-fixed-top');
+                }
+            })
+
+            $("html").niceScroll({
+                cursorcolor: "#51a83f",
+                cursorwidth: "10px",
+                cursorborder: "0px solid transparent",
+                cursorborderradius: "0px",
+                mousescrollstep: 60,
+                autohidemode: false,
+                background: "gray",
+                horizrailenabled: false
+            });
+
+            $('.srj').waypoint(function () {
+                var anim = $(this).attr('data-animate'),
+                    del = $(this).attr('data-animation-delay');
+                var window_width = $(window).width();
+                if (window_width > 767) {
+                    $(this).addClass('animated ' + anim).css({animationDelay: del + 'ms'});
+                } else {
+                    $(this).addClass('animated ' + anim).css({animationDelay: 200 + 'ms'});
+                }
+            }, {offset: '100%', triggerOnce: true});
+
+            /*==============Code for Back to Top==============*/
+            if ((jQuery(window).height() + 100) < jQuery(document).height()) {
+                jQuery('#top-link-block').removeClass('hidden').affix({
+                    offset: {top: 100}
+                });
+            }
+
+            jQuery('.carousel').carousel({
+                interval: 5000
+            })
+
+        });
+    </script>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+        @endsection
         @endsection
