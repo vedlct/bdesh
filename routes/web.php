@@ -60,6 +60,19 @@ Route::get('/ramadan-food',function (){
 /* test bluepay*/
 Route::get('/test','PaymentController@makePayment');
 /* end test bluePay*/
+Route::view('/family-event','pages.familynightevent')->name('familyEvent');
+
+Route::view('/zakat','pages.zakat')->name('zakat');
+
+Route::view('/videogallery','pages.videogallery')->name('videogallery');
+
+Route::view('/welfare','pages.welfare')->name('welfare');
+
+Route::view('/healthgallery','pages.healthgallery')->name('healthgallery');
+
+Route::view('/faqs','pages.faqs')->name('faqs');
+
+Route::view('/pastevents','pages.pastevents')->name('pastevents');
 
 Route::post('/Donation','PaymentController@makeDonation')->name('payment.donationPay');
 

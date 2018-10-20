@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Header Image or Video -->
-    <section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/temp/slide-12.jpg')}});">
+<section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/rohinga/rohinja-L1.jpg')}});">
         <div class="fly-header-content">
             <h1 id="projectTitle1" class="page-title" itemprop="title">AN APPEAL FOR ROHINGYA REFUGEES</h1> <br>
             <p style="color: #fff;">Rohingya Muslims are being persecuted in Myanmar, scores are killed by Myanmar authorities. According to the United  <br>Nations, more than 700,000 left the country since August 25, 2017. <br>

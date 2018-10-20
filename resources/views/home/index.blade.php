@@ -3,6 +3,86 @@
     <!-- Fly Slider -->
     <div class="fly-slider invisible" data-rotation-interval="10000" data-rotation-duration="1000">
         <div class="cube">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/1.jpg')}});">
+                <div class="slide-content">
+                    <h1 class="page-title">Helping Hands for Everyone</h1>
+
+                    <div class="page-subtitle">Choose the way to help people in need</div>
+
+                    <div class="volunteer-cta">
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <div class="note">no credit card needed / secure payments</div>
+                    </div>
+                </div>
+            </section>
+            <section class="slide" style="background-image: url({{asset('public/images/temp/2.jpg')}});">
+                <div class="slide-content">
+                    <h1 class="page-title">Helping Hands for Everyone</h1>
+
+                    <div class="page-subtitle">Choose the way to help people in need</div>
+
+                    <div class="volunteer-cta">
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <div class="note">no credit card needed / secure payments</div>
+                    </div>
+                </div>
+            </section>
+            <section class="slide" style="background-image: url({{asset('public/images/temp/3.jpg')}});">
+                <div class="slide-content">
+                    <h1 class="page-title">Helping Hands for Everyone</h1>
+
+                    <div class="page-subtitle">Choose the way to help people in need</div>
+
+                    <div class="volunteer-cta">
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <div class="note">no credit card needed / secure payments</div>
+                    </div>
+                </div>
+            </section>
+            <section class="slide" style="background-image: url({{asset('public/images/temp/4.jpg')}});">
+                <div class="slide-content">
+                    <h1 class="page-title">Helping Hands for Everyone</h1>
+
+                    <div class="page-subtitle">Choose the way to help people in need</div>
+
+                    <div class="volunteer-cta">
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <div class="note">no credit card needed / secure payments</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" style="background-image: url({{asset('public/images/temp/6.jpg')}});">
+                <div class="slide-content">
+                    <h1 class="page-title">Helping Hands for Everyone</h1>
+
+                    <div class="page-subtitle">Choose the way to help people in need</div>
+
+                    <div class="volunteer-cta">
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <div class="note">no credit card needed / secure payments</div>
+                    </div>
+                </div>
+            </section>
+            <section class="slide" style="background-image: url({{asset('public/images/temp/7.jpg')}});">
+                <div class="slide-content">
+                    <h1 class="page-title">Helping Hands for Everyone</h1>
+
+                    <div class="page-subtitle">Choose the way to help people in need</div>
+
+                    <div class="volunteer-cta">
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <div class="note">no credit card needed / secure payments</div>
+                    </div>
+                </div>
+            </section>
+           
             <section class="slide" style="background-image: url({{asset('public/images/temp/slide-1.jpg')}});">
                 <div class="slide-content">
                     <h1 class="page-title">Helping Hands for Everyone</h1>
@@ -10,7 +90,8 @@
                     <div class="page-subtitle">Choose the way to help people in need</div>
 
                     <div class="volunteer-cta">
-                        <a href="#" class="btn btn-large btn-icon js-wave"><i class="material-icons">arrow_forward</i>BECOME A VOLUNTEER TODAY</a>
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
@@ -23,7 +104,8 @@
                     <div class="page-subtitle">Choose the way to help people in need</div>
 
                     <div class="volunteer-cta">
-                        <a href="#" class="btn btn-large btn-icon js-wave"><i class="material-icons">arrow_forward</i>BECOME A VOLUNTEER TODAY</a>
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
@@ -36,7 +118,8 @@
                     <div class="page-subtitle">Choose the way to help people in need</div>
 
                     <div class="volunteer-cta">
-                        <a href="#" class="btn btn-large btn-icon js-wave"><i class="material-icons">arrow_forward</i>BECOME A VOLUNTEER TODAY</a>
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
@@ -49,7 +132,8 @@
                     <div class="page-subtitle">Choose the way to help people in need</div>
 
                     <div class="volunteer-cta">
-                        <a href="#" class="btn btn-large btn-icon js-wave"><i class="material-icons">arrow_forward</i>BECOME A VOLUNTEER TODAY</a>
+                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
@@ -62,28 +146,28 @@
     <!--/ Fly Slider -->
 
     <!-- Services -->
-    <section class="flex-container fly-services">
+    <section class="flex-container fly-services"> 
         <div class="fly-service">
             <div class="service-content">
                 <i class="material-icons">language</i>
                 <h3 class="title">Pay Your Zakat</h3>
-                <div class="description">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</div>
+                <div class="description"></div>
             </div>
 
             <div class="service-buttons">
-                <a href="https://www.paypal.com/cgi-bin/webscr" class="btn btn-medium js-wave">READ MORE</a>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-medium js-wave">READ MORE</a>
             </div>
         </div>
 
         <div class="fly-service">
             <div class="service-content">
-                <i class="material-icons">face</i>
+                <i class="material-icons">settings_cell </i>
                 <h3 class="title">Zakat Calculator</h3>
-                <div class="description">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</div>
+                <div class="description"></div>
             </div>
 
             <div class="service-buttons">
-                <a href="http://bdeshfoundation.org/zakat_calculator-content.php" class="btn btn-medium js-wave">READ MORE</a>
+                <a href="{{route('zakat')}}" class="btn btn-medium js-wave">READ MORE</a>
             </div>
         </div>
 
@@ -91,7 +175,7 @@
             <div class="service-content">
                 <i class="material-icons">favorite_border</i>
                 <h3 class="title">Pay Your Zakatul Fitrana</h3>
-                <div class="description">"Pay Your Zakatul Fitrana and Bring the Joy of Eid to People in Need"</div>
+                <div class="description"></div>
             </div>
 
             <div class="service-buttons">
@@ -133,7 +217,7 @@
                             </h3>
 
                             <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                             </div>
 
                             <div class="project-description" itemprop="description">
@@ -199,7 +283,7 @@
                             </h3>
 
                             <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                             </div>
 
                             <div class="project-description" itemprop="description">
@@ -265,7 +349,7 @@
                             </h3>
 
                             <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                             </div>
 
                             <div class="project-description" itemprop="description">
@@ -332,7 +416,7 @@
                             </h3>
 
                             <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                             </div>
 
                             <div class="project-description" itemprop="description">
@@ -400,7 +484,7 @@
                             </h3>
 
                             <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                             </div>
 
                             <div class="project-description" itemprop="description">
@@ -466,7 +550,7 @@
                             </h3>
 
                             <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                             </div>
 
                             <div class="project-description" itemprop="description">
@@ -558,17 +642,17 @@
                     <!-- Event -->
                     <article class="fly-card fly-event fly-flip-effect" itemscope itemtype="http://schema.org/Event">
                         <div class="boxed flip-front">
-                            <a class="event-media js-wave" href="event-details.html" itemprop="url">
+                            <a class="event-media js-wave" href="{{route('familyEvent')}}" itemprop="url">
                                 <img src="{{asset('public/images/events/BDeshFlyer_BANNER.jpg')}}" alt="" itemprop="image" />
                             </a>
 
                             <div class="event-content">
                                 <h3 class="event-title" itemprop="name">
-                                    <a href="event-details.html">Family Night & Fund Raising Dinner</a>
+                                    <a href="{{route('familyEvent')}}">Family Night & Fund Raising Dinner</a>
                                 </h3>
 
                                 <div class="event-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                                     <time class="event-date" datetime="2016-12-12T20:11:00" itemprop="startDate">
                                         <i class="material-icons">query_builder</i>12 Dec 2016, 11:00 AM
                                     </time>
@@ -582,7 +666,7 @@
 
                                 <div class="event-footer">
                                     <div class="event-buttons">
-                                        <a href="event-details.html" class="btn btn-transparent btn-icon-left js-wave" itemprop="url">
+                                        <a href="{{route('familyEvent')}}" class="btn btn-transparent btn-icon-left js-wave" itemprop="url">
                                             <i class="material-icons">arrow_forward</i>Learn More
                                         </a>
                                     </div>
@@ -619,17 +703,17 @@
                     <!-- Event -->
                     <article class="fly-card fly-event fly-flip-effect" itemscope itemtype="http://schema.org/Event">
                         <div class="boxed flip-front">
-                            <a class="event-media js-wave" href="event-details.html" itemprop="url">
+                            <a class="event-media js-wave" href="{{route('familyEvent')}}" itemprop="url">
                                 <img src="{{asset('public/images/events/Family-Night-&-Fund-Raising-Dinner.jpg')}}" alt="" itemprop="image" />
                             </a>
 
                             <div class="event-content">
                                 <h3 class="event-title" itemprop="name">
-                                    <a href="event-details.html">Family Night & Fund Raising Dinner</a>
+                                    <a href="{{route('familyEvent')}}">Family Night & Fund Raising Dinner</a>
                                 </h3>
 
                                 <div class="event-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                                     <time class="event-date" datetime="2016-12-12T20:14:00" itemprop="startDate">
                                         <i class="material-icons">query_builder</i>12 Dec 2016, 2:00 PM
                                     </time>
@@ -643,7 +727,7 @@
 
                                 <div class="event-footer">
                                     <div class="event-buttons">
-                                        <a href="event-details.html" class="btn btn-transparent btn-icon-left js-wave" itemprop="url">
+                                        <a href="{{route('familyEvent')}}" class="btn btn-transparent btn-icon-left js-wave" itemprop="url">
                                             <i class="material-icons">arrow_forward</i>Learn More
                                         </a>
                                     </div>
@@ -698,13 +782,13 @@
                     <!-- Post -->
                     <article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">
                         <div class="boxed">
-                            <a class="post-media js-wave" href="blog-details.html" itemprop="url">
+                            <a class="post-media js-wave" href="{{route('tubewellSanitation')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/thumb_img_1.png')}}" alt="" itemprop="image" />
                             </a>
 
                             <div class="post-content">
                                 <h3 class="post-title" itemprop="name">
-                                    <a href="blog-details.html">Tube Well & Sanitation</a>
+                                    <a href="{{route('tubewellSanitation')}}">Tube Well & Sanitation</a>
                                 </h3>
 
                                 <div class="post-meta">
@@ -722,7 +806,7 @@
 
                                 <div class="post-footer">
                                     <div class="post-buttons">
-                                        <a href="blog-details.html" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
+                                        <a href="{{route('tubewellSanitation')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -735,13 +819,13 @@
                     <!-- Post -->
                     <article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">
                         <div class="boxed">
-                            <a class="post-media js-wave" href="blog-details.html" itemprop="url">
+                            <a class="post-media js-wave" href="{{route('multimedia')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/Multimedia-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />
                             </a>
 
                             <div class="post-content">
                                 <h3 class="post-title" itemprop="name">
-                                    <a href="blog-details.html">Multimedia Program</a>
+                                    <a href="{{route('multimedia')}}">Multimedia Program</a>
                                 </h3>
 
                                 <div class="post-meta">
@@ -759,7 +843,7 @@
 
                                 <div class="post-footer">
                                     <div class="post-buttons">
-                                        <a href="blog-details.html" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
+                                        <a href="{{route('multimedia')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -772,13 +856,13 @@
                     <!-- Post -->
                     <article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">
                         <div class="boxed">
-                            <a class="post-media js-wave" href="blog-details.html" itemprop="url">
+                            <a class="post-media js-wave" href="{{route('childrenwelfare')}}" itemprop="url">
                                 <img src="{{asset('public/images/current/Childwelfaret-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />
                             </a>
 
                             <div class="post-content">
                                 <h3 class="post-title" itemprop="name">
-                                    <a href="blog-details.html">Children Welfare Program</a>
+                                    <a href="{{route('childrenwelfare')}}">Children Welfare Program</a>
                                 </h3>
 
                                 <div class="post-meta">
@@ -796,7 +880,7 @@
 
                                 <div class="post-footer">
                                     <div class="post-buttons">
-                                        <a href="blog-details.html" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
+                                        <a href="{{route('childrenwelfare')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
                                     </div>
                                 </div>
                             </div>

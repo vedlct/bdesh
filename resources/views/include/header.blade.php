@@ -69,9 +69,10 @@
 
                 <!-- Dropdown Menu -->
                 <ul class="nav-menu clearfix" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <li><a href="{{route('rohingya')}}">Rohingya</a></li>
                     <li><a href="{{route('about')}}">About</a></li>
                     <li><a href="{{route('projects')}}">Projects</a></li>
+                    <li><a href="{{route('rohingya')}}">Rohingya</a></li>
+
 
 
 
@@ -79,20 +80,20 @@
                         <a href="#">Events </a>
                         <ul>
                             <li><a href="#">Upcoming Events</a></li>
-                            <li><a href="#">Past Events</a></li>
+                            <li><a href="{{route('pastevents')}}">Past Events</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">Media Archive</a>
                         <ul>
-                            <li><a href="#">Children welfare</a></li>
-                            <li><a href="#">Health care gallery</a></li>
-                            <li><a href="#">Video gallery</a></li>
+                            <li><a href="{{route('welfare')}}">Children welfare</a></li>
+                            <li><a href="{{route('healthgallery')}}">Health care gallery</a></li>
+                            <li><a href="{{route('videogallery')}}">Video gallery</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="#">Faqs</a></li>
-                    <li><a href="{{route('contact')}}">Contact us</a></li>
+                    <li><a href="{{route('faqs')}}">Faqs</a></li>
+                    <li><a href="{{route('contact')}}">Contact</a></li>
                 </ul>
                 <!--/ Dropdown Menu -->
 

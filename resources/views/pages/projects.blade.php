@@ -444,6 +444,7 @@
             </div>
 
             <!-- Pagination -->
+<!--
             <ul class="pagination">
                 <li class="disabled prev"><a href="#"></a></li>
 
@@ -455,6 +456,7 @@
 
                 <li class="next"><a href="#"></a></li>
             </ul>
+-->
             <!--/ Pagination -->
         </div>
     </section>

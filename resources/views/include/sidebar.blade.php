@@ -4,12 +4,14 @@
     <div class="widget-sidebar widget_text">
         <h4 class="widget-title">Cause information</h4>
 
+<!--
         <div class="textwidget">
             <p><strong>Where:</strong> South Africa, Capetown</p>
             <p><strong>How to spend:</strong> Online Payments, Credit Card</p>
             <p><strong>Category:</strong> Spending Water</p>
             <p><strong>Donations:</strong> money only</p>
         </div>
+-->
     </div>
     <!--/ Widget Text -->
 
@@ -18,6 +20,7 @@
         <h4 class="widget-title">Recent posts</h4>
 
         <!-- Post -->
+<!--
         <article class="fly-article clearfix" itemscope itemtype="http://schema.org/Article">
             <a class="post-media js-wave" href="blog-details.html"><img src="{{asset('public/images/temp/post-4.jpg')}}" alt="" itemprop="image" /></a>
 
@@ -29,9 +32,11 @@
                 </div>
             </div>
         </article>
+-->
         <!--/ Post -->
 
         <!-- Post -->
+<!--
         <article class="fly-article clearfix" itemscope itemtype="http://schema.org/Article">
             <a class="post-media js-wave" href="blog-details.html"><img src="{{asset('public/images/temp/post-5.jpg')}}" alt="" itemprop="image" /></a>
 
@@ -43,9 +48,11 @@
                 </div>
             </div>
         </article>
+-->
         <!--/ Post -->
 
         <!-- Post -->
+<!--
         <article class="fly-article clearfix" itemscope itemtype="http://schema.org/Article">
             <a class="post-media js-wave" href="blog-details.html"><img src="{{asset('public/images/temp/post-6.jpg')}}" alt="" itemprop="image" /></a>
 
@@ -57,6 +64,7 @@
                 </div>
             </div>
         </article>
+-->
         <!--/ Post -->
     </div>
     <!--/ Widget Recent Posts -->
