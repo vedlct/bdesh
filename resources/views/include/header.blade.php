@@ -79,8 +79,8 @@
                     <li class="">
                         <a href="#">Events </a>
                         <ul>
-                            <li><a href="#">Upcoming Events</a></li>
-                            <li><a href="{{route('pastevents')}}">Past Events</a></li>
+                            <li><a href="{{route('upcomingEvents')}}">Upcoming Events</a></li>
+                            <li><a href="{{route('pastevents')}}">Past Events</a></li> 
                         </ul>
                     </li>
                     <li>

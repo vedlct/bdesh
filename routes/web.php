@@ -72,7 +72,11 @@ Route::view('/healthgallery','pages.healthgallery')->name('healthgallery');
 
 Route::view('/faqs','pages.faqs')->name('faqs');
 
+Route::view('/creditcard','pages.creditcard')->name('creditcard');
+
 Route::view('/pastevents','pages.pastevents')->name('pastevents');
+
+Route::view('/upcomingEvents','pages.upcomingEvents')->name('upcomingEvents');
 
 Route::post('/Donation','PaymentController@makeDonation')->name('payment.donationPay');
 

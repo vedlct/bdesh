@@ -3,7 +3,6 @@
     <!-- Header Image or Video -->
     <section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/temp/slide-25.jpg')}});">
         <div class="fly-header-content">
-            <div class="page-subtitle">Some Lines</div>
             <h1 class="page-title">About us</h1>
         </div>
     </section>

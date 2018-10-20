@@ -1,7 +1,7 @@
 @extends('layout.mainLayout')
 @section('content')
     <!-- Header Image or Video -->
-    <section class="fly-header parallax overlay" style="background-image: url(images/temp/slide-11.jpg);">
+<section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/temp/slide-25.jpg')}});">
         <div class="fly-header-content">
             <div class="page-subtitle"></div>
             <h1 class="page-title">Clildren Welfare</h1>
@@ -24,7 +24,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="#">Children wellfair 01</a>
+                                    <a href="#">Children welfare 01</a>
                                 </h3>
 
                             </div>
@@ -47,7 +47,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="#">Children wellfair 02</a>
+                                    <a href="#">Children welfare 02</a>
                                 </h3>
 
                             </div>
@@ -69,7 +69,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="#">Children wellfair 03</a>
+                                    <a href="#">Children welfare 03</a>
                                 </h3>
 
                             </div>
@@ -92,7 +92,7 @@
 
                             <div class="project-content">
                                 <h3 class="project-title" itemprop="name">
-                                    <a href="#">Children wellfair 04</a>
+                                    <a href="#">Children welfare 04</a>
                                 </h3>
 
                             </div>

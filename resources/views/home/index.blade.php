@@ -3,7 +3,7 @@
     <!-- Fly Slider -->
     <div class="fly-slider invisible" data-rotation-interval="10000" data-rotation-duration="1000">
         <div class="cube">
-            <section class="slide" style="background-image: url({{asset('public/images/temp/1.jpg')}});">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-1.jpg')}});">
                 <div class="slide-content">
                     <h1 class="page-title">Helping Hands for Everyone</h1>
 
@@ -11,7 +11,7 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
@@ -37,12 +37,12 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
             </section>
-            <section class="slide" style="background-image: url({{asset('public/images/temp/4.jpg')}});">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-3.jpg')}});">
                 <div class="slide-content">
                     <h1 class="page-title">Helping Hands for Everyone</h1>
 
@@ -50,7 +50,7 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
@@ -64,12 +64,12 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
             </section>
-            <section class="slide" style="background-image: url({{asset('public/images/temp/7.jpg')}});">
+            <section class="slide" style="background-image: url({{url('public/images/temp/slide-4.jpg')}});">
                 <div class="slide-content">
                     <h1 class="page-title">Helping Hands for Everyone</h1>
 
@@ -77,13 +77,13 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
             </section>
            
-            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-1.jpg')}});">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/1.jpg')}});">
                 <div class="slide-content">
                     <h1 class="page-title">Helping Hands for Everyone</h1>
 
@@ -91,13 +91,13 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
             </section>
 
-            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-2.jpg')}});">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/4.jpg')}});">
                 <div class="slide-content">
                     <h2 class="page-title">Helping Hands for Everyone</h2>
 
@@ -105,13 +105,13 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
             </section>
 
-            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-3.jpg')}});">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-24.jpg')}});">
                 <div class="slide-content">
                     <h2 class="page-title">Helping Hands for Everyone</h2>
 
@@ -119,13 +119,13 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
             </section>
 
-            <section class="slide" style="background-image: url({{url('public/images/temp/slide-4.jpg')}});">
+            <section class="slide" style="background-image: url({{url('public/images/temp/7.jpg')}});">
                 <div class="slide-content">
                     <h2 class="page-title">Helping Hands for Everyone</h2>
 
@@ -133,7 +133,7 @@
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
+                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
                         <div class="note">no credit card needed / secure payments</div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
             </div>
 
             <div class="service-buttons">
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-medium js-wave">READ MORE</a>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-medium js-wave">PAY NOW</a>
             </div>
         </div>
 
@@ -167,7 +167,7 @@
             </div>
 
             <div class="service-buttons">
-                <a href="{{route('zakat')}}" class="btn btn-medium js-wave">READ MORE</a>
+                <a href="{{route('zakat')}}" class="btn btn-medium js-wave">CALCULATE</a>
             </div>
         </div>
 
@@ -179,7 +179,7 @@
             </div>
 
             <div class="service-buttons">
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-medium js-wave">READ MORE</a>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-medium js-wave">PAY NOW</a>
             </div>
         </div>
 

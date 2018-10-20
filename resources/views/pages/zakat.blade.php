@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- Header Image or Video -->
-    <section class="fly-header parallax overlay" style="background-image: url(images/temp/slide-25.jpg);">
+<section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/current/Multimedia-small-Banner.jpg')}});">
         <div class="fly-header-content">
             <h1 class="page-title">Zakat Calculator</h1>
         </div>
@@ -13,11 +13,7 @@
 
     <!-- Our Mission -->
     <section class="section padding-top-70">
-        <div class="section-heading">
-            <div class="container">
-                <h2 class="section-title">Who we are?</h2>
-            </div>
-        </div>
+
 
 
 
@@ -162,7 +158,7 @@
                                     </div>
                                     <!--- end Your Zakat Zakat-Eligible Total) ---->
                                     <!--<button type="submit" class="btn btn-success" id="submit" name="submit">PAY YOUR ZAKAT NOW</button>-->
-                                    <div class="btn btn-success"><a style="color: #fff;" title="Donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z3MUXEEMWPBCU" target="blank">PAY YOUR ZAKAT NOW</a></div>
+                                    <div class="btn btn-success"><a style="color: #fff;" title="Donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" target="blank">PAY YOUR ZAKAT NOW</a></div>
                                     
 
 
@@ -175,7 +171,7 @@
 
 
             </div>
-                <h4 style="margin-top: 5px;">Using credit card to pay for zakat</h4>
+                <h4 style="margin-top: 10px;">Using credit card to pay for zakat</h4>
 
                 <p>Please consider adding 2% when using Visa and Mastercard, and 2.5% when using American Express to your total zakat donation—this will compensate for any transaction fees deducted from your donation by the credit card companies, and will ensure that your intended zakat amount is paid in full.</p>
         </div>

@@ -1,10 +1,10 @@
 @extends('layout.mainLayout')
 @section('content')
     <!-- Header Image or Video -->
-    <section class="fly-header parallax overlay" style="background-image: url(images/temp/slide-11.jpg);">
+<section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/temp/post-8.jpg')}});">
         <div class="fly-header-content">
             <div class="page-subtitle"></div>
-            <h1 class="page-title">Healthcare Gallery</h1>
+            <h1 class="page-title">Health care Gallery</h1>
         </div>
     </section>
     <!--/ Header Image or Video -->
