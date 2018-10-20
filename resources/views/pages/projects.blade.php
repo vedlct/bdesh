@@ -30,7 +30,7 @@
                                 </h3>
 
                                 <div class="project-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Bangladesh</a>
                                 </div>
 
                                 <div class="project-description" itemprop="description">
@@ -101,7 +101,7 @@
                                 </h3>
 
                                 <div class="project-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                                 </div>
 
                                 <div class="project-description" itemprop="description">
@@ -172,7 +172,7 @@
                                 </h3>
 
                                 <div class="project-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Bangladesh</a>
                                 </div>
 
                                 <div class="project-description" itemprop="description">
@@ -243,7 +243,7 @@
                                 </h3>
 
                                 <div class="project-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
                                 </div>
 
                                 <div class="project-description" itemprop="description">
@@ -314,7 +314,7 @@
                                 </h3>
 
                                 <div class="project-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Bangladesh</a>
                                 </div>
 
                                 <div class="project-description" itemprop="description">
@@ -385,7 +385,7 @@
                                 </h3>
 
                                 <div class="project-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Mombasa, Kenya</a>
+                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Bangladesh</a>
                                 </div>
 
                                 <div class="project-description" itemprop="description">

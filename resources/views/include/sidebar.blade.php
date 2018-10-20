@@ -92,9 +92,27 @@
 
     <!-- Widget Facebook -->
     <div class="widget-sidebar widget-facebook">
-        <h4 class="widget-title">Facebook</h4>
 
-        <img src="{{asset('public/images/temp/facebook-dummy.jpg')}}" alt=""/>
+
+        <div class="" data-animate="fadeInUp" data-animation-delay="1000">
+            <div class="item links">
+                <h3><span>Our Fan Page</span></h3>
+                <div id="fb-root"></div>
+                <script>
+                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id))
+                            return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1401103616787674";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+
+                <div class="fb-page" data-href="https://www.facebook.com/bdeshfoundation/" data-tabs="timeline" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/crebsol/"><a href="https://www.facebook.com/crebsol/">CreBSol</a></blockquote></div></div>
+            </div>
+        </div>
     </div>
     <!--/ Widget Facebook -->
 </aside>
