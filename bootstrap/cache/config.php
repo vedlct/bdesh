@@ -8,7 +8,7 @@
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
-    'key' => 'base64:eKslHOVkcdhy7c223AGMAxCSw84WAZI5JWArSl4gmVU=',
+    'key' => 'base64:X6N8L0xurp30eVQp4z6HDM4pwJkG/wWAY1o/u7X8QbM=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -210,7 +210,7 @@
       'sqlite' => 
       array (
         'driver' => 'sqlite',
-        'database' => '',
+        'database' => 'bdesh',
         'prefix' => '',
       ),
       'mysql' => 
@@ -218,8 +218,8 @@
         'driver' => 'mysql',
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => '',
-        'username' => '',
+        'database' => 'bdesh',
+        'username' => 'root',
         'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
@@ -233,8 +233,8 @@
         'driver' => 'pgsql',
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => '',
-        'username' => '',
+        'database' => 'bdesh',
+        'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
@@ -246,8 +246,8 @@
         'driver' => 'sqlsrv',
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => '',
-        'username' => '',
+        'database' => 'bdesh',
+        'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
         'prefix' => '',

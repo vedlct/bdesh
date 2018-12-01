@@ -80,3 +80,14 @@ Route::view('/upcomingEvents','pages.upcomingEvents')->name('upcomingEvents');
 
 Route::post('/Donation','PaymentController@makeDonation')->name('payment.donationPay');
 
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/test', function (){
+    return view('index');
+});
+Route::get('/project/create','ProjectController@createProject')->name('project.create');
+Route::get('/project/store','ProjectController@storeProjectData')->name('project.store');
+
+
