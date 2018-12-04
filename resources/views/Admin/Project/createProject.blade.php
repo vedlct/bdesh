@@ -12,7 +12,8 @@
                                       <div class="card-header mb-5">
                                           <h3>Create Project</h3>
                                       </div>
-                                      <form class="#" action="{{route('project.store')}}" enctype="multipart/form-data">
+                                      <form action="{{route('project.store')}}" method="post" enctype="multipart/form-data">
+                                          @csrf
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Project Name</label>
                                               <div class="col-sm-10">
@@ -30,7 +31,7 @@
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Project Goal</label>
                                               <div class="col-sm-10">
-                                                  <input type="text" name="pGoal" class="form-control" required placeholder="Project Goal">
+                                                  <input type="number" name="pGoal" class="form-control" required placeholder="Project Goal">
                                               </div>
                                           </div>
 
@@ -49,7 +50,7 @@
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Project image</label>
                                               <div class="col-sm-10">
-                                                  <input type="file" name="projectImage" class="form-control" multiple>
+                                                  <input type="file" name="projectImage[]" class="form-control" multiple>
                                               </div>
                                           </div>
 
@@ -65,6 +66,6 @@
                           </div>
                   </div>
                         <!-- end col -->
-
+                  </div>
 
 @endsection

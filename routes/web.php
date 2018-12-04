@@ -88,6 +88,10 @@ Route::get('/test', function (){
     return view('index');
 });
 Route::get('/project/create','ProjectController@createProject')->name('project.create');
-Route::get('/project/store','ProjectController@storeProjectData')->name('project.store');
-
+Route::get('/project/update/{id}','ProjectController@updateProject')->name('project.update');
+Route::get('/project/show','ProjectController@showProject')->name('project.show');
+Route::post('/project/store','ProjectController@storeProjectData')->name('project.store');
+Route::post('/project/update','ProjectController@updateProjectData')->name('project.updateData');
+Route::post('/project/delete','ProjectController@deleteProject')->name('project.delete');
+Route::post('delete/image','ProjectController@deleteProjctImage')->name('project.image.delete');
 

@@ -221,7 +221,7 @@
 
 
 <script src="{{url('public/js/waypoints.min.js')}}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.search_icon').click(function () {

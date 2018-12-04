@@ -2,15 +2,83 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
+use App\ProjectImage;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ProjectController extends Controller
 {
    public function createProject(){
        return view('Admin.Project.createProject');
    }
+   public function updateProject($id){
+       $project = Project::findOrFail($id)->first();
+       $projectImage = ProjectImage::where('fkProjectId',$id)->get();
+       return view('Admin.Project.editProject')->with('project',$project)->with('projectImage',$projectImage);
+   }
+
+   public function showProject(){
+       $project = Project::get();
+        return view('Admin.Project.showProject')->with('projects',$project);
+   }
+
    public function storeProjectData(Request $request){
-       return $request;
+
+       $project = new Project();
+       $project->pName = $request->projectName;
+       $project->pLocation=$request->projectLocation;
+       $project->pDescription = $request->pDescription;
+       $project->pGoal = $request->pGoal;
+       $project->fkuserId =Auth::id();
+       $project->save();
+
+           foreach($request->file('projectImage') as $photo) {
+               $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $photo->getClientOriginalExtension();
+               $photo->move('public/Gallery',$filename);
+               $img = new ProjectImage();
+               $img->fkprojectId = $project->projectId;
+               $img->projectPath = $filename;
+               $img->save();
+           }
+           return redirect()->route('project.show');
+   }
+public function deleteProject(Request $request){
+       $projectImage = ProjectImage::where('fkprojectId',$request->id)->delete();
+       $project = Project::findOrFail($request->id)->delete();
+//       Session::put('message',"Project Deleted Successfuly");
+       return response()->json('project deleted');
+}
+
+public function updateProjectData(Request $request){
+        $project = Project::findOrfail($request->id);
+        $project->pName = $request->projectName;
+        $project->pLocation=$request->projectLocation;
+        $project->pDescription = $request->pDescription;
+        $project->pGoal = $request->pGoal;
+        $project->fkuserId =Auth::id();
+        $project->update();
+       if ($request->hasFile('projectImage')){
+           foreach($request->file('projectImage') as $photo) {
+               $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $photo->getClientOriginalExtension();
+               $photo->move('public/Gallery',$filename);
+               $img = new ProjectImage();
+               $img->fkprojectId = $project->projectId;
+               $img->projectPath = $filename;
+               $img->save();
+           }
+       }
+    return redirect()->route('project.show');
+}
+public function deleteProjctImage(Request $request){
+       $project = ProjectImage::findOrFail($request->id)->delete();
+       return response()->json('deleted');
+}
+
+   public static function getUserName($id){
+       return User::where('userId',$id)->first()->name;
    }
 }
