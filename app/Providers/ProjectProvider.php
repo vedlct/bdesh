@@ -5,24 +5,24 @@ namespace App\Providers;
 use App\Project;
 use Illuminate\Support\ServiceProvider;
 use View;
-class AppServiceProvider extends ServiceProvider
+class ProjectProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      *
      * @return void
      */
     public function boot()
     {
-        View::composer('*', function($view)
+        View()->composer('*', function($view)
         {
             $project = Project::get();
-            $view->with('projectsProvider',$project);
+            $view->with('prsad',$project);
         });
     }
 
     /**
-     * Register any application services.
+     * Register services.
      *
      * @return void
      */

@@ -14,10 +14,8 @@
 
 //Route::view('/','home.index');
 
-Route::get('/',function (){
-    return view('home.index');
-})->name('home');
-
+Route::get('/','HomeController@index')->name('home');
+Route::get('/{slug}','ProjectController@singlePost')->name('project.singlePost');
 Route::get('/rohingya',function (){
     return view('pages.rohingya');
 })->name('rohingya');

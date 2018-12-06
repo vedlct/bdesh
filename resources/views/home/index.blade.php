@@ -1,3 +1,4 @@
+
 @extends('layout.mainLayout')
 @section('content')
     <!-- Fly Slider -->
@@ -204,25 +205,26 @@
         <div class="container">
             <div class="fly-projects alternate-layout">
                 <!-- Project -->
+                @foreach($projectsProvider as $projects)
                 <article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">
                     <div class="boxed flip-front">
-                        <a class="project-media js-wave" href="{{route('tubewellSanitation')}}" itemprop="url">
-                            <img src="{{asset('public/images/current/thumb_img_1.png')}}" alt="" itemprop="image" />
+                        <a class="project-media js-wave" href="{{route('project.singlePost',[$projects->slug])}}" itemprop="url">
+                            <img src="{{asset('public/Gallery')}}/{{\App\Http\Controllers\HomeController::getThumnailImage($projects->projectId)}}" alt="" itemprop="image" />
 
                         </a>
 
                         <div class="project-content">
                             <h3 class="project-title" itemprop="name">
-                                <a href="{{route('tubewellSanitation')}}">Tube Well & Santitation</a>
+                                <a href="{{route('project.singlePost',[$projects->slug])}}">{{$projects->pName}}</a>
                             </h3>
 
                             <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Bangladesh</a>
+                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>{{$projects->pLocation}}</a>
                             </div>
 
                             <div class="project-description" itemprop="description">
                                 <p>
-                                    Our primary objective is to have a healthy and wealthy society. Our health care program is more focus on the proactive measurement. Hundreds of families suffer diarrhea and cholera from not having clean drinkable water and from poor sanitation.
+                                    {!! str_limit($projects->pDescription,250) !!}
                                 </p>
                             </div>
 
@@ -230,16 +232,16 @@
                                 <ul class="project-stats">
                                     <li>
                                         <div class="label">raised</div>
-                                        <div class="value" data-raised="12731"><sup>$</sup>12,731</div>
+                                        <div class="value" data-raised="{{$projects->pRaised}}"><sup>$</sup>{{$projects->pRaised}}</div>
                                     </li>
                                     <li>
                                         <div class="label">goal</div>
-                                        <div class="value" data-goal="22500" itemprop="target"><sup>$</sup>22,500</div>
+                                        <div class="value" data-goal="{{$projects->pGoal}}" itemprop="target"><sup>$</sup>{{$projects->pGoal}}</div>
                                     </li>
                                 </ul>
 
                                 <div class="project-buttons">
-                                    <a href="{{route('tubewellSanitation')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
+                                    <a href="{{route('project.singlePost',[$projects->slug])}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
                                 </div>
                             </div>
                         </div>
@@ -268,340 +270,340 @@
                     </div>
                 </article>
                 <!--/ Project -->
-
+                    @endforeach
                 <!-- Project -->
-                <article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">
-                    <div class="boxed flip-front">
-                        <a class="project-media js-wave" href="{{route('multimedia')}}" itemprop="url">
-                            <img src="{{asset('public/images/current/Multimedia-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />
+                {{--<article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">--}}
+                    {{--<div class="boxed flip-front">--}}
+                        {{--<a class="project-media js-wave" href="{{route('multimedia')}}" itemprop="url">--}}
+                            {{--<img src="{{asset('public/images/current/Multimedia-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />--}}
 
-                        </a>
+                        {{--</a>--}}
 
-                        <div class="project-content">
-                            <h3 class="project-title" itemprop="name">
-                                <a href="{{route('multimedia')}}">Multimedia Program</a>
-                            </h3>
+                        {{--<div class="project-content">--}}
+                            {{--<h3 class="project-title" itemprop="name">--}}
+                                {{--<a href="{{route('multimedia')}}">Multimedia Program</a>--}}
+                            {{--</h3>--}}
 
-                            <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
-                            </div>
+                            {{--<div class="project-location">--}}
+                                {{--<a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>--}}
+                            {{--</div>--}}
 
-                            <div class="project-description" itemprop="description">
-                                <p>
-                                    The multimedia program is designed to educated and bring the awareness among the people of every walk of life. It plays dvd and vcd programs on various religious, and social issues. It covers health and world affairs as well.
-                                </p>
-                            </div>
+                            {{--<div class="project-description" itemprop="description">--}}
+                                {{--<p>--}}
+                                    {{--The multimedia program is designed to educated and bring the awareness among the people of every walk of life. It plays dvd and vcd programs on various religious, and social issues. It covers health and world affairs as well.--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
 
-                            <div class="project-footer">
-                                <ul class="project-stats">
-                                    <li>
-                                        <div class="label">raised</div>
-                                        <div class="value" data-raised="26456"><sup>$</sup>26,456</div>
-                                    </li>
-                                    <li>
-                                        <div class="label">goal</div>
-                                        <div class="value" data-goal="25000" itemprop="target"><sup>$</sup>25,000</div>
-                                    </li>
-                                </ul>
+                            {{--<div class="project-footer">--}}
+                                {{--<ul class="project-stats">--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">raised</div>--}}
+                                        {{--<div class="value" data-raised="26456"><sup>$</sup>26,456</div>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">goal</div>--}}
+                                        {{--<div class="value" data-goal="25000" itemprop="target"><sup>$</sup>25,000</div>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
 
-                                <div class="project-buttons">
-                                    <a href="{{route('multimedia')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                {{--<div class="project-buttons">--}}
+                                    {{--<a href="{{route('multimedia')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    <div class="boxed flip-back">
-                        <div class="card-map" data-placeholder="waiting for map">
-                            <div class="google-map"
-                                 data-map-zoom="14"
-                                 data-map-type="roadmap"
-                                 data-map-style="onehope"
-                                 data-map-address="Fontana, CA 92335"
-                                 data-map-marker="{{asset('public/images/marker.png')}}"
-                                 data-map-marker-size="[31,46]"
-                                 data-map-marker-anchor="[16,46]">
-                                <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                            </div>
-                        </div>
+                    {{--<div class="boxed flip-back">--}}
+                        {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                            {{--<div class="google-map"--}}
+                                 {{--data-map-zoom="14"--}}
+                                 {{--data-map-type="roadmap"--}}
+                                 {{--data-map-style="onehope"--}}
+                                 {{--data-map-address="Fontana, CA 92335"--}}
+                                 {{--data-map-marker="{{asset('public/images/marker.png')}}"--}}
+                                 {{--data-map-marker-size="[31,46]"--}}
+                                 {{--data-map-marker-anchor="[16,46]">--}}
+                                {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                        <ul class="card-social">
-                            <li><a href="#" class="fa fa-facebook js-wave"></a></li>
-                            <li><a href="#" class="fa fa-twitter js-wave"></a></li>
-                            <li><a href="#" class="fa fa-instagram js-wave"></a></li>
-                            <li><a href="#" class="fa fa-google js-wave"></a></li>
-                        </ul>
-                    </div>
-                </article>
+                        {{--<ul class="card-social">--}}
+                            {{--<li><a href="#" class="fa fa-facebook js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-twitter js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-instagram js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-google js-wave"></a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</article>--}}
                 <!--/ Project -->
 
                 <!-- Project -->
-                <article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">
-                    <div class="boxed flip-front">
-                        <a class="project-media js-wave" href="{{route('food')}}" itemprop="url">
-                            <img src="{{asset('public/images/current/Food-Bank-small-Banner21-300x200.jpg')}}" alt="" itemprop="image" />
+                {{--<article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">--}}
+                    {{--<div class="boxed flip-front">--}}
+                        {{--<a class="project-media js-wave" href="{{route('food')}}" itemprop="url">--}}
+                            {{--<img src="{{asset('public/images/current/Food-Bank-small-Banner21-300x200.jpg')}}" alt="" itemprop="image" />--}}
 
-                        </a>
+                        {{--</a>--}}
 
-                        <div class="project-content">
-                            <h3 class="project-title" itemprop="name">
-                                <a href="{{route('food')}}">Food Bank</a>
-                            </h3>
+                        {{--<div class="project-content">--}}
+                            {{--<h3 class="project-title" itemprop="name">--}}
+                                {{--<a href="{{route('food')}}">Food Bank</a>--}}
+                            {{--</h3>--}}
 
-                            <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Bangladesh</a>
-                            </div>
+                            {{--<div class="project-location">--}}
+                                {{--<a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>Bangladesh</a>--}}
+                            {{--</div>--}}
 
-                            <div class="project-description" itemprop="description">
-                                <p>
-                                    It's a food reserve bank for the rainy day. Most of the Bangladesh is a flood prune area, recently Bangladesh had a devastated flood and cyclone. Most of the poor family lives in hand to mouth, so when the calamity strikes their first resort become to go to the money lenders and loan the money with very high interest rates. The objective of the food bank is to provide the food security during the time of calamity as well as when there is a food shortage due to bad harvest.
-                                </p>
-                            </div>
+                            {{--<div class="project-description" itemprop="description">--}}
+                                {{--<p>--}}
+                                    {{--It's a food reserve bank for the rainy day. Most of the Bangladesh is a flood prune area, recently Bangladesh had a devastated flood and cyclone. Most of the poor family lives in hand to mouth, so when the calamity strikes their first resort become to go to the money lenders and loan the money with very high interest rates. The objective of the food bank is to provide the food security during the time of calamity as well as when there is a food shortage due to bad harvest.--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
 
-                            <div class="project-footer">
-                                <ul class="project-stats">
-                                    <li>
-                                        <div class="label">raised</div>
-                                        <div class="value" data-raised="8345"><sup>$</sup>8,345</div>
-                                    </li>
-                                    <li>
-                                        <div class="label">goal</div>
-                                        <div class="value" data-goal="24500" itemprop="target"><sup>$</sup>24,500</div>
-                                    </li>
-                                </ul>
+                            {{--<div class="project-footer">--}}
+                                {{--<ul class="project-stats">--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">raised</div>--}}
+                                        {{--<div class="value" data-raised="8345"><sup>$</sup>8,345</div>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">goal</div>--}}
+                                        {{--<div class="value" data-goal="24500" itemprop="target"><sup>$</sup>24,500</div>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
 
-                                <div class="project-buttons">
-                                    <a href="{{route('food')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                {{--<div class="project-buttons">--}}
+                                    {{--<a href="{{route('food')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    <div class="boxed flip-back">
-                        <div class="card-map" data-placeholder="waiting for map">
-                            <div class="google-map"
-                                 data-map-zoom="14"
-                                 data-map-type="roadmap"
-                                 data-map-style="onehope"
-                                 data-map-address="Phoenix, AZ 85007"
-                                 data-map-marker="{{asset('public/images/marker.png')}}"
-                                 data-map-marker-size="[31,46]"
-                                 data-map-marker-anchor="[16,46]">
-                                <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                            </div>
-                        </div>
+                    {{--<div class="boxed flip-back">--}}
+                        {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                            {{--<div class="google-map"--}}
+                                 {{--data-map-zoom="14"--}}
+                                 {{--data-map-type="roadmap"--}}
+                                 {{--data-map-style="onehope"--}}
+                                 {{--data-map-address="Phoenix, AZ 85007"--}}
+                                 {{--data-map-marker="{{asset('public/images/marker.png')}}"--}}
+                                 {{--data-map-marker-size="[31,46]"--}}
+                                 {{--data-map-marker-anchor="[16,46]">--}}
+                                {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                        <ul class="card-social">
-                            <li><a href="#" class="fa fa-facebook js-wave"></a></li>
-                            <li><a href="#" class="fa fa-twitter js-wave"></a></li>
-                            <li><a href="#" class="fa fa-instagram js-wave"></a></li>
-                            <li><a href="#" class="fa fa-google js-wave"></a></li>
-                        </ul>
-                    </div>
-                </article>
-                <!--/ Project -->
+                        {{--<ul class="card-social">--}}
+                            {{--<li><a href="#" class="fa fa-facebook js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-twitter js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-instagram js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-google js-wave"></a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</article>--}}
+                {{--<!--/ Project -->--}}
 
-
-                <!-- Project -->
-                <article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">
-                    <div class="boxed flip-front">
-                        <a class="project-media js-wave" href="{{route('health')}}" itemprop="url">
-                            <img src="{{asset('public/images/current/Eyecampt-small-Banner1-300x200.jpg')}}" alt="" itemprop="image" />
-
-                        </a>
-
-                        <div class="project-content">
-                            <h3 class="project-title" itemprop="name">
-                                <a href="{{route('health')}}">Health Care</a>
-                            </h3>
-
-                            <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
-                            </div>
-
-                            <div class="project-description" itemprop="description">
-                                <p>
-                                    Our primary objective is to have a healthy and wealthy society. Our health care program is more focus on the proactive measurement. Hundreds of families suffer diarrhea and cholera from not having clean drinkable water and from poor sanitation.
-
-                                    In recent month we have installed 72 sanitation facilities which will help hundreds of families. Our goal is to install another 100 sanitation facilities in coming months and to install 10 more Tube wells.
-                                </p>
-                            </div>
-
-                            <div class="project-footer">
-                                <ul class="project-stats">
-                                    <li>
-                                        <div class="label">raised</div>
-                                        <div class="value" data-raised="26456"><sup>$</sup>26,456</div>
-                                    </li>
-                                    <li>
-                                        <div class="label">goal</div>
-                                        <div class="value" data-goal="25000" itemprop="target"><sup>$</sup>25,000</div>
-                                    </li>
-                                </ul>
-
-                                <div class="project-buttons">
-                                    <a href="{{route('health')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="boxed flip-back">
-                        <div class="card-map" data-placeholder="waiting for map">
-                            <div class="google-map"
-                                 data-map-zoom="14"
-                                 data-map-type="roadmap"
-                                 data-map-style="onehope"
-                                 data-map-address="Fontana, CA 92335"
-                                 data-map-marker="{{asset('public/images/marker.png')}}"
-                                 data-map-marker-size="[31,46]"
-                                 data-map-marker-anchor="[16,46]">
-                                <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                            </div>
-                        </div>
-
-                        <ul class="card-social">
-                            <li><a href="#" class="fa fa-facebook js-wave"></a></li>
-                            <li><a href="#" class="fa fa-twitter js-wave"></a></li>
-                            <li><a href="#" class="fa fa-instagram js-wave"></a></li>
-                            <li><a href="#" class="fa fa-google js-wave"></a></li>
-                        </ul>
-                    </div>
-                </article>
-                <!--/ Project -->
 
                 <!-- Project -->
-                <article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">
-                    <div class="boxed flip-front">
-                        <a class="project-media js-wave" href="{{route('childrenwelfare')}}" itemprop="url">
-                            <img src="{{asset('public/images/current/Childwelfaret-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />
+                {{--<article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">--}}
+                    {{--<div class="boxed flip-front">--}}
+                        {{--<a class="project-media js-wave" href="{{route('health')}}" itemprop="url">--}}
+                            {{--<img src="{{asset('public/images/current/Eyecampt-small-Banner1-300x200.jpg')}}" alt="" itemprop="image" />--}}
 
-                        </a>
+                        {{--</a>--}}
 
-                        <div class="project-content">
-                            <h3 class="project-title" itemprop="name">
-                                <a href="{{route('childrenwelfare')}}">Children Welfare Program</a>
-                            </h3>
+                        {{--<div class="project-content">--}}
+                            {{--<h3 class="project-title" itemprop="name">--}}
+                                {{--<a href="{{route('health')}}">Health Care</a>--}}
+                            {{--</h3>--}}
 
-                            <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
-                            </div>
+                            {{--<div class="project-location">--}}
+                                {{--<a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>--}}
+                            {{--</div>--}}
 
-                            <div class="project-description" itemprop="description">
-                                <p>
-                                    Today's children are leaders of tomorrow. Unfortunately, the socio-economic environment plays a significant role in children growth and their development as future leaders. Our mission is to create a lasting, positive change in the lives of children in need around the world.
-                                </p>
-                            </div>
+                            {{--<div class="project-description" itemprop="description">--}}
+                                {{--<p>--}}
+                                    {{--Our primary objective is to have a healthy and wealthy society. Our health care program is more focus on the proactive measurement. Hundreds of families suffer diarrhea and cholera from not having clean drinkable water and from poor sanitation.--}}
 
-                            <div class="project-footer">
-                                <ul class="project-stats">
-                                    <li>
-                                        <div class="label">raised</div>
-                                        <div class="value" data-raised="8345"><sup>$</sup>8,345</div>
-                                    </li>
-                                    <li>
-                                        <div class="label">goal</div>
-                                        <div class="value" data-goal="24500" itemprop="target"><sup>$</sup>24,500</div>
-                                    </li>
-                                </ul>
+                                    {{--In recent month we have installed 72 sanitation facilities which will help hundreds of families. Our goal is to install another 100 sanitation facilities in coming months and to install 10 more Tube wells.--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
 
-                                <div class="project-buttons">
-                                    <a href="{{route('childrenwelfare')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            {{--<div class="project-footer">--}}
+                                {{--<ul class="project-stats">--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">raised</div>--}}
+                                        {{--<div class="value" data-raised="26456"><sup>$</sup>26,456</div>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">goal</div>--}}
+                                        {{--<div class="value" data-goal="25000" itemprop="target"><sup>$</sup>25,000</div>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
 
-                    <div class="boxed flip-back">
-                        <div class="card-map" data-placeholder="waiting for map">
-                            <div class="google-map"
-                                 data-map-zoom="14"
-                                 data-map-type="roadmap"
-                                 data-map-style="onehope"
-                                 data-map-address="Phoenix, AZ 85007"
-                                 data-map-marker="{{asset('public/images/marker.png')}}"
-                                 data-map-marker-size="[31,46]"
-                                 data-map-marker-anchor="[16,46]">
-                                <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                            </div>
-                        </div>
+                                {{--<div class="project-buttons">--}}
+                                    {{--<a href="{{route('health')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                        <ul class="card-social">
-                            <li><a href="#" class="fa fa-facebook js-wave"></a></li>
-                            <li><a href="#" class="fa fa-twitter js-wave"></a></li>
-                            <li><a href="#" class="fa fa-instagram js-wave"></a></li>
-                            <li><a href="#" class="fa fa-google js-wave"></a></li>
-                        </ul>
-                    </div>
-                </article>
+                    {{--<div class="boxed flip-back">--}}
+                        {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                            {{--<div class="google-map"--}}
+                                 {{--data-map-zoom="14"--}}
+                                 {{--data-map-type="roadmap"--}}
+                                 {{--data-map-style="onehope"--}}
+                                 {{--data-map-address="Fontana, CA 92335"--}}
+                                 {{--data-map-marker="{{asset('public/images/marker.png')}}"--}}
+                                 {{--data-map-marker-size="[31,46]"--}}
+                                 {{--data-map-marker-anchor="[16,46]">--}}
+                                {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<ul class="card-social">--}}
+                            {{--<li><a href="#" class="fa fa-facebook js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-twitter js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-instagram js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-google js-wave"></a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</article>--}}
+                {{--<!--/ Project -->--}}
+
+                <!-- Project -->
+                {{--<article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">--}}
+                    {{--<div class="boxed flip-front">--}}
+                        {{--<a class="project-media js-wave" href="{{route('childrenwelfare')}}" itemprop="url">--}}
+                            {{--<img src="{{asset('public/images/current/Childwelfaret-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />--}}
+
+                        {{--</a>--}}
+
+                        {{--<div class="project-content">--}}
+                            {{--<h3 class="project-title" itemprop="name">--}}
+                                {{--<a href="{{route('childrenwelfare')}}">Children Welfare Program</a>--}}
+                            {{--</h3>--}}
+
+                            {{--<div class="project-location">--}}
+                                {{--<a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>--}}
+                            {{--</div>--}}
+
+                            {{--<div class="project-description" itemprop="description">--}}
+                                {{--<p>--}}
+                                    {{--Today's children are leaders of tomorrow. Unfortunately, the socio-economic environment plays a significant role in children growth and their development as future leaders. Our mission is to create a lasting, positive change in the lives of children in need around the world.--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+
+                            {{--<div class="project-footer">--}}
+                                {{--<ul class="project-stats">--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">raised</div>--}}
+                                        {{--<div class="value" data-raised="8345"><sup>$</sup>8,345</div>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">goal</div>--}}
+                                        {{--<div class="value" data-goal="24500" itemprop="target"><sup>$</sup>24,500</div>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+
+                                {{--<div class="project-buttons">--}}
+                                    {{--<a href="{{route('childrenwelfare')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+
+                    {{--<div class="boxed flip-back">--}}
+                        {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                            {{--<div class="google-map"--}}
+                                 {{--data-map-zoom="14"--}}
+                                 {{--data-map-type="roadmap"--}}
+                                 {{--data-map-style="onehope"--}}
+                                 {{--data-map-address="Phoenix, AZ 85007"--}}
+                                 {{--data-map-marker="{{asset('public/images/marker.png')}}"--}}
+                                 {{--data-map-marker-size="[31,46]"--}}
+                                 {{--data-map-marker-anchor="[16,46]">--}}
+                                {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<ul class="card-social">--}}
+                            {{--<li><a href="#" class="fa fa-facebook js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-twitter js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-instagram js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-google js-wave"></a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</article>--}}
                 <!--/ Project -->
 
                 <!-- Project -->
-                <article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">
-                    <div class="boxed flip-front">
-                        <a class="project-media js-wave" href="{{route('ramadanFood')}}" itemprop="url">
-                            <img src="{{asset('public/images/current/Ramadhanfood-small-Banner212-300x200.jpg')}}" alt="" itemprop="image" />
+                {{--<article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">--}}
+                    {{--<div class="boxed flip-front">--}}
+                        {{--<a class="project-media js-wave" href="{{route('ramadanFood')}}" itemprop="url">--}}
+                            {{--<img src="{{asset('public/images/current/Ramadhanfood-small-Banner212-300x200.jpg')}}" alt="" itemprop="image" />--}}
 
-                        </a>
+                        {{--</a>--}}
 
-                        <div class="project-content">
-                            <h3 class="project-title" itemprop="name">
-                                <a href="{{route('ramadanFood')}}">Ramadan Food Basket</a>
-                            </h3>
+                        {{--<div class="project-content">--}}
+                            {{--<h3 class="project-title" itemprop="name">--}}
+                                {{--<a href="{{route('ramadanFood')}}">Ramadan Food Basket</a>--}}
+                            {{--</h3>--}}
 
-                            <div class="project-location">
-                                <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i> Bangladesh </a>
-                            </div>
+                            {{--<div class="project-location">--}}
+                                {{--<a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i> Bangladesh </a>--}}
+                            {{--</div>--}}
 
-                            <div class="project-description" itemprop="description">
-                                <p>
-                                    In the blessed month of Ramadan Bdesh foundation shares the joy and blessing with the fellow brothers and sisters in Islam by providing food to the needy families.
+                            {{--<div class="project-description" itemprop="description">--}}
+                                {{--<p>--}}
+                                    {{--In the blessed month of Ramadan Bdesh foundation shares the joy and blessing with the fellow brothers and sisters in Islam by providing food to the needy families.--}}
 
-                                    Bdesh foundation has launched this program in Bangladesh last year and Alhamdulillah !! this program was able to reach around 1500 needy families last year. Each basket costs around $10 which is the same amount for the zakatul fitra in USA.
-                                </p>
-                            </div>
+                                    {{--Bdesh foundation has launched this program in Bangladesh last year and Alhamdulillah !! this program was able to reach around 1500 needy families last year. Each basket costs around $10 which is the same amount for the zakatul fitra in USA.--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
 
-                            <div class="project-footer">
-                                <ul class="project-stats">
-                                    <li>
-                                        <div class="label">raised</div>
-                                        <div class="value" data-raised="26456"><sup>$</sup>26,456</div>
-                                    </li>
-                                    <li>
-                                        <div class="label">goal</div>
-                                        <div class="value" data-goal="25000" itemprop="target"><sup>$</sup>25,000</div>
-                                    </li>
-                                </ul>
+                            {{--<div class="project-footer">--}}
+                                {{--<ul class="project-stats">--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">raised</div>--}}
+                                        {{--<div class="value" data-raised="26456"><sup>$</sup>26,456</div>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<div class="label">goal</div>--}}
+                                        {{--<div class="value" data-goal="25000" itemprop="target"><sup>$</sup>25,000</div>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
 
-                                <div class="project-buttons">
-                                    <a href="{{route('ramadanFood')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                {{--<div class="project-buttons">--}}
+                                    {{--<a href="{{route('ramadanFood')}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    <div class="boxed flip-back">
-                        <div class="card-map" data-placeholder="waiting for map">
-                            <div class="google-map"
-                                 data-map-zoom="14"
-                                 data-map-type="roadmap"
-                                 data-map-style="onehope"
-                                 data-map-address="Fontana, CA 92335"
-                                 data-map-marker="{{asset('public/images/marker.png')}}"
-                                 data-map-marker-size="[31,46]"
-                                 data-map-marker-anchor="[16,46]">
-                                <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                            </div>
-                        </div>
+                    {{--<div class="boxed flip-back">--}}
+                        {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                            {{--<div class="google-map"--}}
+                                 {{--data-map-zoom="14"--}}
+                                 {{--data-map-type="roadmap"--}}
+                                 {{--data-map-style="onehope"--}}
+                                 {{--data-map-address="Fontana, CA 92335"--}}
+                                 {{--data-map-marker="{{asset('public/images/marker.png')}}"--}}
+                                 {{--data-map-marker-size="[31,46]"--}}
+                                 {{--data-map-marker-anchor="[16,46]">--}}
+                                {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                        <ul class="card-social">
-                            <li><a href="#" class="fa fa-facebook js-wave"></a></li>
-                            <li><a href="#" class="fa fa-twitter js-wave"></a></li>
-                            <li><a href="#" class="fa fa-instagram js-wave"></a></li>
-                            <li><a href="#" class="fa fa-google js-wave"></a></li>
-                        </ul>
-                    </div>
-                </article>
+                        {{--<ul class="card-social">--}}
+                            {{--<li><a href="#" class="fa fa-facebook js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-twitter js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-instagram js-wave"></a></li>--}}
+                            {{--<li><a href="#" class="fa fa-google js-wave"></a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</article>--}}
                 <!--/ Project -->
 
             </div>

@@ -30,6 +30,7 @@ class ProjectController extends Controller
 
        $project = new Project();
        $project->pName = $request->projectName;
+       $project->slug = str_slug($request->projectName);
        $project->pLocation=$request->projectLocation;
        $project->pDescription = $request->pDescription;
        $project->pGoal = $request->pGoal;
@@ -65,6 +66,7 @@ public function updateProjectData(Request $request){
         $project->pName = $request->projectName;
         $project->pLocation=$request->projectLocation;
         $project->pDescription = $request->pDescription;
+        $project->pRaised = $request->pRaised;
         $project->pGoal = $request->pGoal;
         $project->fkuserId =Auth::id();
         $project->update();
@@ -87,5 +89,11 @@ public function deleteProjctImage(Request $request){
 
    public static function getUserName($id){
        return User::where('userId',$id)->first()->name;
+   }
+
+   public function singlePost($slug){
+        $project = Project::where('slug',$slug)->first();
+        $projectImage = ProjectImage::where('fkprojectId',$project->projectId)->get();
+        return view('pages.singleProject')->with('project',$project)->with('projectImage',$projectImage);
    }
 }

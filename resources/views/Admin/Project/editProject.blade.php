@@ -35,7 +35,12 @@
                                     <input type="number" name="pGoal" value="{{$project->pGoal}}"  class="form-control" required  placeholder="Project Goal">
                                 </div>
                             </div>
-
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Project Raised</label>
+                                <div class="col-sm-10">
+                                    <input type="number" name="pRaised" value="{{$project->pRaised}}" class="form-control" required placeholder="Project Raised">
+                                </div>
+                            </div>
                             {{--<div class="form-group row">--}}
                             {{--<label class="col-sm-2 col-form-label">Project Progress</label>--}}
                             {{--<div class="col-sm-10">--}}
