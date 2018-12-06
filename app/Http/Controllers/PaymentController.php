@@ -11,7 +11,6 @@ use Margules\bplib\BluePay;
 class PaymentController extends Controller
 {
     public function makePayment(Request $r){
-
         $payment = new BluePay();
         $payment->setCustomerInformation(array(
             'firstName' => 'Bob',
@@ -51,6 +50,7 @@ class PaymentController extends Controller
         } else{
             echo $payment->getMessage() . "<br/>";
         }
+
 
     }
     public function makeDonation(Request $r){
