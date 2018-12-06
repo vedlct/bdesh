@@ -15,7 +15,7 @@
 //Route::view('/','home.index');
 
 Route::get('/','HomeController@index')->name('home');
-Route::get('/{slug}','ProjectController@singlePost')->name('project.singlePost');
+Route::get('/single-project/{slug}','ProjectController@singlePost')->name('project.singlePost');
 Route::get('/rohingya',function (){
     return view('pages.rohingya');
 })->name('rohingya');
@@ -86,6 +86,10 @@ Route::group(['middleware' => ['auth']],function () {
     Route::get('/admin', function () {
         return view('index');
     });
+
+    /*
+     * Project Route
+     */
     Route::get('/project/create', 'ProjectController@createProject')->name('project.create');
     Route::get('/project/update/{id}', 'ProjectController@updateProject')->name('project.update');
     Route::get('/project/show', 'ProjectController@showProject')->name('project.show');
@@ -93,5 +97,19 @@ Route::group(['middleware' => ['auth']],function () {
     Route::post('/project/update', 'ProjectController@updateProjectData')->name('project.updateData');
     Route::post('/project/delete', 'ProjectController@deleteProject')->name('project.delete');
     Route::post('delete/image', 'ProjectController@deleteProjctImage')->name('project.image.delete');
+
+
+    /*
+     * event Route
+     */
+
+    Route::get('/event/create', 'eventController@createEvent')->name('event.create');
+    Route::get('/event/update/{id}', 'eventController@updateProject')->name('event.update');
+    Route::get('/event/show', 'eventController@showEvents')->name('event.show');
+    Route::post('/event/store', 'eventController@storeEvent')->name('event.store');
+    Route::post('/event/update', 'eventController@updateProjectData')->name('event.updateData');
+    Route::post('/event/delete', 'eventController@deleteEvent')->name('event.delete');
+    Route::post('event/image', 'eventController@deleteProjctImage')->name('event.image.delete');
+
 
 });

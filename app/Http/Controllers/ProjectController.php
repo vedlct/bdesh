@@ -16,9 +16,9 @@ class ProjectController extends Controller
        return view('Admin.Project.createProject');
    }
    public function updateProject($id){
-       $project = Project::findOrFail($id)->first();
+       $project = Project::findOrFail($id);
        $projectImage = ProjectImage::where('fkProjectId',$id)->get();
-       return view('Admin.Project.editProject')->with('project',$project)->with('projectImage',$projectImage);
+       return view('Admin.Project.editProject')->with('projectUpdate',$project)->with('projectImage',$projectImage);
    }
 
    public function showProject(){

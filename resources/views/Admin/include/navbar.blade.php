@@ -21,21 +21,20 @@
 
                     </ul>
                 </li>
+
+                <li class="has_sub"><a href="javascript:void(0);" class="waves-effect"><i class="dripicons-meter"></i> <span>Event </span><span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('event.create')}}#eventCreate" id="eventCreate" class="waves-effect">Create Event</a></li>
+                        <li><a href="{{route('event.show')}}#eventShow" id="eventShow" class="waves-effect">Show Event</a></li>
+
+                    </ul>
+                </li>
                 <li>
                     <a href="" class="waves-effect">
                         <i class="fa fa-user"></i> <span>Client</span>
                     </a>
                 </li>
 
-
-
-                <li class="has_sub"><a href="javascript:void(0);" class="waves-effect"><i class="fa fa-money"></i> <span>Bill</span><span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                    <ul class="list-unstyled">
-                        <li><a href="" class="waves-effect">Monthly Bill</a></li>
-                        <li><a href="" class="waves-effect">Past Due</a></li>
-                        {{--<li><a href="{{route('report.showSummary')}}" class="waves-effect">Summary</a></li>--}}
-                    </ul>
-                </li>
 
 
             </ul>
