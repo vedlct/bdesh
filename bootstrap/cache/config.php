@@ -2,13 +2,13 @@
   'app' => 
   array (
     'name' => 'Laravel',
-    'env' => 'local',
-    'debug' => true,
+    'env' => 'production',
+    'debug' => false,
     'url' => 'http://localhost',
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
-    'key' => 'base64:X6N8L0xurp30eVQp4z6HDM4pwJkG/wWAY1o/u7X8QbM=',
+    'key' => NULL,
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -118,18 +118,18 @@
   ),
   'broadcasting' => 
   array (
-    'default' => 'log',
+    'default' => 'null',
     'connections' => 
     array (
       'pusher' => 
       array (
         'driver' => 'pusher',
-        'key' => '',
-        'secret' => '',
-        'app_id' => '',
+        'key' => NULL,
+        'secret' => NULL,
+        'app_id' => NULL,
         'options' => 
         array (
-          'cluster' => 'mt1',
+          'cluster' => NULL,
           'encrypted' => true,
         ),
       ),
@@ -170,7 +170,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\htdocs\\bdesh\\storage\\framework/cache/data',
+        'path' => '/opt/lampp/htdocs/bdesh/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -210,7 +210,7 @@
       'sqlite' => 
       array (
         'driver' => 'sqlite',
-        'database' => 'bdesh',
+        'database' => '/opt/lampp/htdocs/bdesh/database/database.sqlite',
         'prefix' => '',
       ),
       'mysql' => 
@@ -218,8 +218,8 @@
         'driver' => 'mysql',
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'bdesh',
-        'username' => 'root',
+        'database' => 'forge',
+        'username' => 'forge',
         'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
@@ -232,9 +232,9 @@
       array (
         'driver' => 'pgsql',
         'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'bdesh',
-        'username' => 'root',
+        'port' => '5432',
+        'database' => 'forge',
+        'username' => 'forge',
         'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
@@ -244,10 +244,10 @@
       'sqlsrv' => 
       array (
         'driver' => 'sqlsrv',
-        'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'bdesh',
-        'username' => 'root',
+        'host' => 'localhost',
+        'port' => '1433',
+        'database' => 'forge',
+        'username' => 'forge',
         'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
@@ -261,7 +261,7 @@
       array (
         'host' => '127.0.0.1',
         'password' => NULL,
-        'port' => '6379',
+        'port' => 6379,
         'database' => 0,
       ),
     ),
@@ -275,13 +275,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\bdesh\\storage\\app',
+        'root' => '/opt/lampp/htdocs/bdesh/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\bdesh\\storage\\app/public',
-        'url' => 'http://localhost/storage',
+        'root' => '/opt/lampp/htdocs/bdesh/storage/app/public',
+        'url' => '/storage',
         'visibility' => 'public',
       ),
       's3' => 
@@ -325,13 +325,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\xampp\\htdocs\\bdesh\\storage\\logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/bdesh/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\xampp\\htdocs\\bdesh\\storage\\logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/bdesh/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 7,
       ),
@@ -367,14 +367,14 @@
   'mail' => 
   array (
     'driver' => 'smtp',
-    'host' => 'smtp.mailtrap.io',
-    'port' => '2525',
+    'host' => 'smtp.mailgun.org',
+    'port' => 587,
     'from' => 
     array (
       'address' => 'hello@example.com',
       'name' => 'Example',
     ),
-    'encryption' => NULL,
+    'encryption' => 'tls',
     'username' => NULL,
     'password' => NULL,
     'sendmail' => '/usr/sbin/sendmail -bs',
@@ -383,7 +383,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\htdocs\\bdesh\\resources\\views/vendor/mail',
+        0 => '/opt/lampp/htdocs/bdesh/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -461,10 +461,10 @@
   'session' => 
   array (
     'driver' => 'file',
-    'lifetime' => '120',
+    'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\xampp\\htdocs\\bdesh\\storage\\framework/sessions',
+    'files' => '/opt/lampp/htdocs/bdesh/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -484,9 +484,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\bdesh\\resources\\views',
+      0 => '/opt/lampp/htdocs/bdesh/resources/views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\bdesh\\storage\\framework\\views',
+    'compiled' => '/opt/lampp/htdocs/bdesh/storage/framework/views',
   ),
   'trustedproxy' => 
   array (
