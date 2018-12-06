@@ -437,6 +437,7 @@
         var cardExpireYear=$('#cardExpireYear').val();
         var cvv2=$('#cvv2').val();
         var amount=$('#amount').val();
+        var company=$('#company').val();
 
         if(firstName ==""){
             alertMsg("First Name is required");
@@ -496,6 +497,7 @@
                 'cardExpireYear': cardExpireYear,
                 'cvv2': cvv2,
                 'amount': amount,
+                'company': company,
             },
             success: function (data) {
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Donation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Session;
@@ -81,6 +82,23 @@ class PaymentController extends Controller
 
         // Reads the response from BluePay
         if($payment->isSuccessfulResponse()){
+            $donation=new Donation();
+            $donation->country=$r->country;
+            $donation->city=$r->city;
+            $donation->state=$r->state;
+            $donation->firstName=$r->firstName;
+            $donation->lastName=$r->lastName;
+            $donation->email=$r->email;
+            $donation->company=$r->company;
+            $donation->phone=$r->phone;
+            $donation->addr1=$r->addr1;
+            $donation->addr2=$r->addr2;
+            $donation->zip=$r->zip;
+            $donation->amount=$r->amount;
+            $donation->cardNumber=$r->cardNumber;
+//            $donation->fkprojectId=$r->fkprojectId;
+            $donation->fkprojectId=1;
+            $donation->save();
 
             return $data=array(
                 'donateStatus'=>1,
