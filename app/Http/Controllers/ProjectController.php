@@ -33,6 +33,7 @@ class ProjectController extends Controller
        $project->pLocation=$request->projectLocation;
        $project->pDescription = $request->pDescription;
        $project->pGoal = $request->pGoal;
+       $project->pRaised = $request->pRaised;
        $project->fkuserId =Auth::id();
        if ($request->hasFile('headerImage')) {
            $file = $request->file('headerImage');
