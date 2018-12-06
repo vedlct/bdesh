@@ -170,7 +170,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\htdocs\\bdesh\\storage\\framework/cache/data',
+        'path' => '/opt/lampp/htdocs/bdesh/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -275,12 +275,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\bdesh\\storage\\app',
+        'root' => '/opt/lampp/htdocs/bdesh/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\bdesh\\storage\\app/public',
+        'root' => '/opt/lampp/htdocs/bdesh/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -325,13 +325,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\xampp\\htdocs\\bdesh\\storage\\logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/bdesh/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\xampp\\htdocs\\bdesh\\storage\\logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/bdesh/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 7,
       ),
@@ -383,7 +383,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\htdocs\\bdesh\\resources\\views/vendor/mail',
+        0 => '/opt/lampp/htdocs/bdesh/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -464,7 +464,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\xampp\\htdocs\\bdesh\\storage\\framework/sessions',
+    'files' => '/opt/lampp/htdocs/bdesh/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -484,9 +484,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\bdesh\\resources\\views',
+      0 => '/opt/lampp/htdocs/bdesh/resources/views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\bdesh\\storage\\framework\\views',
+    'compiled' => '/opt/lampp/htdocs/bdesh/storage/framework/views',
   ),
   'trustedproxy' => 
   array (
@@ -495,6 +495,9 @@
   ),
   'tinker' => 
   array (
+    'commands' => 
+    array (
+    ),
     'dont_alias' => 
     array (
     ),
