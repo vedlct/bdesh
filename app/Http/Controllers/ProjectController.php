@@ -34,6 +34,12 @@ class ProjectController extends Controller
        $project->pDescription = $request->pDescription;
        $project->pGoal = $request->pGoal;
        $project->fkuserId =Auth::id();
+       if ($request->hasFile('headerImage')) {
+           $file = $request->file('headerImage');
+           $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
+           $file->move('public/HeaderImage', $filename);
+       }
+       $project->headerImage = $filename;
        $project->save();
 
            foreach($request->file('projectImage') as $photo) {

@@ -84,14 +84,16 @@ Route::post('/Donation','PaymentController@makeDonation')->name('payment.donatio
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/test', function (){
-    return view('index');
-});
-Route::get('/project/create','ProjectController@createProject')->name('project.create');
-Route::get('/project/update/{id}','ProjectController@updateProject')->name('project.update');
-Route::get('/project/show','ProjectController@showProject')->name('project.show');
-Route::post('/project/store','ProjectController@storeProjectData')->name('project.store');
-Route::post('/project/update','ProjectController@updateProjectData')->name('project.updateData');
-Route::post('/project/delete','ProjectController@deleteProject')->name('project.delete');
-Route::post('delete/image','ProjectController@deleteProjctImage')->name('project.image.delete');
+Route::group(['middleware' => ['auth']],function () {
+    Route::get('/admin', function () {
+        return view('index');
+    });
+    Route::get('/project/create', 'ProjectController@createProject')->name('project.create');
+    Route::get('/project/update/{id}', 'ProjectController@updateProject')->name('project.update');
+    Route::get('/project/show', 'ProjectController@showProject')->name('project.show');
+    Route::post('/project/store', 'ProjectController@storeProjectData')->name('project.store');
+    Route::post('/project/update', 'ProjectController@updateProjectData')->name('project.updateData');
+    Route::post('/project/delete', 'ProjectController@deleteProject')->name('project.delete');
+    Route::post('delete/image', 'ProjectController@deleteProjctImage')->name('project.image.delete');
 
+});
