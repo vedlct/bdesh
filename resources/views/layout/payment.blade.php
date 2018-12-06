@@ -503,6 +503,8 @@
 
                 $("#wait").css("display", "none");
 
+                console.log(data);
+
                 if (data.donateStatus==0){
 
                     $.alert({

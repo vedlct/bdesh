@@ -55,6 +55,8 @@ class PaymentController extends Controller
     }
     public function makeDonation(Request $r){
 
+
+
         $payment = new BluePay();
         $payment->setCustomerInformation(array(
             'firstName' => $r->firstName,
@@ -74,6 +76,8 @@ class PaymentController extends Controller
             'cardExpire' => $r->cardExpireMonth.$r->cardExpireYear, // Card Expire: 12/25
             'cvv2' => $r->cvv2 // Card CVV2: 123
         ));
+
+
 
         $payment->sale($r->amount); // Sale Amount: $3.00
 
