@@ -184,11 +184,6 @@
     </div>
         </div>
     </section>
-    <!--/ Our Mission -->
-@section('foot-js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
-
-
     <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -249,6 +244,13 @@
             $('#amount_expenses').on('change', calculateZakat);
         });
     </script>
+
+    <!--/ Our Mission -->
+@section('foot-js')
+    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>--}}
+
+
+
 
 
     <script type="text/javascript">

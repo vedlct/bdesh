@@ -25,6 +25,12 @@
 
     <!-- Modernizr Library -->
     <script src="{{url('public/js/libs/modernizr-3.6.0.min.js')}}"></script>
+    <style>
+        .nav-menu > li {
+            margin: 0 20px !important;
+
+        }
+    </style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -80,7 +86,7 @@
                         <a href="#">Events </a>
                         <ul>
                             <li><a href="{{route('upcomingEvents')}}">Upcoming Events</a></li>
-                            <li><a href="{{route('pastevents')}}">Past Events</a></li> 
+                            <li><a href="{{route('event.showEventsPage')}}">Past Events</a></li>
                         </ul>
                     </li>
                     <li>
@@ -94,6 +100,22 @@
 
                     <li><a href="{{route('faqs')}}">Faqs</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
+                    @if(Auth::id())
+                        <li>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                        <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                    @else
+                        <li><a href="{{route('login')}}">Login</a></li>
+                    @endif
                 </ul>
                 <!--/ Dropdown Menu -->
 

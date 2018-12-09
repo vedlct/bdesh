@@ -220,8 +220,65 @@
 <script src="{{url('public/js/general.js')}}"></script>
 
 
+<script src="{{url('public/js/waypoints.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.search_icon').click(function () {
+            $('.nav-justified').toggleClass('search_opened');
+            $('.navbar_search').fadeToggle();
+        });
+        $('.navbar_search .overlay').click(function () {
+            $('.nav-justified').toggleClass('search_opened');
+            $('.navbar_search').fadeToggle();
+        })
 
+        $(window).scroll(function () {
+            var top_bar_height = $('.top_bar').height();
+            var header_height = $('.header').height();
+            var total_scroll = $(window).scrollTop();
+            if (total_scroll > top_bar_height + header_height) {
+                $('.navbar-default').addClass('navbar-fixed-top');
+            } else {
+                $('.navbar-default').removeClass('navbar-fixed-top');
+            }
+        })
 
+        $("html").niceScroll({
+            cursorcolor: "#51a83f",
+            cursorwidth: "10px",
+            cursorborder: "0px solid transparent",
+            cursorborderradius: "0px",
+            mousescrollstep: 60,
+            autohidemode: false,
+            background: "gray",
+            horizrailenabled: false
+        });
+
+        $('.srj').waypoint(function () {
+            var anim = $(this).attr('data-animate'),
+                del = $(this).attr('data-animation-delay');
+            var window_width = $(window).width();
+            if (window_width > 767) {
+                $(this).addClass('animated ' + anim).css({animationDelay: del + 'ms'});
+            } else {
+                $(this).addClass('animated ' + anim).css({animationDelay: 200 + 'ms'});
+            }
+        }, {offset: '100%', triggerOnce: true});
+
+        /*==============Code for Back to Top==============*/
+        if ((jQuery(window).height() + 100) < jQuery(document).height()) {
+            jQuery('#top-link-block').removeClass('hidden').affix({
+                offset: {top: 100}
+            });
+        }
+
+        jQuery('.carousel').carousel({
+            interval: 5000
+        })
+
+    });
+</script>
 
 {{--<!--goal meter js-->--}}
 {{--<script src="{{url('GoalMeter/js/goalmeter.js')}}"></script>--}}

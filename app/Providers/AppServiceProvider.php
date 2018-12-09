@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
+use App\Project;
 use Illuminate\Support\ServiceProvider;
-
+use View;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +14,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer('*', function($view)
+        {
+            $project = Project::get();
+            $view->with('projectsProvider',$project);
+        });
     }
 
     /**

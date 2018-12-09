@@ -14,10 +14,8 @@
 
 //Route::view('/','home.index');
 
-Route::get('/',function (){
-    return view('home.index');
-})->name('home');
-
+Route::get('/','HomeController@index')->name('home');
+Route::get('/single-project/{slug}','ProjectController@singlePost')->name('project.singlePost');
 Route::get('/rohingya',function (){
     return view('pages.rohingya');
 })->name('rohingya');
@@ -80,3 +78,45 @@ Route::view('/upcomingEvents','pages.upcomingEvents')->name('upcomingEvents');
 
 Route::post('/Donation','PaymentController@makeDonation')->name('payment.donationPay');
 
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth']],function () {
+    Route::get('/admin', function () {
+        return view('index');
+    })->name('admin.dashboard');
+
+    /*
+     * Project Route
+     */
+    Route::get('/project/create', 'ProjectController@createProject')->name('project.create');
+    Route::get('/project/update/{id}', 'ProjectController@updateProject')->name('project.update');
+    Route::get('/project/show', 'ProjectController@showProject')->name('project.show');
+    Route::post('/project/store', 'ProjectController@storeProjectData')->name('project.store');
+    Route::post('/project/update', 'ProjectController@updateProjectData')->name('project.updateData');
+    Route::post('/project/delete', 'ProjectController@deleteProject')->name('project.delete');
+    Route::post('delete/image', 'ProjectController@deleteProjctImage')->name('project.image.delete');
+
+
+    /*
+     * event Route
+     */
+
+    Route::get('/event/create', 'eventController@createEvent')->name('event.create');
+    Route::get('/event/update/{id}', 'eventController@updateProject')->name('event.update');
+    Route::get('/event/show', 'eventController@showEvents')->name('event.show');
+    Route::post('/event/store', 'eventController@storeEvent')->name('event.store');
+    Route::post('/event/update', 'eventController@updateProjectData')->name('event.updateData');
+    Route::post('/event/delete', 'eventController@deleteEvent')->name('event.delete');
+    Route::post('event/image', 'eventController@deleteProjctImage')->name('event.image.delete');
+
+
+    /*
+     * Event Page Home
+     */
+    Route::get('/event/show/all', 'eventController@showEventsPage')->name('event.showEventsPage');
+    Route::get('event/show/single/{id}','eventController@singleEvent')->name('event.singleEvent');
+
+
+});

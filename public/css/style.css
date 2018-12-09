@@ -9072,7 +9072,7 @@ h2 {
 
 .accordion:after {
     content: '\02C5';
-    font-size: 13px
+    font-size: 13px;
         color: #777;
     float: right;
     margin-left: 5px;
