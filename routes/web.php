@@ -121,6 +121,11 @@ Route::group(['middleware' => ['auth']],function () {
     /*
      * Rohingya Projects
      */
-
+    Route::get('/rohingya/show/all', 'RohingyaController@show')->name('rohingya.show');
+    Route::get('/rohingya/create', 'RohingyaController@create')->name('rohingya.create');
+    Route::get('/rohingya/edit/{id}', 'RohingyaController@edit')->name('rohingya.edit');
+    Route::post('/rohingya/store', 'RohingyaController@saveData')->name('rohingya.saveData');
+    Route::post('/rohingya/update', 'RohingyaController@updateData')->name('rohingya.updateData');
+    Route::post('/rohingya/delete', 'RohingyaController@delete')->name('rohingya.delete');
 
 });

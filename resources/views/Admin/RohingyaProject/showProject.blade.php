@@ -13,7 +13,7 @@
 
                                     </div>
                                     <div class="col-6">
-                                        <a href="{{route('project.create')}}" class="btn btn-primary pull-right">Add Project</a>
+                                        <a href="{{route('rohingya.create')}}" class="btn btn-primary pull-right">Add Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -22,24 +22,24 @@
                                 <tr>
                                     <th>Title</th>
                                     <th>Details</th>
-                                    <th>Added By</th>
+                                    <th>Image</th>
                                     <th width="10%">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($projects as $project)
                                 <tr>
-                                    <td>{{$project->pName}}</td>
-                                    <td>{!! $project->pDescription !!}</td>
-                                    <td>{{$project->pLocation}}</td>
-                                    <td>{{$project->pGoal}}</td>
+                                    <td>{{$project->title}}</td>
+                                    <td>{!! $project->details !!}</td>
+                                    <td>{{$project->image}}</td>
 
-                                    <td>{{\App\Http\Controllers\ProjectController::getUserName($project->fkuserId)}}</td>
+
+
                                     <td>
                                         <span class="ml-3"></span>
-                                        <a href="{{route('project.update',[$project->projectId])}}" class="btn btn-info btn-sm" data-panel-id="{{$project->projectId}}" onclick="editProject(this)"><i class="fa fa-edit"></i></a>
+                                        <a href="{{route('rohingya.edit',[$project->rohingyaprojectId])}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i></a>
                                         <span class="mr-3"></span>
-                                        <button class="btn btn-danger btn-sm" data-panel-id="{{$project->projectId}}" onclick="deleteProject(this)"><i class="fa fa-trash"></i></button>
+                                        <button class="btn btn-danger btn-sm" data-panel-id="{{$project->rohingyaprojectId}}" onclick="deleteProject(this)"><i class="fa fa-trash"></i></button>
                                     </td>
                                 </tr>
                                     @endforeach
@@ -64,7 +64,7 @@
                     confirm: function () {
                         $.ajax({
                             type: 'POST',
-                            url: "{!! route('project.delete') !!}",
+                            url: "{!! route('rohingya.delete') !!}",
                             cache: false,
                             data: {_token: "{{csrf_token()}}",'id': id},
                             success: function (data) {
