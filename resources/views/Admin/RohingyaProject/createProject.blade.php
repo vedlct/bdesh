@@ -10,9 +10,9 @@
                               <div class="card m-b-30">
                                   <div class="card-body">
                                       <div class="card-header mb-5">
-                                          <h3>Create Project</h3>
+                                          <h3>Create Rohingya Project</h3>
                                       </div>
-                                      <form action="{{route('project.store')}}" method="post" enctype="multipart/form-data">
+                                      <form action="{{route('rohingya.saveData')}}" method="post" enctype="multipart/form-data">
                                           @csrf
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Project Name</label>
@@ -20,52 +20,24 @@
                                                   <input type="text" name="projectName" class="form-control" required placeholder="Project Name">
                                               </div>
                                           </div>
-
-
                                           <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label">Project Location</label>
+                                              <label class="col-sm-2 col-form-label">Project Details</label>
                                               <div class="col-sm-10">
-                                                  <input type="text" name="projectLocation" class="form-control" required placeholder="Project Location">
+                                                  <textarea name="details" class="summernote"></textarea>
                                               </div>
                                           </div>
                                           <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label">Project Goal</label>
+                                              <label class="col-sm-2 col-form-label">Video Url</label>
                                               <div class="col-sm-10">
-                                                  <input type="number" name="pGoal" class="form-control" required placeholder="Project Goal">
+                                                  <input type="text" name="videoUrl" class="form-control" required placeholder="Project Name">
                                               </div>
                                           </div>
                                           <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label">Project Raised</label>
+                                              <label class="col-sm-2 col-form-label">Project image</label>
                                               <div class="col-sm-10">
-                                                  <input type="number" name="pRaised" class="form-control" required placeholder="Project Raised">
+                                                  <input type="file" name="rImage" class="form-control">
                                               </div>
                                           </div>
-                                          {{--<div class="form-group row">--}}
-                                              {{--<label class="col-sm-2 col-form-label">Project Progress</label>--}}
-                                              {{--<div class="col-sm-10">--}}
-                                                  {{--<input type="text" id="pProgress" class="form-control" required placeholder="Project Progress">--}}
-                                              {{--</div>--}}
-                                          {{--</div>--}}
-                                          <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label">Project Description</label>
-                                              <div class="col-sm-10">
-                                                  <textarea name="pDescription" class="summernote"></textarea>
-                                              </div>
-                                          </div>
-                                          <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label">Project Header image</label>
-                                              <div class="col-sm-10">
-                                                  <input type="file" name="headerImage" class="form-control">
-                                              </div>
-                                          </div>
-
-                                          <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label">Project Gallery image</label>
-                                              <div class="col-sm-10">
-                                                  <input type="file" name="projectImage[]" class="form-control" multiple>
-                                              </div>
-                                          </div>
-
 
                                           <div class="form-group">
                                               <div>

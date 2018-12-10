@@ -10,70 +10,41 @@
                 <div class="card m-b-30">
                     <div class="card-body">
                         <div class="card-header mb-5">
-                            <h3>Create Project</h3>
+                            <h3>Update Rohingya Project</h3>
                         </div>
-                        <form action="{{route('project.updateData')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('rohingya.updateData')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group row">
-                                <input type="hidden" id="projectId" name="id" value="{{$projectUpdate->projectId}}">
+                                <input type="hidden" name="id" value="{{$project->rohingyaprojectId}}">
                                 <label class="col-sm-2 col-form-label">Project Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="projectName" value="{{$projectUpdate->pName}}" class="form-control" required placeholder="Project Name">
-                                </div>
-                            </div>
-
-
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Project Location</label>
-                                <div class="col-sm-10">
-                                    <input type="text" name="projectLocation"value="{{$projectUpdate->pLocation}}" class="form-control" required placeholder="Project Location">
+                                    <input type="text" name="projectName" value="{{$project->title}}" class="form-control" required placeholder="Project Name">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Project Goal</label>
+                                <label class="col-sm-2 col-form-label">Project Details</label>
                                 <div class="col-sm-10">
-                                    <input type="number" name="pGoal" value="{{$projectUpdate->pGoal}}"  class="form-control" required  placeholder="Project Goal">
+                                    <textarea name="details" class="summernote">{{$project->details}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Project Raised</label>
+                                <label class="col-sm-2 col-form-label">Video Url</label>
                                 <div class="col-sm-10">
-                                    <input type="number" name="pRaised" value="{{$projectUpdate->pRaised}}" class="form-control" required placeholder="Project Raised">
-                                </div>
-                            </div>
-                            {{--<div class="form-group row">--}}
-                            {{--<label class="col-sm-2 col-form-label">Project Progress</label>--}}
-                            {{--<div class="col-sm-10">--}}
-                            {{--<input type="text" id="pProgress" class="form-control" required placeholder="Project Progress">--}}
-                            {{--</div>--}}
-                            {{--</div>--}}
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Project Description</label>
-                                <div class="col-sm-10">
-                                    <textarea name="pDescription" class="summernote"> {!! $projectUpdate->pDescription !!}</textarea>
+                                    <input type="text" name="videoUrl" value="{{$project->video}}" class="form-control" required placeholder="Project Name">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Project image</label>
                                 <div class="col-sm-10">
-                                    <input type="file" name="projectImage[]" class="form-control" multiple>
+                                    <input type="file" name="rImage" class="form-control">
+                                    <img class="img-thumbnail" src="{{url('public/Rohingya')}}/{{$project->image}}" alt=" ">
                                 </div>
                             </div>
-                           <div class="row" id="projectTable">
-                               @foreach($projectImage as $image)
-                                   <div class="col-md-3 mt-2" >
-                                       <button type="button" class="btn btn-danger btn-sm" data-Panel-id="{{$image->projectImageId}}" onclick="deleteImage(this)">
-                                           <i class="fa fa-trash"></i>
-                                       </button>
-                                       <img src="{{url('public/Gallery')}}/{{$image->projectPath}}" class="img-thumbnail" alt="">
-                                   </div>
-                               @endforeach
-
-                           </div>
 
                             <div class="form-group">
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                    <button type="reset" class="btn btn-secondary waves-effect m-l-5">Cancel</button>
                                 </div>
                             </div>
                         </form>
@@ -83,31 +54,5 @@
         </div>
         <!-- end col -->
     </div>
-    <script>
-        function deleteImage(x) {
-            var id = $(x).data('panel-id')
-            $.confirm({
-                title: 'Are',
-                content: 'Your Sure!',
-                buttons: {
-                    confirm: function () {
-                        $.ajax({
-                            type: 'POST',
-                            url: "{!! route('project.image.delete') !!}",
-                            cache: false,
-                            data: {_token: "{{csrf_token()}}",'id': id},
-                            success: function (data) {
-                                $.alert('Image Deleted!');
-                                $("#projectTable").load(" #projectTable");
-                            }
-                        });
-                    },
-                    cancel: function () {
-                        $.alert('Canceled!');
-                    }
-                }
-            });
 
-        }
-    </script>
 @endsection
