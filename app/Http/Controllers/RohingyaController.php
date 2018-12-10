@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AverageCost;
 use App\RohingyaProject;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -34,6 +35,27 @@ class RohingyaController extends Controller
            }
 
            $rProject->save();
+//                  $avgCost = new AverageCost();
+//           foreach ($request->avgTitle as $title){
+//               foreach ($request->avgPrice as $price){
+//                   $avgCost->title = $title;
+//                   $avgCost->cost = $price;
+//                   $avgCost->fkrohingyaprojectId = $rProject->rohingyaprojectId;
+//                   $avgCost->save();
+//               }
+//
+//           }
+
+           for ($i=0;$i<count($request->avgTitle);$i++){
+               $avgCost = new AverageCost();
+               $avgCost->title =  $request->avgTitle[$i];
+               $avgCost->cost =$request->avgPrice[$i];
+               $avgCost->fkrohingyaprojectId = $rProject->rohingyaprojectId;
+               $avgCost->save();
+
+           }
+
+
            return redirect()->route('rohingya.show');
     }
 
