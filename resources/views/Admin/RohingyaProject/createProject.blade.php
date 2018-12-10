@@ -38,11 +38,22 @@
                                                   <input type="file" name="rImage" class="form-control">
                                               </div>
                                           </div>
+                                          {{--<div class="addMoreBody"> </div>--}}
+                                          {{--<div class="form-group row">--}}
+                                              {{--<label class="col-sm-2 col-form-label">Average Cost</label>--}}
+                                              {{--<div class="col-sm-5">--}}
+                                                  {{--<input type="text" name="projectName" class="form-control" required placeholder="Average Cost Title">--}}
+                                              {{--</div>--}}
+                                              {{--<div class="col-sm-5">--}}
+                                                  {{--<input type="text" name="projectName" class="form-control" required placeholder="Average Cost Price">--}}
+                                              {{--</div>--}}
+
+                                          {{--</div>--}}
+                                              {{--<button type="button" class="btn btn-primary pull-right" id="addMore" >Add More</i> </button>--}}
 
                                           <div class="form-group">
                                               <div>
                                                   <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
-                                                  <button type="reset" class="btn btn-secondary waves-effect m-l-5">Cancel</button>
                                               </div>
                                           </div>
                                       </form>
@@ -52,5 +63,23 @@
                   </div>
                         <!-- end col -->
                   </div>
-
 @endsection
+
+@section('js')
+    <script>
+        $(document).ready(function () {
+            $('#addMore').click(function () {
+                $('.addMoreBody').append("<div class=\"form-group row\">\n" +
+                    "                                              <label class=\"col-sm-2 col-form-label\">Average Cost</label>\n" +
+                    "                                              <div class=\"col-sm-5\">\n" +
+                    "                                                  <input type=\"text\" name=\"projectName\" class=\"form-control\" required placeholder=\"Average Cost Title\">\n" +
+                    "                                              </div>\n" +
+                    "                                              <div class=\"col-sm-5\">\n" +
+                    "                                                  <input type=\"text\" name=\"projectName\" class=\"form-control\" required placeholder=\"Average Cost Price\">\n" +
+                    "                                              </div>\n" +
+                    "\n" +
+                    "                                          </div>");
+            });
+        });
+    </script>
+    @endsection
