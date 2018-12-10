@@ -16,10 +16,11 @@
 
 Route::get('/','HomeController@index')->name('home');
 Route::get('/single-project/{slug}','ProjectController@singlePost')->name('project.singlePost');
-Route::get('/rohingya',function (){
-    return view('pages.rohingya');
-})->name('rohingya');
+//Route::get('/rohingya',function (){
+//    return view('pages.rohingya');
+//})->name('rohingya');
 
+Route::get('/rohingya', 'RohingyaController@index')->name('rohingya');
 Route::get('/about',function (){
     return view('pages.about');
 })->name('about');

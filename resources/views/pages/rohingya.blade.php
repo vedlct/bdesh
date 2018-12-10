@@ -116,7 +116,9 @@
 
                                     <p> BDesh Foundation currently has three different projects on the grounds. You can donate to any of the projects below and they are also eligible for zakah and sadaqa! Below are baseline notes on each project and package/donation costs:</p> <br>
 
-                                    <h4 class="project-title">1. Project Orphan Care: </h4>
+
+
+                                    <h4 class="project-title">1. {{$firstproject->title}} </h4>
 
                                     <div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="https://www.youtube.com/embed/nZ8CkAktRmg" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>
                                     </div>
@@ -128,43 +130,44 @@
 
 
                                     <div class="project-description post-content" itemprop="description"> <br>
-                                        <p>
-                                            More than 40,000 orphans are now living in the 12 camps in Cox’s Bazaar Bangladesh. Your Zakah and Sadaqa can help BDesh build an Orphan Care Center to provide a better environment for Rohingya orphans.
 
-                                        </p>
-                                        <p>
-                                            Donate today! Average cost for orphan care: Per month $50; Per year $600 <br> <br> Orphan Care Center - Overview
+                                         {!! $firstproject->details!!}
+                                        {{--<p>--}}
+                                            {{--More than 40,000 orphans are now living in the 12 camps in Cox’s Bazaar Bangladesh. Your Zakah and Sadaqa can help BDesh build an Orphan Care Center to provide a better environment for Rohingya orphans.--}}
 
-                                        </p>
+                                        {{--</p>--}}
+                                        {{--<p>--}}
+                                            {{--Donate today! Average cost for orphan care: Per month $50; Per year $600 <br> <br> Orphan Care Center - Overview--}}
+
+                                        {{--</p>--}}
 
 
-                                        <ul>
-                                            <li>Children will learn English and Burmese alphabet and numeric number.</li>
-                                            <li>This Shobuj Polly Orphan Care center will be followed government and UNICEF, UNHCR curriculum.</li>
-                                            <li>All students of this project will be selected from orphan and destitute Rohingya families who are deprived from education, nutrition and primary health care.</li>
-                                            <li>School management committee will be formed with 7-9 members comprised of teacher, parents, religious leader(s), etc.</li>
+                                        {{--<ul>--}}
+                                            {{--<li>Children will learn English and Burmese alphabet and numeric number.</li>--}}
+                                            {{--<li>This Shobuj Polly Orphan Care center will be followed government and UNICEF, UNHCR curriculum.</li>--}}
+                                            {{--<li>All students of this project will be selected from orphan and destitute Rohingya families who are deprived from education, nutrition and primary health care.</li>--}}
+                                            {{--<li>School management committee will be formed with 7-9 members comprised of teacher, parents, religious leader(s), etc.</li>--}}
 
-                                        </ul>
+                                        {{--</ul>--}}
 
-                                        <p>
-                                            Your Donation Will Provide:
-                                        </p>
+                                        {{--<p>--}}
+                                            {{--Your Donation Will Provide:--}}
+                                        {{--</p>--}}
 
-                                        <ul>
-                                            <li>Health Care</li>
-                                            <li>Nutritional Food</li>
-                                            <li> Clothes/Shoes</li>
-                                            <li>Education</li>
-                                            <li>Books</li>
-                                            <li>Backpacks</li>
-                                            <li>School Supplies</li>
-                                            <li> …Much more!</li>
+                                        {{--<ul>--}}
+                                            {{--<li>Health Care</li>--}}
+                                            {{--<li>Nutritional Food</li>--}}
+                                            {{--<li> Clothes/Shoes</li>--}}
+                                            {{--<li>Education</li>--}}
+                                            {{--<li>Books</li>--}}
+                                            {{--<li>Backpacks</li>--}}
+                                            {{--<li>School Supplies</li>--}}
+                                            {{--<li> …Much more!</li>--}}
 
-                                        </ul>
+                                        {{--</ul>--}}
 
 
                                     </div>
-
 
                                 </div>
 

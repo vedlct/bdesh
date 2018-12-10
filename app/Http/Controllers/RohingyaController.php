@@ -6,9 +6,24 @@ use App\RohingyaProject;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class RohingyaController extends Controller
 {
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index(){
+
+            $firstproject = RohingyaProject::select('*')->orderBy('rohingyaprojectId', 'asc')->first();
+
+           // $allproject = RohingyaProject::select(DB::raw('WHERE rohingyaprojectId NOT IN (SELECT MAX(rohingyaprojectId) FROM rohingyaproject) ORDER BY rohingyaprojectId DESC '))->get();
+
+         //   return $allproject;
+
+            return view('pages.rohingya' , compact('firstproject'));
+        }
     public function show(){
         $rohingya = RohingyaProject::get();
         return view('Admin.RohingyaProject.showProject')->with('projects',$rohingya);
