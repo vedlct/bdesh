@@ -13,8 +13,10 @@
                             <h3>Edit Event</h3>
                         </div>
                         <form action="{{route('event.updateData')}}" method="post" enctype="multipart/form-data">
+
                             @csrf
                             <div class="form-group row">
+                                <input type="hidden" name="id" value="{{$event->eventId}}">
                                 <label class="col-sm-2 col-form-label">Event Name</label>
                                 <div class="col-sm-10">
                                     <input type="text" name="eventName" value="{{$event->eventName}}"  class="form-control" required placeholder="Event Name">

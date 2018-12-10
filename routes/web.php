@@ -107,7 +107,7 @@ Route::group(['middleware' => ['auth']],function () {
     Route::get('/event/update/{id}', 'EventController@updateEvent')->name('event.update');
     Route::get('/event/show', 'EventController@showEvents')->name('event.show');
     Route::post('/event/store', 'EventController@storeEvent')->name('event.store');
-    Route::post('/event/update', 'EventController@updateEventData')->name('event.updateData');
+    Route::post('/event/updateData', 'EventController@updateEventData')->name('event.updateData');
     Route::post('/event/delete', 'EventController@deleteEvent')->name('event.delete');
     Route::post('event/image', 'EventController@deleteProjctImage')->name('event.image.delete');
 
@@ -117,6 +117,10 @@ Route::group(['middleware' => ['auth']],function () {
      */
     Route::get('/event/show/all', 'EventController@showEventsPage')->name('event.showEventsPage');
     Route::get('event/show/single/{id}','EventController@singleEvent')->name('event.singleEvent');
+
+    /*
+     * Rohingya Projects
+     */
 
 
 });

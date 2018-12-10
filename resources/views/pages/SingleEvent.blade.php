@@ -41,10 +41,10 @@
                                         </li>
 
                                         <li>
-                                            <div class="label">Date:</div>
+                                            <div class="label">Date:</div>{{$event->startDate}}
 
                                             <time class="event-date" datetime="2016-12-12T20:11:00" itemprop="startDate">
-                                                <i class="material-icons">query_builder</i>{{$event->date}}
+                                                <i class="material-icons">query_builder</i> {{$event->startTime}}
                                             </time>
                                         </li>
                                     </ul>
@@ -55,9 +55,9 @@
 
                                             Ends: {{$event->EndDate}} @ {{$event->endTime}} <br> <br>
 
-                                            Place: {{$event->place}}
+                                            Place: {{$event->place}}<>
 
-                                            {{$event->name}} <br> <br>
+                                            {{$event->eventName}} <br> <br>
 
                                             Date: {{$event->startDate}} <br> <br>
 

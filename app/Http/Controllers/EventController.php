@@ -64,17 +64,30 @@ class EventController extends Controller
     }
 
     public function updateEventData(Request $request){
-       $event = Event::findOrFail($request->id);
+        $event = Event::findOrFail($request->id);
         $event->eventName =  $request->eventName;
         $event->eLocation =  $request->eLocation;
         $event->startDate =  $request->startDate;
         $event->startTime =  $request->startTime;
         $event->EndTime =   $request->endTime;
-        $event->EndDate=    Carbon::parse($request->EndDate)->format('Y-m-d');
+        $event->EndDate=  Carbon::parse($request->EndDate)->format('Y-m-d');
         $event->place =    $request->place;
         $event->specialGuest=$request->specialGuest;
         $event->ticketPrice =   $request->ticketPrice;
         $event->contact =   $request->contact;
+        if ($request->hasFile('eventImage')) {
+            $file = $request->file('eventImage');
+            $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
+            $file->move('public/Event', $filename);
+            $event->eventImage = $filename;
+        }
+
+        if ($request->hasFile('headerImage')) {
+            $file = $request->file('headerImage');
+            $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
+            $file->move('public/Event/Header', $filename);
+            $event->headerImage = $filename;
+        }
         $event->update();
         return redirect()->route('event.show');
     }
