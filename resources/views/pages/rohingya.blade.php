@@ -116,12 +116,29 @@
 
                                     <p> BDesh Foundation currently has three different projects on the grounds. You can donate to any of the projects below and they are also eligible for zakah and sadaqa! Below are baseline notes on each project and package/donation costs:</p> <br>
 
+                                </div>
+                            </div>
+                        </div>
+                        @php
+                        $count = 1 ;
+                        @endphp
+                        @foreach($allproject as $ap)
+                        <div class="fly-card fly-project fly-flip-effect vertical">
+                            <div class="boxed flip-front">
+                                <div class="project-content">
+                                    <h4 class="project-title">{{$count}}. {{$ap->title}} </h4>
 
 
-                                    <h4 class="project-title">1. {{$firstproject->title}} </h4>
-
-                                    <div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="https://www.youtube.com/embed/nZ8CkAktRmg" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>
+                                    @if(!empty($ap->video) && !empty($ap->image))
+                                        <img src="{{asset('public/images/rohinga/rohinja-women.jpg')}}" alt="" />
+                                    @elseif(!empty($ap->video))
+                                    <div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="<?php echo $ap->video ?>" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>
                                     </div>
+                                    @else
+                                        <img src="{{asset('public/images/rohinga/rohinja-women.jpg')}}" alt="" />
+                                        <p class="wp-caption-text">Rape as weapon of war on Rohingya Women and Adolescent Girls</p>
+
+                                    @endif
 
 
                                     <div class="">
@@ -131,7 +148,7 @@
 
                                     <div class="project-description post-content" itemprop="description"> <br>
 
-                                         {!! $firstproject->details!!}
+                                         {!! $ap->details!!}
                                         {{--<p>--}}
                                             {{--More than 40,000 orphans are now living in the 12 camps in Cox’s Bazaar Bangladesh. Your Zakah and Sadaqa can help BDesh build an Orphan Care Center to provide a better environment for Rohingya orphans.--}}
 
@@ -165,7 +182,10 @@
                                             {{--<li> …Much more!</li>--}}
 
                                         {{--</ul>--}}
-
+                                        @if(!empty($ap->video) && !empty($ap->image))
+                                            <div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="{{$ap->video}}" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>
+                                            </div>
+                                        @endif
 
                                     </div>
 
@@ -184,85 +204,89 @@
                                 </div>
                             </div>
                         </div>
-                        <!--/ Project Stats -->
-                        <!-- Project Stats -->
-                        <div class="fly-card fly-project fly-flip-effect vertical">
-                            <div class="boxed flip-front">
-                                <div class="project-content">
+                            @php
+                                $count ++ ;
+                            @endphp
+                        @endforeach
+                        {{--<!--/ Project Stats -->--}}
+                        {{--<!-- Project Stats -->--}}
+                        {{--<div class="fly-card fly-project fly-flip-effect vertical">--}}
+                            {{--<div class="boxed flip-front">--}}
+                                {{--<div class="project-content">--}}
 
-                                    <h4 class="project-title">2.Project Women’s Care:</h4> <br>
-                                    <img src="{{asset('public/images/rohinga/rohinja-women.jpg')}}" alt="" />
-                                    <p class="wp-caption-text">Rape as weapon of war on Rohingya Women and Adolescent Girls</p>
-
-
-                                    <div class="">
-                                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XKAGUQDFSPFCJ" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</a>
-                                    </div>
-
-
-                                    <div class="project-description post-content" itemprop="description"> <br>
-                                        <p>
-                                            Burmese security forces have committed widespread rape against women and girls as part of a campaign of ethnic cleansing against Rohingya Muslims in Burma’s Rakhine State - Human Rights Watch stated in a report.
-
-                                        </p> <br>
-                                        <p>
-                                            Fifteen-year-old Hala Sadak, from Hathi Para village in Maungdaw Township, said soldiers had stripped her naked and then dragged her from her home to a nearby tree where, she estimates, about 10 men raped her from behind. She said, “They left me where I was…when my brother and sister came to get me, I was lying there on the ground, they thought I was dead.”
-                                        </p> <br>
-
-                                        <p>
-                                            BDesh’s focus is to improve women’s health and financial well-being. Project Women Care provides women with primary health care, sanitary hygiene aid, livelihood initiatives, etc.
-                                        </p> <br>
-
-                                        <p>
-                                            Your Zakah and Sadaqa can help to rebuild the lives of Rohingya women.
-                                        </p> <br> <br>
-
-                                        <h4 style=""><strong>Donate today! Average cost per:</strong></h4> <br>
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <tbody>
-                                                <tr>
-                                                    <td>Sewing Machine:</td>
-                                                    <td>$125 US Dollars</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Shower Facility:</td>
-                                                    <td>$100 US Dollars</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Hygiene kit:</td>
-                                                    <td>$25 US Dollars</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Medical Care:</td>
-                                                    <td>$25-$100 US Dollars</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                    {{--<h4 class="project-title">2.Project Women’s Care:</h4> <br>--}}
+                                    {{--<img src="{{asset('public/images/rohinga/rohinja-women.jpg')}}" alt="" />--}}
+                                    {{--<p class="wp-caption-text">Rape as weapon of war on Rohingya Women and Adolescent Girls</p>--}}
 
 
+                                    {{--<div class="">--}}
+                                        {{--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XKAGUQDFSPFCJ" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</a>--}}
+                                    {{--</div>--}}
 
-                                    </div>
 
+                                    {{--<div class="project-description post-content" itemprop="description"> <br>--}}
+                                        {{--<p>--}}
+                                            {{--Burmese security forces have committed widespread rape against women and girls as part of a campaign of ethnic cleansing against Rohingya Muslims in Burma’s Rakhine State - Human Rights Watch stated in a report.--}}
 
-                                </div>
+                                        {{--</p> <br>--}}
+                                        {{--<p>--}}
+                                            {{--Fifteen-year-old Hala Sadak, from Hathi Para village in Maungdaw Township, said soldiers had stripped her naked and then dragged her from her home to a nearby tree where, she estimates, about 10 men raped her from behind. She said, “They left me where I was…when my brother and sister came to get me, I was lying there on the ground, they thought I was dead.”--}}
+                                        {{--</p> <br>--}}
 
-                            </div>
+                                        {{--<p>--}}
+                                            {{--BDesh’s focus is to improve women’s health and financial well-being. Project Women Care provides women with primary health care, sanitary hygiene aid, livelihood initiatives, etc.--}}
+                                        {{--</p> <br>--}}
+
+                                        {{--<p>--}}
+                                            {{--Your Zakah and Sadaqa can help to rebuild the lives of Rohingya women.--}}
+                                        {{--</p> <br> <br>--}}
+
+                                        {{--<h4 style=""><strong>Donate today! Average cost per:</strong></h4> <br>--}}
+                                        {{--<div class="table-responsive">--}}
+                                            {{--<table class="table">--}}
+                                                {{--<tbody>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Sewing Machine:</td>--}}
+                                                    {{--<td>$125 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Shower Facility:</td>--}}
+                                                    {{--<td>$100 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Hygiene kit:</td>--}}
+                                                    {{--<td>$25 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Medical Care:</td>--}}
+                                                    {{--<td>$25-$100 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--</tbody>--}}
+                                            {{--</table>--}}
+                                        {{--</div>--}}
 
 
 
-                            <div class="boxed flip-back">
-                                <div class="card-map" data-placeholder="waiting for map">
-                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope"
-                                         data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="{{asset('public/images/marker.png')}}
-                                            " data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
-                                        <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/ Project Stats -->
+                                    {{--</div>--}}
+
+
+                                {{--</div>--}}
+
+                            {{--</div>--}}
+
+                        {{--</div>--}}
+
+                            {{--<div class="boxed flip-back">--}}
+                                {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                                    {{--<div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope"--}}
+                                         {{--data-map-address="1998 Hulman Blvd, Speedway, IN, 46222" data-map-marker="{{asset('public/images/marker.png')}}--}}
+                                            {{--" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">--}}
+                                        {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<!--/ Project Stats -->--}}
 
 
                         <!-- Project Stats -->
@@ -350,18 +374,18 @@
 
                             </div>
 
-
-
-                            <div class="boxed flip-back">
-                                <div class="card-map" data-placeholder="waiting for map">
-                                    <div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222"
-                                         data-map-marker="{{asset('public/images/marker.png')}}" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">
-                                        <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <!--/ Project Stats -->
+
+                            {{--<div class="boxed flip-back">--}}
+                                {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                                    {{--<div class="google-map" data-map-zoom="14" data-map-type="roadmap" data-map-style="onehope" data-map-address="1998 Hulman Blvd, Speedway, IN, 46222"--}}
+                                         {{--data-map-marker="{{asset('public/images/marker.png')}}" data-map-marker-size="[31,46]" data-map-marker-anchor="[16,46]">--}}
+                                        {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<!--/ Project Stats -->--}}
 
 
                     </article>

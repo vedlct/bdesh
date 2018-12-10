@@ -17,13 +17,13 @@ class RohingyaController extends Controller
      */
     public function index(){
 
-            $firstproject = RohingyaProject::select('*')->orderBy('rohingyaprojectId', 'asc')->first();
+            $allproject = RohingyaProject::get();
 
            // $allproject = RohingyaProject::select(DB::raw('WHERE rohingyaprojectId NOT IN (SELECT MAX(rohingyaprojectId) FROM rohingyaproject) ORDER BY rohingyaprojectId DESC '))->get();
 
          //   return $allproject;
 
-            return view('pages.rohingya' , compact('firstproject'));
+            return view('pages.rohingya' , compact('allproject'));
         }
     public function show(){
         $rohingya = RohingyaProject::get();
