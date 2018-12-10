@@ -30,6 +30,7 @@ class EventController extends Controller
             $event->eLocation =  $request->eLocation;
             $event->startDate =  $request->startDate;
             $event->startTime =  $request->startTime;
+            $event->EndTime =  $request->endTime;
             $event->EndDate= Carbon::parse($request->EndDate)->format('Y-m-d');
             $event->place =    $request->place;
             $event->specialGuest=$request->specialGuest;
@@ -84,10 +85,14 @@ class EventController extends Controller
     public static function getUserName($id){
         return User::where('userId',$id)->first()->name;
     }
+    public function showEventsPage(){
+        $event = Event::get();
+        return view('pages.pastevents')->with('events',$event);
+    }
 
-    public function singlePost($slug){
-        $project = Project::where('slug',$slug)->first();
-        $projectImage = ProjectImage::where('fkprojectId',$project->projectId)->get();
-        return view('pages.singleProject')->with('project',$project)->with('projectImage',$projectImage);
+    public function singleEvent($id){
+        $event = Event::findOrFail($id);
+//        return $event;
+        return view('pages.SingleEvent')->with('event',$event);
     }
 }

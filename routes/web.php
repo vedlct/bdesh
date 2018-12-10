@@ -85,7 +85,7 @@ Auth::routes();
 Route::group(['middleware' => ['auth']],function () {
     Route::get('/admin', function () {
         return view('index');
-    });
+    })->name('admin.dashboard');
 
     /*
      * Project Route
@@ -110,6 +110,13 @@ Route::group(['middleware' => ['auth']],function () {
     Route::post('/event/update', 'eventController@updateProjectData')->name('event.updateData');
     Route::post('/event/delete', 'eventController@deleteEvent')->name('event.delete');
     Route::post('event/image', 'eventController@deleteProjctImage')->name('event.image.delete');
+
+
+    /*
+     * Event Page Home
+     */
+    Route::get('/event/show/all', 'eventController@showEventsPage')->name('event.showEventsPage');
+    Route::get('event/show/single/{id}','eventController@singleEvent')->name('event.singleEvent');
 
 
 });

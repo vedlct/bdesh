@@ -27,7 +27,7 @@
     <script src="{{url('public/js/libs/modernizr-3.6.0.min.js')}}"></script>
     <style>
         .nav-menu > li {
-            margin: 0 32px !important;
+            margin: 0 20px !important;
 
         }
     </style>
@@ -86,7 +86,7 @@
                         <a href="#">Events </a>
                         <ul>
                             <li><a href="{{route('upcomingEvents')}}">Upcoming Events</a></li>
-                            <li><a href="{{route('pastevents')}}">Past Events</a></li> 
+                            <li><a href="{{route('event.showEventsPage')}}">Past Events</a></li>
                         </ul>
                     </li>
                     <li>
@@ -112,6 +112,7 @@
                                 @csrf
                             </form>
                         </li>
+                        <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                     @else
                         <li><a href="{{route('login')}}">Login</a></li>
                     @endif
