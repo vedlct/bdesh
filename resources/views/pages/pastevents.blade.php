@@ -30,13 +30,13 @@
                 <!-- Event -->
                 <article class="fly-card fly-event fly-flip-effect" itemscope itemtype="http://schema.org/Event">
                     <div class="boxed flip-front">
-                        <a class="event-media js-wave" href="{{route('familyEvent')}}" itemprop="url">
-                            <img src="{{asset('public/images/events/BDeshFlyer_BANNER.jpg')}}" alt="" itemprop="image" />
+                        <a class="event-media js-wave" href="{{route('event.singleEvent',[$event->eventId])}}" itemprop="url">
+                            <img src="{{asset('public/Event')}}/{{$event->eventImage}}" alt="" itemprop="image" />
                         </a>
 
                         <div class="event-content">
                             <h3 class="event-title" itemprop="name">
-                                <a href="{{route('familyEvent')}}">{{$event->evenntName}}</a>
+                                <a href="{{route('event.singleEvent',[$event->eventId])}}">{{$event->evenntName}}</a>
                             </h3>
 
                             <div class="event-location">

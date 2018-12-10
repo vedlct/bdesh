@@ -29,11 +29,14 @@
 
                     </ul>
                 </li>
-                <li>
-                    <a href="" class="waves-effect">
-                        <i class="fa fa-user"></i> <span>Client</span>
-                    </a>
+                <li class="has_sub"><a href="javascript:void(0);" class="waves-effect"><i class="dripicons-meter"></i> <span>Rohingya Project </span><span class="menu-arrow float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('event.create')}}#eventCreate" id="eventCreate" class="waves-effect">Create project</a></li>
+                        <li><a href="{{route('event.show')}}#eventShow" id="eventShow" class="waves-effect">Show project</a></li>
+
+                    </ul>
                 </li>
+
 
 
 
