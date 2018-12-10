@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- Header Image or Video -->
-<section class="fly-header parallax overlay" style="background-image: url({{url('public/images/events/BDeshFlyer_BANNER.jpg')}});background-size: contain;">
+<section class="fly-header parallax overlay" style="background-image: url({{url('public/Event/Header')}}/{{$event->headerImage}});background-size: contain;">
         <div class="fly-header-content">
             <div class="page-subtitle"></div>
             <h1 id="projectTitle1" class="page-title" itemprop="title"></h1>
@@ -20,8 +20,9 @@
                     <article class="fly-article-details" itemscope itemtype="http://schema.org/DonateAction" itemref="projectTitle1">
                         <div class="post-media">
                             <div class="owl-carousel post-slider">
-                                <a class="swipebox" data-rel="gallery1" href="{{asset('public/images/events/Family-Night-&-Fund-Raising-Dinner.jpg')}}" title="This is the First Image Description"><img src="{{asset('public/images/events/Family-Night-&-Fund-Raising-Dinner.jpg')}}" alt="" itemprop="image" /></a>
-                                
+                                <a class="swipebox" data-rel="gallery1" href="{{asset('public/Event')}}/{{$event->eventImage}}" title="This is the First Image Description">
+                                    <img src="{{asset('public/Event')}}/{{$event->eventImage}}" alt="" itemprop="image" /></a>
+
                             </div>
                         </div>
 
@@ -43,7 +44,7 @@
                                             <div class="label">Date:</div>
 
                                             <time class="event-date" datetime="2016-12-12T20:11:00" itemprop="startDate">
-                                                <i class="material-icons">query_builder</i>{{$event->createdDate}}
+                                                <i class="material-icons">query_builder</i>{{$event->date}}
                                             </time>
                                         </li>
                                     </ul>
@@ -52,7 +53,7 @@
                                         <p>
                                             <br> <br> Starts: {{$event->startDate}} @ {{$event->startTime}} <br> <br>
 
-                                            Ends: {{$event->EndDate}} @ {{$event->EndTime}} <br> <br>
+                                            Ends: {{$event->EndDate}} @ {{$event->endTime}} <br> <br>
 
                                             Place: {{$event->place}}
 

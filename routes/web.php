@@ -103,20 +103,20 @@ Route::group(['middleware' => ['auth']],function () {
      * event Route
      */
 
-    Route::get('/event/create', 'eventController@createEvent')->name('event.create');
-    Route::get('/event/update/{id}', 'eventController@updateProject')->name('event.update');
-    Route::get('/event/show', 'eventController@showEvents')->name('event.show');
-    Route::post('/event/store', 'eventController@storeEvent')->name('event.store');
-    Route::post('/event/update', 'eventController@updateProjectData')->name('event.updateData');
-    Route::post('/event/delete', 'eventController@deleteEvent')->name('event.delete');
-    Route::post('event/image', 'eventController@deleteProjctImage')->name('event.image.delete');
+    Route::get('/event/create', 'EventController@createEvent')->name('event.create');
+    Route::get('/event/update/{id}', 'EventController@updateEvent')->name('event.update');
+    Route::get('/event/show', 'EventController@showEvents')->name('event.show');
+    Route::post('/event/store', 'EventController@storeEvent')->name('event.store');
+    Route::post('/event/update', 'EventController@updateEventData')->name('event.updateData');
+    Route::post('/event/delete', 'EventController@deleteEvent')->name('event.delete');
+    Route::post('event/image', 'EventController@deleteProjctImage')->name('event.image.delete');
 
 
     /*
      * Event Page Home
      */
-    Route::get('/event/show/all', 'eventController@showEventsPage')->name('event.showEventsPage');
-    Route::get('event/show/single/{id}','eventController@singleEvent')->name('event.singleEvent');
+    Route::get('/event/show/all', 'EventController@showEventsPage')->name('event.showEventsPage');
+    Route::get('event/show/single/{id}','EventController@singleEvent')->name('event.singleEvent');
 
 
 });
