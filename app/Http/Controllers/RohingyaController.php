@@ -30,8 +30,9 @@ class RohingyaController extends Controller
                $file = $request->file('rImage');
                $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
                $file->move('public/Rohingya', $filename);
+               $rProject->image = $filename;
            }
-           $rProject->image = $filename;
+
            $rProject->save();
            return redirect()->route('rohingya.show');
     }
@@ -46,8 +47,9 @@ class RohingyaController extends Controller
                 $file = $request->file('rImage');
                 $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
                 $file->move('public/Rohingya', $filename);
+                $rProject->image = $filename;
             }
-            $rProject->image = $filename;
+
             $rProject->save();
             return redirect()->route('rohingya.show');
         }
