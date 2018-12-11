@@ -61,14 +61,14 @@ class RohingyaController extends Controller
 //
 //           }
 
-           for ($i=0;$i<count($request->avgTitle);$i++){
-               $avgCost = new AverageCost();
-               $avgCost->title =  $request->avgTitle[$i];
-               $avgCost->cost =$request->avgPrice[$i];
-               $avgCost->fkrohingyaprojectId = $rProject->rohingyaprojectId;
-               $avgCost->save();
-
-           }
+//           for ($i=0;$i<count($request->avgTitle);$i++){
+//               $avgCost = new AverageCost();
+//               $avgCost->title =  $request->avgTitle[$i];
+//               $avgCost->cost =$request->avgPrice[$i];
+//               $avgCost->fkrohingyaprojectId = $rProject->rohingyaprojectId;
+//               $avgCost->save();
+//
+//           }
 
 
            return redirect()->route('rohingya.show');

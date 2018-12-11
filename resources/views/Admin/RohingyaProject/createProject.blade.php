@@ -39,19 +39,19 @@
                                               </div>
                                           </div>
 
-                                          <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label">Average Cost</label>
-                                              <div class="col-sm-5">
-                                                  <input type="text" name="avgTitle[]" class="form-control" required placeholder="Average Cost Title">
-                                              </div>
-                                              <div class="col-sm-5">
-                                                  <input type="text" name="avgPrice[]" class="form-control" required placeholder="Average Cost Price">
-                                              </div>
+                                          {{--<div class="form-group row">--}}
+                                              {{--<label class="col-sm-2 col-form-label">Average Cost</label>--}}
+                                              {{--<div class="col-sm-5">--}}
+                                                  {{--<input type="text" name="avgTitle[]" class="form-control" required placeholder="Average Cost Title">--}}
+                                              {{--</div>--}}
+                                              {{--<div class="col-sm-5">--}}
+                                                  {{--<input type="text" name="avgPrice[]" class="form-control" required placeholder="Average Cost Price">--}}
+                                              {{--</div>--}}
 
-                                          </div>
-                                          <div class="addMoreBody"> </div>
-                                          <br>
-                                              <button type="button" class="btn btn-primary pull-right" id="addMore" >Add More</i> </button>
+                                          {{--</div>--}}
+                                          {{--<div class="addMoreBody"> </div>--}}
+                                          {{--<br>--}}
+                                              {{--<button type="button" class="btn btn-primary pull-right" id="addMore" >Add More</i> </button>--}}
 
                                           <div class="form-group">
                                               <div>
