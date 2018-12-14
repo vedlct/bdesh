@@ -28,7 +28,9 @@
     <style>
         .nav-menu > li {
             margin: 0 20px !important;
-
+        }
+        p {
+            color: #000 !important;
         }
     </style>
 </head>
