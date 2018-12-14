@@ -130,14 +130,22 @@
 
 
                                     @if(!empty($ap->video) && !empty($ap->image))
-                                        <img src="{{asset('public/images/rohinga/rohinja-women.jpg')}}" alt="" />
+                                        <img src="{{url('public/Rohingya')}}/{{$ap->image}}" alt="" />
+                                        @if(!empty($ap->imagetitle))
+                                            <p class="wp-caption-text">{{$ap->imagetitle}}</p>
+                                        @else
+                                            <br>
+                                        @endif
                                     @elseif(!empty($ap->video))
                                     <div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="<?php echo $ap->video ?>" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>
                                     </div>
                                     @else
-                                        <img src="{{asset('public/images/rohinga/rohinja-women.jpg')}}" alt="" />
-                                        <p class="wp-caption-text">Rape as weapon of war on Rohingya Women and Adolescent Girls</p>
-
+                                        <img src="{{url('public/Rohingya')}}/{{$ap->image}}" alt="" />
+                                        @if(!empty($ap->imagetitle))
+                                        <p class="wp-caption-text">{{$ap->imagetitle}}</p>
+                                        @else
+                                           <br>
+                                        @endif
                                     @endif
 
 
@@ -183,7 +191,7 @@
 
                                         {{--</ul>--}}
                                         @if(!empty($ap->video) && !empty($ap->image))
-                                            <div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="{{$ap->video}}" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>
+                                            <div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="<?php echo $ap->video ?>" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>
                                             </div>
                                         @endif
 
@@ -290,91 +298,91 @@
 
 
                         <!-- Project Stats -->
-                        <div class="fly-card fly-project fly-flip-effect vertical">
-                            <div class="boxed flip-front">
-                                <div class="project-content">
+                        {{--<div class="fly-card fly-project fly-flip-effect vertical">--}}
+                            {{--<div class="boxed flip-front">--}}
+                                {{--<div class="project-content">--}}
 
-                                    <h4 class="project-title">3.Project Medical Care:</h4> <br>
+                                    {{--<h4 class="project-title">3.Project Medical Care:</h4> <br>--}}
 
-                                    <p class="wp-caption-text">Water-borne disease outbreaks such as cholera, bloody diarrhea, typhoid, and hepatitis E have been a major concern in the camps</p>
-                                    <img src="{{asset('public/images/rohinga/rohinja-health.jpg')}}" alt="" /> <br>
-
-
-
-                                    <div class="">
-                                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XKAGUQDFSPFCJ" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</a>
-                                    </div>
-
-
-                                    <div class="project-description post-content" itemprop="description"> <br>
-                                        <p>
-                                            Our partnered on-site medical team takes care of refugee medical needs ranging from: paramedics, OB/GYN needs, medicine, vaccinations, surgical services, etc.
-
-                                        </p> <br>
-                                        <p>
-                                            Fifteen-year-old Hala Sadak, from Hathi Para village in Maungdaw Township, said soldiers had stripped her naked and then dragged her from her home to a nearby tree where, she estimates, about 10 men raped her from behind. She said, “They left me where I was…when my brother and sister came to get me, I was lying there on the ground, they thought I was dead.”
-                                        </p> <br>
-
-                                        <br>
-
-                                        <h4 style=""><strong>Donate today! Average cost per:</strong></h4> <br>
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <tbody>
-                                                <tr>
-                                                    <td>Tube Well &ndash;</td>
-                                                    <td>$500 US Dollars</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sanitary Latrine &ndash;</td>
-                                                    <td>$50 US Dollars</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Women&rsquo;s Shower Facility -</td>
-                                                    <td>$100 US Dollars</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Primary Medical Care Per 100 Patients -</td>
-                                                    <td>$500 US Dollars</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Critical Need Patients -</td>
-                                                    <td>$100 US Dollars</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-
-                                        <p>
-                                            Please consider donating to the Rohingya Appeal during the month of Ramadan and beyond. The families need as much support as possible and you can help make a difference. <br><br>
-
-                                            You can send your checks payable to BDesh Foundation at the following address: <br> <br>
-                                            BDesh Foundation, Inc. <br>
-                                            6 Silo Mill CT <br>
-                                            Sterling, VA 20164 <br>
-                                            USA
-                                        </p> <br>
+                                    {{--<p class="wp-caption-text">Water-borne disease outbreaks such as cholera, bloody diarrhea, typhoid, and hepatitis E have been a major concern in the camps</p>--}}
+                                    {{--<img src="{{asset('public/images/rohinga/rohinja-health.jpg')}}" alt="" /> <br>--}}
 
 
 
+                                    {{--<div class="">--}}
+                                        {{--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XKAGUQDFSPFCJ" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</a>--}}
+                                    {{--</div>--}}
 
 
-                                        <div class="">
-                                            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XKAGUQDFSPFCJ" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</a>
-                                        </div> <br>
+                                    {{--<div class="project-description post-content" itemprop="description"> <br>--}}
+                                        {{--<p>--}}
+                                            {{--Our partnered on-site medical team takes care of refugee medical needs ranging from: paramedics, OB/GYN needs, medicine, vaccinations, surgical services, etc.--}}
 
-                                        <div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="https://www.youtube.com/embed/qyRCb3Y6fyI" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>
-                                        </div>
+                                        {{--</p> <br>--}}
+                                        {{--<p>--}}
+                                            {{--Fifteen-year-old Hala Sadak, from Hathi Para village in Maungdaw Township, said soldiers had stripped her naked and then dragged her from her home to a nearby tree where, she estimates, about 10 men raped her from behind. She said, “They left me where I was…when my brother and sister came to get me, I was lying there on the ground, they thought I was dead.”--}}
+                                        {{--</p> <br>--}}
 
-                                    </div>
+                                        {{--<br>--}}
+
+                                        {{--<h4 style=""><strong>Donate today! Average cost per:</strong></h4> <br>--}}
+                                        {{--<div class="table-responsive">--}}
+                                            {{--<table class="table">--}}
+                                                {{--<tbody>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Tube Well &ndash;</td>--}}
+                                                    {{--<td>$500 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Sanitary Latrine &ndash;</td>--}}
+                                                    {{--<td>$50 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Women&rsquo;s Shower Facility -</td>--}}
+                                                    {{--<td>$100 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Primary Medical Care Per 100 Patients -</td>--}}
+                                                    {{--<td>$500 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr>--}}
+                                                    {{--<td>Critical Need Patients -</td>--}}
+                                                    {{--<td>$100 US Dollars</td>--}}
+                                                {{--</tr>--}}
+                                                {{--</tbody>--}}
+                                            {{--</table>--}}
+                                        {{--</div>--}}
 
 
-                                </div>
+                                        {{--<p>--}}
+                                            {{--Please consider donating to the Rohingya Appeal during the month of Ramadan and beyond. The families need as much support as possible and you can help make a difference. <br><br>--}}
 
-                            </div>
+                                            {{--You can send your checks payable to BDesh Foundation at the following address: <br> <br>--}}
+                                            {{--BDesh Foundation, Inc. <br>--}}
+                                            {{--6 Silo Mill CT <br>--}}
+                                            {{--Sterling, VA 20164 <br>--}}
+                                            {{--USA--}}
+                                        {{--</p> <br>--}}
 
-                        </div>
+
+
+
+
+                                        {{--<div class="">--}}
+                                            {{--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XKAGUQDFSPFCJ" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</a>--}}
+                                        {{--</div> <br>--}}
+
+                                        {{--<div class="thumbnail srj" data-animate="fadeInUp" data-animation-delay="400"><iframe src="https://www.youtube.com/embed/qyRCb3Y6fyI" width="100%" height="315" frameborder="0" allowfullscreen=""></iframe>--}}
+                                        {{--</div>--}}
+
+                                    {{--</div>--}}
+
+
+                                {{--</div>--}}
+
+                            {{--</div>--}}
+
+                        {{--</div>--}}
 
                             {{--<div class="boxed flip-back">--}}
                                 {{--<div class="card-map" data-placeholder="waiting for map">--}}

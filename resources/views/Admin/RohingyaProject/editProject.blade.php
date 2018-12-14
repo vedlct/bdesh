@@ -36,7 +36,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Video Url</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="videoUrl" value="{{$project->video}}" class="form-control" required placeholder="Project Name">
+                                    <input type="text" name="videoUrl" value="{{$project->video}}" class="form-control"  placeholder="Project Name">
                                 </div>
                             </div>
                             <div class="form-group row">
