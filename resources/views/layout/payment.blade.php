@@ -438,6 +438,7 @@
         var cvv2=$('#cvv2').val();
         var amount=$('#amount').val();
         var company=$('#company').val();
+        var projectId = $('#projectId').val();
 
         if(firstName ==""){
             alertMsg("First Name is required");
@@ -498,6 +499,7 @@
                 'cvv2': cvv2,
                 'amount': amount,
                 'company': company,
+                'projectId':projectId,
             },
             success: function (data) {
 

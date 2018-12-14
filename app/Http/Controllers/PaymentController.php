@@ -100,8 +100,7 @@ class PaymentController extends Controller
             $donation->zip=$r->zip;
             $donation->amount=$r->amount;
             $donation->cardNumber=$r->cardNumber;
-//            $donation->fkprojectId=$r->fkprojectId;
-            $donation->fkprojectId=1;
+            $donation->fkprojectId=$r->projectId;
             $donation->save();
 
             return $data=array(

@@ -180,7 +180,7 @@
             </div>
 
             <div class="service-buttons">
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" class="btn btn-medium js-wave">PAY NOW</a>
+                <a href="{{route('creditcard')}}" class="btn btn-medium js-wave">PAY NOW</a>
             </div>
         </div>
 

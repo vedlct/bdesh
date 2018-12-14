@@ -60,6 +60,7 @@
                         <div class="fly-card fly-project fly-flip-effect vertical">
                             <div class="boxed flip-front">
                                 <div class="project-content">
+                                    <input type="hidden" name="projectId" id="projectId" value="{{$project->projectId}}">
                                     <h4 class="project-title">{{$project->pName}}</h4>
 
                                     <div class="project-location">
