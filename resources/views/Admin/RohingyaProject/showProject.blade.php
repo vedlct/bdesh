@@ -21,7 +21,7 @@
                                 <thead>
                                 <tr>
                                     <th>Title</th>
-                                    <th>Details</th>
+                                    <th>Image Title</th>
                                     <th>Image</th>
                                     <th width="10%">Action</th>
                                 </tr>
@@ -30,7 +30,7 @@
                                 @foreach($projects as $project)
                                 <tr>
                                     <td>{{$project->title}}</td>
-                                    <td>{!! $project->details !!}</td>
+                                    <td>{!! $project->imagetitle !!}</td>
                                     <td>{{$project->image}}</td>
 
 

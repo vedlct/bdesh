@@ -27,6 +27,13 @@
                                               </div>
                                           </div>
                                           <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label">Image Title</label>
+                                              <div class="col-sm-10">
+                                                  <input type="text" name="imageTitle" class="form-control"  placeholder="Image Title">
+                                              </div>
+                                          </div>
+
+                                          <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Video Url</label>
                                               <div class="col-sm-10">
                                                   <input type="text" name="videoUrl" class="form-control"  placeholder="Project Name">
