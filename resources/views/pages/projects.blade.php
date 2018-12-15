@@ -19,7 +19,7 @@
                     <article class="fly-card fly-project fly-flip-effect" itemscope itemtype="http://schema.org/DonateAction">
                         <div class="boxed flip-front">
                             <a class="project-media js-wave" href="{{route('project.singlePost',[$project->slug])}}" itemprop="url">
-                                <img src="{{asset('public/images/current/thumb_img_1.png')}}" alt="" itemprop="image" />
+                                <img src="{{asset('public/Gallery')}}/{{\App\Http\Controllers\HomeController::getThumnailImage($project->projectId)}}" alt="" itemprop="image" />
                                 <span class="progress">
                                     <span class="progress-label">0%</span>
                                     <span class="progress-bar"></span>
@@ -36,9 +36,7 @@
                                 </div>
 
                                 <div class="project-description" itemprop="description">
-                                    <p>
                                       {!! str_limit($project->pDescription,250) !!}
-                                    </p>
                                 </div>
 
                                 <div class="project-footer">

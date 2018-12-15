@@ -96,4 +96,15 @@ public function deleteProjctImage(Request $request){
         $projectImage = ProjectImage::where('fkprojectId',$project->projectId)->get();
         return view('pages.singleProject')->with('project',$project)->with('projectImage',$projectImage);
    }
+   public function saveToHome(Request $request){
+       $project = Project::findOrFail($request->id);
+       if($project->projectId!=1){
+           $project->home = '1';
+           $project->save();
+       }
+       else{
+           $project->home = '0';
+           $project->save();
+       }
+   }
 }
