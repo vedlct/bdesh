@@ -25,6 +25,7 @@
                                     <th>Location</th>
                                     <th>Goal</th>
                                     <th>Added By</th>
+                                    <td>Homepage</td>
                                     <th width="10%">Action</th>
                                 </tr>
                                 </thead>
@@ -37,6 +38,15 @@
                                     <td>{{$project->pGoal}}</td>
 
                                     <td>{{\App\Http\Controllers\ProjectController::getUserName($project->fkuserId)}}</td>
+                                    <td>
+                                        <form >
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="form-control-input" id="checkHome" value="{{$project->projectId}}" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
                                     <td>
                                         <span class="ml-3"></span>
                                         <a href="{{route('project.update',[$project->projectId])}}" class="btn btn-info btn-sm" data-panel-id="{{$project->projectId}}" onclick="editProject(this)"><i class="fa fa-edit"></i></a>
@@ -57,6 +67,25 @@
 
 @section('js')
     <script type="text/javascript">
+
+
+        $(document).ready(function () {
+            $('#checkHome').click(function () {
+                var checkHome = $('#checkHome').val();
+                $.ajax({
+                    type: 'POST',
+                    url: "{!! route('project.saveToHome') !!}",
+                    cache: false,
+                    data: {_token: "{{csrf_token()}}",'id': checkHome},
+                    success: function (data) {
+                        console.log(data)
+                    }
+                });
+
+            });
+        })
+
+
         function deleteProject(x) {
             var id = $(x).data('panel-id');
             $.confirm({
