@@ -333,7 +333,7 @@
                 <select class="select2" name="cardExpireYear" id="cardExpireYear">
                     <option value="">Bdesh</option>
                     @foreach($projectName as $name)
-                    <option value="bdesh">{{$name->pName}}</option>
+                    <option @if( strtoupper(basename(Request::url()))  == strtoupper($name->slug) ) selected @endif value="{{$name->projectId}}">{{strtoupper($name->pName)}}</option>
                     @endforeach
 
                 </select>
