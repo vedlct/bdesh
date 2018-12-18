@@ -224,7 +224,8 @@
 
                             <div class="project-description" itemprop="description">
                                 <p>
-                                    {!! str_limit($projects->pDescription,250) !!}
+                                    {!!  substr(strip_tags($projects->pDescription), 0, 200) !!}
+
                                 </p>
                             </div>
 

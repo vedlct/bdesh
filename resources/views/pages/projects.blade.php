@@ -36,7 +36,8 @@
                                 </div>
 
                                 <div class="project-description" itemprop="description">
-                                      {!! str_limit($project->pDescription,250) !!}
+                                    {!!  substr(strip_tags($project->pDescription), 0, 150) !!}
+                                      {{--{!! str_limit($project->pDescription,250) !!}--}}
                                 </div>
 
                                 <div class="project-footer">
