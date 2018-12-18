@@ -23,6 +23,7 @@ class ProjectController extends Controller
 
    public function showProject(){
        $project = Project::get();
+      // return $project;
         return view('Admin.Project.showProject')->with('projects',$project);
    }
 
@@ -98,13 +99,9 @@ public function deleteProjctImage(Request $request){
    }
    public function saveToHome(Request $request){
        $project = Project::findOrFail($request->id);
-       if($project->projectId!=1){
-           $project->home = '1';
+           $project->home = $request->id1;
            $project->save();
-       }
-       else{
-           $project->home = '0';
-           $project->save();
-       }
+
+       return $project;
    }
 }
