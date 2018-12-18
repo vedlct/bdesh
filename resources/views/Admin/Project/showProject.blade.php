@@ -21,7 +21,7 @@
                                 <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    {{--<th>Description</th>--}}
                                     <th>Location</th>
                                     <th>Goal</th>
                                     <th>Added By</th>
@@ -34,7 +34,7 @@
                                 <tr>
                                     <td>{{$project->pName}}</td>
                                     {{--<td>{!!str_limit($project->pDescription,480)!!}</td>--}}
-                                    <td>{!! $project->pDescription !!}</td>
+                                    {{--<td>{!! $project->pDescription !!}</td>--}}
                                     <td>{{$project->pLocation}}</td>
                                     <td>{{$project->pGoal}}</td>
 
@@ -43,7 +43,7 @@
                                         <form >
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="form-control-input" id="checkHome" value="{{$project->projectId}}" />
+                                                    <input type="checkbox" class="form-control-input checkHome" @if($project->home==1)checked @endif id="checkHome" value="{{$project->projectId}}" />
                                                 </div>
                                             </div>
                                         </form>
@@ -71,20 +71,30 @@
 
 
         $(document).ready(function () {
-            $('#checkHome').click(function () {
-                var checkHome = $('#checkHome').val();
+
+
+            $('.checkHome').on('click',function () {
+
+                if ($(this).is(':checked')) {
+                    id1=1;
+
+                }else{
+                    id1=0;
+                }
+                var checkHome = $(this).val();
+
                 $.ajax({
                     type: 'POST',
                     url: "{!! route('project.saveToHome') !!}",
                     cache: false,
-                    data: {_token: "{{csrf_token()}}",'id': checkHome},
+                    data: {_token: "{{csrf_token()}}",'id': checkHome,id1:id1},
                     success: function (data) {
                         console.log(data)
                     }
                 });
 
             });
-        })
+        });
 
 
         function deleteProject(x) {
