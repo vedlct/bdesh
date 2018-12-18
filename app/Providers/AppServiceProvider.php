@@ -18,7 +18,8 @@ class AppServiceProvider extends ServiceProvider
         {
             $project = Project::where('home','1')->take(5)->orderBy('created_at','desc')->get();
             $allProject = Project::get();
-            $view->with('projectsProvider',$project)->with('allProjects',$allProject);
+            $projectName = Project::select('pName')->get();
+            $view->with('projectsProvider',$project)->with('allProjects',$allProject)->with('projectName',$projectName);
         });
     }
 

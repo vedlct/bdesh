@@ -158,7 +158,7 @@
                                     </div>
                                     <!--- end Your Zakat Zakat-Eligible Total) ---->
                                     <!--<button type="submit" class="btn btn-success" id="submit" name="submit">PAY YOUR ZAKAT NOW</button>-->
-                                    <div class="btn btn-success"><a style="color: #fff;" title="Donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FS3HK7GLRNFVY" target="blank">PAY YOUR ZAKAT NOW</a></div>
+                                    <div class="btn btn-success"><a style="color: #fff;" title="Donate" href="{{route('creditcard')}}" target="blank">PAY YOUR ZAKAT NOW</a></div>
                                     
 
 

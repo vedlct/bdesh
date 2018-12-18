@@ -327,7 +327,18 @@
                 <input class="form-control" type="text" id="zip" name="zip" placeholder="zipe" />
             </div>
         </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="message">Project</label>
+                <select class="select2" name="cardExpireYear" id="cardExpireYear">
+                    <option value="">Bdesh</option>
+                    @foreach($projectName as $name)
+                    <option value="bdesh">{{$name->pName}}</option>
+                    @endforeach
 
+                </select>
+            </div>
+        </div>
 
         <div class="col-sm-12"><hr></div>
 
