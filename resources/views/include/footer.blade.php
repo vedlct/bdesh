@@ -17,8 +17,8 @@
                         </div>
                         <!--/ Logo -->
 
-                        <div class="site-description" itemprop="about">
-                            <p>
+                        <div class="site-description" itemprop="about" >
+                            <p style="color: white !important;">
                                 B DESH Foundation, Inc is a non-profit charitable organization involved in poverty alleviation, health and sanitation and educational projects. B Desh Foundation, Inc. is an IRS approved 501c3 organization.
                             </p>
                         </div>

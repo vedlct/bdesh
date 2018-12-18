@@ -123,4 +123,10 @@ public function deleteProjectHeaderImage(Request $request){
 
        return $project;
    }
+
+   public function serveameal(){
+       $slug = 'serve-a-meal';
+
+       return $this->singlePost($slug);
+   }
 }

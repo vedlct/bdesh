@@ -151,12 +151,12 @@
         <div class="fly-service">
             <div class="service-content">
                 <i class="material-icons">language</i>
-                <h3 class="title">Pay Your Zakat</h3>
+                <h3 class="title">Make Donations</h3>
                 <div class="description"></div>
             </div>
 
             <div class="service-buttons">
-                <a href="{{route('creditcard')}}" class="btn btn-medium js-wave">PAY NOW</a>
+                <a href="{{route('projects')}}" class="btn btn-medium js-wave">DONATE NOW</a>
             </div>
         </div>
 
@@ -175,12 +175,12 @@
         <div class="fly-service">
             <div class="service-content">
                 <i class="material-icons">favorite_border</i>
-                <h3 class="title">Pay Your Zakatul Fitrana</h3>
+                <h3 class="title">Serve a Meal</h3>
                 <div class="description"></div>
             </div>
 
             <div class="service-buttons">
-                <a href="{{route('creditcard')}}" class="btn btn-medium js-wave">PAY NOW</a>
+                <a href="{{route('serveameal')}}" class="btn btn-medium js-wave">PAY NOW</a>
             </div>
         </div>
 

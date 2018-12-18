@@ -78,6 +78,7 @@ Route::view('/pastevents','pages.pastevents')->name('pastevents');
 Route::view('/upcomingEvents','pages.upcomingEvents')->name('upcomingEvents');
 
 Route::post('/Donation','PaymentController@makeDonation')->name('payment.donationPay');
+Route::get('/Serve-A-Meal','ProjectController@serveameal')->name('serveameal');
 
 
 Auth::routes();
@@ -129,5 +130,7 @@ Route::group(['middleware' => ['auth']],function () {
     Route::post('/rohingya/store', 'RohingyaController@saveData')->name('rohingya.saveData');
     Route::post('/rohingya/update', 'RohingyaController@updateData')->name('rohingya.updateData');
     Route::post('/rohingya/delete', 'RohingyaController@delete')->name('rohingya.delete');
+
+
 
 });
