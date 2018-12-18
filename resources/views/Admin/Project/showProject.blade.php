@@ -33,6 +33,7 @@
                                 @foreach($projects as $project)
                                 <tr>
                                     <td>{{$project->pName}}</td>
+                                    {{--<td>{!!str_limit($project->pDescription,480)!!}</td>--}}
                                     <td>{!! $project->pDescription !!}</td>
                                     <td>{{$project->pLocation}}</td>
                                     <td>{{$project->pGoal}}</td>
