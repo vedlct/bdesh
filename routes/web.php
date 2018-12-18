@@ -98,6 +98,7 @@ Route::group(['middleware' => ['auth']],function () {
     Route::post('/project/update', 'ProjectController@updateProjectData')->name('project.updateData');
     Route::post('/project/delete', 'ProjectController@deleteProject')->name('project.delete');
     Route::post('delete/image', 'ProjectController@deleteProjctImage')->name('project.image.delete');
+    Route::post('delete/header/image', 'ProjectController@deleteProjectHeaderImage')->name('project.deleteHeaderImage');
     Route::post('/saveToHome','ProjectController@saveToHome')->name('project.saveToHome');
 
     /*

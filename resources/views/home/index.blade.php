@@ -209,6 +209,7 @@
                 <article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">
                     <div class="boxed flip-front">
                         <a class="project-media js-wave" href="{{route('project.singlePost',[$projects->slug])}}" itemprop="url">
+
                             <img src="{{asset('public/Gallery')}}/{{\App\Http\Controllers\HomeController::getThumnailImage($projects->projectId)}}" alt="" itemprop="image" />
 
                         </a>

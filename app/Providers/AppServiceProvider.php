@@ -17,7 +17,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function($view)
         {
             $project = Project::where('home','1')->take(5)->orderBy('created_at','desc')->get();
-            $view->with('projectsProvider',$project);
+            $allProject = Project::get();
+            $view->with('projectsProvider',$project)->with('allProjects',$allProject);
         });
     }
 

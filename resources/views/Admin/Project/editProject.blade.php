@@ -70,6 +70,23 @@
                                @endforeach
 
                            </div>
+                            <div class="form-group row">
+
+                                    <label class="col-sm-2 col-form-label">Header image</label>
+                                    <div class="col-sm-10">
+                                        <input type="file" name="headerImage" class="form-control">
+                                </div>
+
+                            </div>
+                           @if($projectUpdate->headerImage !=null)
+                            <div class="col-md-3 mt-2" id="headerImageLoad" >
+                                <button type="button" class="btn btn-danger btn-sm" data-Panel-id="{{$projectUpdate->projectId}}" onclick="deleteHeaderImage(this)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                                <img src="{{url('public/HeaderImage')}}/{{$projectUpdate->headerImage}}" class="img-thumbnail" alt="">
+                            </div>
+
+                        @endif
 
                             <div class="form-group">
                                 <div>
@@ -99,6 +116,32 @@
                             success: function (data) {
                                 $.alert('Image Deleted!');
                                 $("#projectTable").load(" #projectTable");
+                            }
+                        });
+                    },
+                    cancel: function () {
+                        $.alert('Canceled!');
+                    }
+                }
+            });
+
+        }
+        function deleteHeaderImage(x) {
+            var id = $(x).data('panel-id');
+            console.log(id)
+            $.confirm({
+                title: 'Are',
+                content: 'Your Sure!',
+                buttons: {
+                    confirm: function () {
+                        $.ajax({
+                            type: 'POST',
+                            url: "{!! route('project.deleteHeaderImage') !!}",
+                            cache: false,
+                            data: {_token: "{{csrf_token()}}",'id': id},
+                            success: function (data) {
+                                $.alert('Image Deleted!');
+                                $("#headerImageLoad").load(" #headerImageLoad");
                             }
                         });
                     },

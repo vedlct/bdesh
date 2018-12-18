@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use App\ProjectImage;
 use Illuminate\Http\Request;
 
@@ -24,8 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-        return view('home.index');
+        $project = Project::where('home','1')->take(5)->orderBy('created_at','desc')->get();
+        $projectImage = ProjectImage::get();
+        return view('home.index')->with('projectsHome',$project)->with('projectImage',$projectImage);
     }
     public static function getThumnailImage($id){
         $thumbnail = ProjectImage::where('fkprojectId',$id)->first()->projectPath;

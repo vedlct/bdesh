@@ -12,7 +12,7 @@
     <section class="section">
         <div class="container">
             <div class="fly-projects columns4 flex-container">
-                @foreach($projectsProvider as $project)
+                @foreach($allProjects as $project)
                 <div class="column">
 
                     <!-- Project -->

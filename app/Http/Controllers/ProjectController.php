@@ -70,6 +70,17 @@ public function updateProjectData(Request $request){
         $project->pRaised = $request->pRaised;
         $project->pGoal = $request->pGoal;
         $project->fkuserId =Auth::id();
+        if ($request->hasFile('headerImage')) {
+            $file = $request->file('headerImage');
+            $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
+            $file->move('public/HeaderImage', $filename);
+        }
+        if ($filename !=null){
+            $project->headerImage = $filename;
+        }
+        else{
+            $project->headerImage = $filename;
+        }
         $project->update();
        if ($request->hasFile('projectImage')){
            foreach($request->file('projectImage') as $photo) {
@@ -81,10 +92,18 @@ public function updateProjectData(Request $request){
                $img->save();
            }
        }
+
     return redirect()->route('project.show');
 }
 public function deleteProjctImage(Request $request){
        $project = ProjectImage::findOrFail($request->id)->delete();
+       return response()->json('deleted');
+}
+
+public function deleteProjectHeaderImage(Request $request){
+       $project = Project::findOrFail($request->id);
+       $project->headerImage=null;
+       $project->save();
        return response()->json('deleted');
 }
 
