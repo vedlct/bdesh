@@ -17,7 +17,7 @@ class DonationController extends Controller
         return view('Admin.Donation.show');
     }
     public function getDonationData(Request $request){
-        $donation = Donation::select('donations.*')->get();
+        $donation = Donation::select('donations.*');
         $datatables = DataTables::of($donation);
         return $datatables->make(true);
     }

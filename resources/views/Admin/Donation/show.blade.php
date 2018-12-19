@@ -62,17 +62,17 @@
                     "data":{ _token: "{{csrf_token()}}"},
                 },
                 columns: [
-                    { data: 'firstName', name: 'firstName'},
-                    { data: 'lastName', name: 'lastName'},
-                    { data: 'email', name: 'email'},
-                    { data: 'country', name: 'country' },
-                    { data: 'city', name: 'city' },
-                    { data: 'state', name: 'state'},
-                    { data: 'company', name: 'company'},
-                    { data: 'phone', name: 'phone'},
-                    { data: 'addr1', name: 'addr1'},
-                    { data: 'addr2', name: 'addr2'},
-                    { data: 'zip', name: 'zip'},
+                    { data: 'firstName', name: 'donations.firstName'},
+                    { data: 'lastName', name: 'donations.lastName'},
+                    { data: 'email', name: 'donations.email'},
+                    { data: 'country', name: 'donations.country' },
+                    { data: 'city', name: 'donations.city' },
+                    { data: 'state', name: 'donations.state'},
+                    { data: 'company', name: 'donations.company'},
+                    { data: 'phone', name: 'donations.phone'},
+                    { data: 'addr1', name: 'donations.addr1'},
+                    { data: 'addr2', name: 'donations.addr2'},
+                    { data: 'zip', name: 'donations.zip'},
 
                 ]
             });
