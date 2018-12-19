@@ -10,7 +10,7 @@
             <ul>
                 <li class="menu-title">Main</li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="{{route('admin.dashboard')}}" class="waves-effect">
                         <i class="dripicons-blog"></i> <span>Dashboard </span>
                     </a>
                 </li>

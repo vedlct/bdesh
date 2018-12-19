@@ -1,246 +1,81 @@
-
 @extends('layouts.mainLayout')
-
+@section('css')
+    <!-- DataTables -->
+    <link href="{{url('public/assets/plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/assets/plugins/datatables/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/assets/plugins/datatables/responsive.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
+@endsection
 @section('content')
-    <style>
-        .lds-facebook {
-            display: inline-block;
-            position: relative;
-            width: 64px;
-            height: 37px;
-        }
-        .lds-facebook div {
-            display: inline-block;
-            position: absolute;
-            left: 6px;
-            width: 13px;
-            background: #99ff48;
-            animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-        }
-        .lds-facebook div:nth-child(1) {
-            left: 6px;
-            animation-delay: -0.24s;
-        }
-        .lds-facebook div:nth-child(2) {
-            left: 26px;
-            animation-delay: -0.12s;
-        }
-        .lds-facebook div:nth-child(3) {
-            left: 45px;
-            animation-delay: 0;
-        }
-        @keyframes lds-facebook {
-            0% {
-                top: 6px;
-                height: 51px;
-            }
-            50%, 100% {
-                top: 19px;
-                height: 26px;
-            }
-        }
 
-    </style>
-    {{--<div class="row">--}}
+    <!-- end row -->
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <table id="datatable" class="table table-bordered " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>LastName</th>
+                        <th>email</th>
+                        <th>company</th>
+                        <th>phone</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>addr1</th>
+                        <th>addr2</th>
+                        <th>zip</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        {{--<div class="col-lg-3 col-md-6">--}}
-            {{--<div class="card">--}}
-                {{--<div class="card-body">--}}
-                    {{--<h4 class="card-title"><a href="#">Total Bill Recieved</a></h4>--}}
-                    {{--<div class="row">--}}
-                    {{--<div class="text-left col-md-6">--}}
-                        {{--<h2 class="font-light m-b-0"> {{$lastDayCalled}} | {{$target->targetCall}}</h2>--}}
-                        {{--<h2 class="font-light m-b-0"><span class="text-success">{{$totalBillRecievedOFLastMonth}} </span></h2>--}}
-
-
-                    {{--</div>--}}
-                    {{--<div class="text-right col-md-6">--}}
-                        {{--<h5 class="font-light m-b-0">Client</h5>--}}
-
-                        {{--<span class="text-muted">Last Month</span>--}}
-
-                    {{--</div>--}}
-                    {{--</div>--}}
-
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="col-lg-3 col-md-6">--}}
-            {{--<div class="card">--}}
-                {{--<div class="card-body">--}}
-                    {{--<h4 class="card-title"><a href="#">Total Bill Due</a></h4>--}}
-
-                    {{--<div class="row">--}}
-
-                        {{--<div class="text-left col-md-6">--}}
-                            {{--<h2 class="font-light m-b-0"> {{$lastDayCalled}} | {{$target->targetCall}}</h2>--}}
-                            {{--<h2 class="font-light m-b-0"><span class="text-success">{{$totalBillDueOFLastMonth}}</span></h2>--}}
-
-
-
-                        {{--</div>--}}
-
-                    {{--<div class="text-right col-md-6">--}}
-                        {{--<h5 class="font-light m-b-0">Client</h5>--}}
-
-                        {{--<span class="text-muted">Last Month</span>--}}
-
-                    {{--</div>--}}
-
-                    {{--</div>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="col-lg-3 col-md-6">--}}
-            {{--<div class="card">--}}
-                {{--<div class="card-body">--}}
-                    {{--<h4 class="card-title"><a href="#">Past Bill Due</a></h4>--}}
-
-                    {{--<div class="row">--}}
-
-                        {{--<div class="text-left col-md-6">--}}
-                            {{--<h2 class="font-light m-b-0"> {{$lastDayCalled}} | {{$target->targetCall}}</h2>--}}
-                            {{--<h2 class="font-light m-b-0"><span class="text-success"><span id="duepayment"><div class="lds-facebook"><div></div><div></div><div></div></div></span></span></h2>--}}
-
-
-                        {{--</div>--}}
-
-                    {{--<div class="text-right col-md-6">--}}
-                        {{--<h5 class="font-light m-b-0">Client</h5>--}}
-
-                        {{--<span class="text-muted">Last Month</span>--}}
-
-                    {{--</div>--}}
-
-                    {{--</div>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-        {{--<div class="col-lg-3 col-md-6">--}}
-            {{--<div class="card">--}}
-                {{--<div class="card-body">--}}
-                    {{--<h4 class="card-title"><a href="#">Total Expense</a></h4>--}}
-
-                    {{--<div class="row">--}}
-
-                        {{--<div class="text-left col-md-6">--}}
-                            {{--<h2 class="font-light m-b-0"> {{$lastDayCalled}} | {{$target->targetCall}}</h2>--}}
-                            {{--<h2 class="font-light m-b-0"><span class="text-success">{{$totalOFLastMonthDebit}} </span></h2>--}}
-                            {{--<h2 class="font-light m-b-0"><span class="text-success">35000.00 </span></h2>--}}
-
-
-                        {{--</div>--}}
-
-                    {{--<div class="text-right col-md-6">--}}
-                        {{--<h5 class="font-light m-b-0">TK</h5>--}}
-
-                        {{--<span class="text-muted">Last Month</span>--}}
-
-                    {{--</div>--}}
-
-                    {{--</div>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div style="margin-top: 10px;margin-bottom: 10px" class="col-md-12"></div>--}}
-        {{--<div class="col-lg-3 col-md-6">--}}
-            {{--<div class="card">--}}
-                {{--<div class="card-body">--}}
-                    {{--<h4 class="card-title"><a href="#">Total Earning</a></h4>--}}
-                    {{--<div class="row">--}}
-
-                        {{--<div class="text-left col-md-6">--}}
-                            {{--<h2 class="font-light m-b-0"> {{$lastDayCalled}} | {{$target->targetCall}}</h2>--}}
-                            {{--<h2 class="font-light m-b-0"><span class="text-success">{{$totalOFLastMonthCredit}}</span></h2>--}}
-                            {{--<h2 class="font-light m-b-0"><span class="text-success">100000.00</span></h2>--}}
-
-
-                        {{--</div>--}}
-
-                    {{--<div class="text-right col-md-6">--}}
-                        {{--<h5 class="font-light m-b-0">TK</h5>--}}
-
-                        {{--<span class="text-muted">Last Month</span>--}}
-
-                    {{--</div>--}}
-
-                    {{--</div>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="col-lg-3 col-md-6">--}}
-            {{--<div class="card">--}}
-                {{--<div class="card-body">--}}
-                    {{--<h4 class="card-title"><a href="#">Total(Summary)</a></h4>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="text-left col-md-6">--}}
-                            {{--<h2 class="font-light m-b-0"> {{$lastDayCalled}} | {{$target->targetCall}}</h2>--}}
-                            {{--<h2 class="font-light m-b-0"><span class="text-success">{{(number_format(str_replace(',','',$totalOFLastMonthCredit)-str_replace(',','',$totalOFLastMonthDebit),2))}}</span></h2>--}}
-                            {{--<h2 class="font-light m-b-0"><span class="text-success">65000.00</span></h2>--}}
-
-
-                        {{--</div>--}}
-                    {{--<div class="text-right col-md-6">--}}
-                        {{--<h5 class="font-light m-b-0">TK</h5>--}}
-
-                        {{--<span class="text-muted">Last Month</span>--}}
-
-                    {{--</div>--}}
-
-                    {{--</div>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-    {{--</div>--}}
+    <!-- end col -->
 
 @endsection
+
 @section('js')
+
+    <script src="{{url('public/assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{url('public/assets/plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{url('public/plugins/datatables/dataTables.responsive.min.js')}}"></script>
+    <script src="{{url('public/plugins/datatables/responsive.bootstrap4.min.js')}}"></script>
+    <!-- Buttons examples -->
+    <script src="{{url('public/assets/plugins/datatables/dataTables.buttons.min.js')}}"></script>
     <script>
-    $(document).ready( function () {
+        $(document).ready( function () {
 
-        {{--$.ajax({--}}
-            {{--type: 'GET',--}}
-            {{--url: "{!! route('dashboard.duepayment') !!}",--}}
-            {{--cache: false,--}}
-            {{--data: {_token: "{{csrf_token()}}"},--}}
-            {{--success: function (data) {--}}
-                {{--$("#duepayment").html(data);--}}
-                {{--// console.log(data);--}}
-            {{--}--}}
-        {{--});--}}
+            $('#datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                Filter: true,
+                stateSave: true,
+                type:"POST",
+                "ajax":{
+                    "url": "{!! route('admin.getTodayData') !!}",
+                    "type": "POST",
+                    "data":{ _token: "{{csrf_token()}}"},
+                },
+                columns: [
+                    { data: 'firstName', name: 'donations.firstName'},
+                    { data: 'lastName', name: 'donations.lastName'},
+                    { data: 'email', name: 'donations.email'},
+                    { data: 'country', name: 'donations.country' },
+                    { data: 'city', name: 'donations.city' },
+                    { data: 'state', name: 'donations.state'},
+                    { data: 'company', name: 'donations.company'},
+                    { data: 'phone', name: 'donations.phone'},
+                    { data: 'addr1', name: 'donations.addr1'},
+                    { data: 'addr2', name: 'donations.addr2'},
+                    { data: 'zip', name: 'donations.zip'},
 
-    });
+                ]
+            });
+        } );
 
-    {{--$(document).ready( function () {--}}
-        {{--$.ajax({--}}
-            {{--type: 'GET',--}}
-            {{--url: "{!! route('dashboard.insertbillformonth') !!}",--}}
-            {{--cache: false,--}}
-            {{--data: {_token: "{{csrf_token()}}"},--}}
-            {{--success: function (data) {--}}
-
-
-              {{--//  $("#duepayment").html(data);--}}
-                 {{--console.log(data);--}}
-            {{--}--}}
-        {{--});--}}
-
-    {{--});--}}
     </script>
-    }
-    @endsection
+
+@endsection
