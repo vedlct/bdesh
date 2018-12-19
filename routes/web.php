@@ -130,6 +130,11 @@ Route::group(['middleware' => ['auth']],function () {
     Route::post('/rohingya/store', 'RohingyaController@saveData')->name('rohingya.saveData');
     Route::post('/rohingya/update', 'RohingyaController@updateData')->name('rohingya.updateData');
     Route::post('/rohingya/delete', 'RohingyaController@delete')->name('rohingya.delete');
+    /*
+     * Route For Donation
+     */
+    Route::get('/donation/show', 'DonationController@show')->name('donation.show');
+    Route::post('/donation/getData', 'DonationController@getDonationData')->name('donation.getData');
 
 
 

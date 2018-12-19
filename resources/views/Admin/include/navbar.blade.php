@@ -36,6 +36,11 @@
 
                     </ul>
                 </li>
+                <li>
+                    <a href="{{route('donation.show')}}" class="waves-effect">
+                        <i class="dripicons-blog"></i> <span>Donation </span>
+                    </a>
+                </li>
 
 
 
