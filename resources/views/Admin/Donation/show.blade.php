@@ -1,0 +1,83 @@
+@extends('layouts.mainLayout')
+@section('css')
+    <!-- DataTables -->
+    <link href="{{url('public/assets/plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/assets/plugins/datatables/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/assets/plugins/datatables/responsive.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url('public/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
+    @endsection
+@section('content')
+
+    <!-- end row -->
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header mb-5">
+                </div>
+                <table id="datatable" class="table table-bordered " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>LastName</th>
+                        <th>email</th>
+                        <th>company</th>
+                        <th>phone</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>addr1</th>
+                        <th>addr2</th>
+                        <th>zip</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- end col -->
+
+@endsection
+
+@section('js')
+
+    <script src="{{url('public/assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{url('public/assets/plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{url('public/plugins/datatables/dataTables.responsive.min.js')}}"></script>
+    <script src="{{url('public/plugins/datatables/responsive.bootstrap4.min.js')}}"></script>
+    <!-- Buttons examples -->
+    <script src="{{url('public/assets/plugins/datatables/dataTables.buttons.min.js')}}"></script>
+    <script>
+        $(document).ready( function () {
+
+            $('#datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                Filter: true,
+                stateSave: true,
+                type:"POST",
+                "ajax":{
+                    "url": "{!! route('donation.getData') !!}",
+                    "type": "POST",
+                    "data":{ _token: "{{csrf_token()}}"},
+                },
+                columns: [
+                    { data: 'firstName', name: 'firstName'},
+                    { data: 'lastName', name: 'lastName'},
+                    { data: 'email', name: 'email'},
+                    { data: 'country', name: 'country' },
+                    { data: 'city', name: 'city' },
+                    { data: 'state', name: 'state'},
+                    { data: 'company', name: 'company'},
+                    { data: 'phone', name: 'phone'},
+                    { data: 'addr1', name: 'addr1'},
+                    { data: 'addr2', name: 'addr2'},
+                    { data: 'zip', name: 'zip'},
+
+                ]
+            });
+        } );
+
+    </script>
+
+@endsection
