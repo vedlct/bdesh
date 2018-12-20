@@ -75,12 +75,15 @@ public function updateProjectData(Request $request){
             $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
             $file->move('public/HeaderImage', $filename);
         }
-        if ($filename !=null){
-            $project->headerImage = $filename;
-        }
-        else{
-            $project->headerImage = $filename;
-        }
+//        else{
+//            $project->headerImage = $project->headerImage;
+//        }
+//        if ($filename !=null){
+//            $project->headerImage = $filename;
+//        }
+//        else{
+//            $project->headerImage = $filename;
+//        }
         $project->update();
        if ($request->hasFile('projectImage')){
            foreach($request->file('projectImage') as $photo) {

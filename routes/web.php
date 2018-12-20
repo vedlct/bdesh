@@ -85,9 +85,8 @@ Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['auth']],function () {
-    Route::get('/admin', function () {
-        return view('index');
-    })->name('admin.dashboard');
+    Route::get('/admin','DashboardController@index')->name('admin.dashboard');
+    Route::post('/admin','DonationController@getTodayData')->name('admin.getTodayData');
 
     /*
      * Project Route
@@ -137,5 +136,11 @@ Route::group(['middleware' => ['auth']],function () {
     Route::post('/donation/getData', 'DonationController@getDonationData')->name('donation.getData');
 
 
+});
+
+Route::get('/test',function (){
+    $donation = \App\Donation::select('donations.*')->where('donationDate',\Carbon\Carbon::today()->format('Y-m-d'))->get();
+        return $donation;
+//    return \Carbon\Carbon::today()->format('Y-m-d');
 
 });

@@ -12,8 +12,6 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <div class="card-header mb-5">
-                </div>
                 <table id="datatable" class="table table-bordered " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
                     <tr>
