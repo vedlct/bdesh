@@ -71,9 +71,10 @@
 
                                     <div class="project-description" itemprop="description">
                                         <p>
-                                            {!! $project->pName !!}
+                                            {!! $project->pDescription !!}
                                         </p>
                                     </div>
+
 
                                     <div class="project-footer">
                                         <ul class="project-stats">
@@ -98,6 +99,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <br>
+                            <p>
+                                {!! $project->bdeshDescription !!}
+                            </p>
 
                             <div class="boxed flip-back">
                                 <div class="card-map" data-placeholder="waiting for map">

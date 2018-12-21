@@ -53,6 +53,12 @@
                                               </div>
                                           </div>
                                           <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label">Description For Bdesh</label>
+                                              <div class="col-sm-10">
+                                                  <textarea name="bdeshDescription" class="summernote"></textarea>
+                                              </div>
+                                          </div>
+                                          <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Project Header image</label>
                                               <div class="col-sm-10">
                                                   <input type="file" name="headerImage" class="form-control">

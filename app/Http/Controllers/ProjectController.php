@@ -34,6 +34,7 @@ class ProjectController extends Controller
        $project->slug = str_slug($request->projectName);
        $project->pLocation=$request->projectLocation;
        $project->pDescription = $request->pDescription;
+       $project->bdeshDescription = $request->bdeshDescription;
        $project->pGoal = $request->pGoal;
        $project->pRaised = $request->pRaised;
        $project->fkuserId =Auth::id();
@@ -67,6 +68,7 @@ public function updateProjectData(Request $request){
         $project->pName = $request->projectName;
         $project->pLocation=$request->projectLocation;
         $project->pDescription = $request->pDescription;
+        $project->bdeshDescription = $request->bdeshDescription;
         $project->pRaised = $request->pRaised;
         $project->pGoal = $request->pGoal;
         $project->fkuserId =Auth::id();

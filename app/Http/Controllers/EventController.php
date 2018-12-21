@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class EventController extends Controller
 {
     public function createEvent(){
-        return view('Admin.event.createEvent');
+        return view('Admin.Event.createEvent');
     }
     public function updateEvent($id){
         $event = Event::findOrFail($id);
