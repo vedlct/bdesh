@@ -17,7 +17,7 @@
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Event Name</label>
                                               <div class="col-sm-10">
-                                                  <input type="text" name="eventName" class="form-control" required placeholder="Event Name">
+                                                  <input type="text" name="eventName" class="form-control"  placeholder="Event Name">
                                               </div>
                                           </div>
 
@@ -25,44 +25,44 @@
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Event Location</label>
                                               <div class="col-sm-10">
-                                                  <input type="text" name="eLocation" class="form-control" required placeholder="Event Location">
+                                                  <input type="text" name="eLocation" class="form-control"  placeholder="Event Location">
                                               </div>
                                           </div>
 
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Event Start Date</label>
                                               <div class="col-sm-10">
-                                                  <input type="date" name="startDate" class="form-control" required placeholder="Event Location">
+                                                  <input type="date" name="startDate" class="form-control"  placeholder="Event Location">
                                               </div>
                                           </div>
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Event End Date</label>
                                               <div class="col-sm-10">
-                                                  <input type="date" name="EndDate" class="form-control" required placeholder="Event Location">
+                                                  <input type="date" name="EndDate" class="form-control"  placeholder="Event Location">
                                               </div>
                                           </div>
 
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Event Start Time</label>
                                               <div class="col-sm-10">
-                                                  <input type="time" name="startTime" class="form-control" required placeholder="Event End Time">
+                                                  <input type="time" name="startTime" class="form-control"  placeholder="Event End Time">
                                               </div>
                                           </div>
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Event End Time</label>
                                               <div class="col-sm-10">
-                                                  <input type="time" name="endTime" class="form-control" required placeholder="Event End Time">
+                                                  <input type="time" name="endTime" class="form-control"  placeholder="Event End Time">
                                               </div>
                                           </div>
                                           <div class="form-group row">
                                               <label class="col-sm-2 col-form-label">Event place</label>
                                               <div class="col-sm-10">
-                                                  <input type="text" name="place" class="form-control" required placeholder="Event Place">
+                                                  <input type="text" name="place" class="form-control"  placeholder="Event Place">
                                               </div>
                                           </div>
 
                                           <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label">Event  specialGuest</label>
+                                              <label class="col-sm-2 col-form-label">Event  Details</label>
                                               <div class="col-sm-10">
                                                   {{--<input type="text" name="specialGuest" class="form-control" placeholder="Special Guest">--}}
                                                   <textarea name="specialGuest" class="summernote"></textarea>

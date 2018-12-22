@@ -43,7 +43,13 @@ class ProjectController extends Controller
            $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
            $file->move('public/HeaderImage', $filename);
        }
+       if ($request->hasFile('thumbnailImage')) {
+           $file2 = $request->file('thumbnailImage');
+           $filename2 = Auth::id() . '-' . rand(1000, 9999) . '.' . $file2->getClientOriginalExtension();
+           $file2->move('public/thumbnailImage', $filename2);
+       }
        $project->headerImage = $filename;
+       $project->thumbnailImage = $filename2;
        $project->save();
 
            foreach($request->file('projectImage') as $photo) {
@@ -76,6 +82,14 @@ public function updateProjectData(Request $request){
             $file = $request->file('headerImage');
             $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
             $file->move('public/HeaderImage', $filename);
+            $project->headerImage = $filename;
+        }
+
+        if ($request->hasFile('thumbnailImage')) {
+            $file2 = $request->file('thumbnailImage');
+            $filename2 = Auth::id() . '-' . rand(1000, 9999) . '.' . $file2->getClientOriginalExtension();
+            $file2->move('public/thumbnailImage', $filename2);
+            $project->thumbnailImage = $filename2;
         }
 //        else{
 //            $project->headerImage = $project->headerImage;
@@ -108,6 +122,12 @@ public function deleteProjctImage(Request $request){
 public function deleteProjectHeaderImage(Request $request){
        $project = Project::findOrFail($request->id);
        $project->headerImage=null;
+       $project->save();
+       return response()->json('deleted');
+}
+public function deleteProjectthumbnailImage(Request $request){
+       $project = Project::findOrFail($request->id);
+       $project->thumbnailImage=null;
        $project->save();
        return response()->json('deleted');
 }
