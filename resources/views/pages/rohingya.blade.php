@@ -27,7 +27,47 @@
                             <div class="boxed flip-front">
                                 <div class="project-content">
 
-                                    <img src="{{asset('public/images/rohinga/rohinja-L1.jpg')}}" alt="" />
+
+
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="{{asset('public/images/rohinga/2.jpg')}}" alt="Los Angeles" style="width:100%;">
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="{{asset('public/images/rohinga/1.jpg')}}" alt="Chicago" style="width:100%;">
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="{{asset('public/images/rohinga/3.png')}}" alt="New york" style="width:100%;">
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="{{asset('public/images/rohinga/4.jpg')}}" alt="New york" style="width:100%;">
+                                            </div>
+                                        </div>
+
+                                        <!-- Left and right controls -->
+                                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+
                                     <div class="project-description post-content" itemprop="description"> <br>
                                         <p>
                                             Since August 25, 2017, the Burmese military have committed killings, rapes, arbitrary arrests, and mass arson of homes in hundreds of predominantly Rohingya villages in northern Rakhine State, forcing more than 700,000 Rohingya to flee to neighboring Bangladesh. Human Rights Watch has found that this abuse amounts to crimes against humanity under international law.
@@ -39,7 +79,7 @@
                                             <li>More than 40% children are orphans</li>
                                         </ul>
 
-                                        <h5>How is the BDesh Foundation Helping the Rohingya Refugees on the Ground ? </h5>
+
 
 
                                     </div>
@@ -48,6 +88,31 @@
                                 </div>
 
                             </div>
+
+                            {{--<div class="boxed flip-front">--}}
+                                {{--<div class="project-content">--}}
+
+                                    {{--<img src="{{asset('public/images/rohinga/rohinja-L1.jpg')}}" alt="" />--}}
+                                    {{--<div class="project-description post-content" itemprop="description"> <br>--}}
+                                        {{--<p>--}}
+                                            {{--Since August 25, 2017, the Burmese military have committed killings, rapes, arbitrary arrests, and mass arson of homes in hundreds of predominantly Rohingya villages in northern Rakhine State, forcing more than 700,000 Rohingya to flee to neighboring Bangladesh. Human Rights Watch has found that this abuse amounts to crimes against humanity under international law.--}}
+
+                                        {{--</p>--}}
+
+                                        {{--<ul>--}}
+                                            {{--<li>52% of the women surveyed by the United Nations were raped</li>--}}
+                                            {{--<li>More than 40% children are orphans</li>--}}
+                                        {{--</ul>--}}
+
+                                        {{--<h5>How is the BDesh Foundation Helping the Rohingya Refugees on the Ground ? </h5>--}}
+
+
+                                    {{--</div>--}}
+
+
+                                {{--</div>--}}
+
+                            {{--</div>--}}
 
 
 

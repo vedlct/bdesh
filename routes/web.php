@@ -81,6 +81,10 @@ Route::post('/Donation','PaymentController@makeDonation')->name('payment.donatio
 Route::get('/Serve-A-Meal','ProjectController@serveameal')->name('serveameal');
 
 
+Route::get('/event/show/all', 'EventController@showEventsPage')->name('event.showEventsPage');
+Route::get('event/show/single/{id}','EventController@singleEvent')->name('event.singleEvent');
+
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -118,8 +122,7 @@ Route::group(['middleware' => ['auth']],function () {
     /*
      * Event Page Home
      */
-    Route::get('/event/show/all', 'EventController@showEventsPage')->name('event.showEventsPage');
-    Route::get('event/show/single/{id}','EventController@singleEvent')->name('event.singleEvent');
+
 
     /*
      * Rohingya Projects

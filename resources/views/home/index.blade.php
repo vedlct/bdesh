@@ -115,7 +115,7 @@
                     <div class="boxed flip-front">
                         <a class="project-media js-wave" href="{{route('project.singlePost',[$projects->slug])}}" itemprop="url">
 
-                            <img src="{{asset('public/Gallery')}}/{{\App\Http\Controllers\HomeController::getThumnailImage($projects->projectId)}}" alt="" itemprop="image" />
+                            <img src="{{url('public/thumbnailImage')}}/{{$projects->thumbnailImage}}" class="img-thumbnail" alt="">
 
                         </a>
 

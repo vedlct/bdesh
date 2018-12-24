@@ -25,14 +25,14 @@
 
     <!-- Modernizr Library -->
     <script src="{{url('public/js/libs/modernizr-3.6.0.min.js')}}"></script>
-    <style>
-        .nav-menu > li {
-            margin: 0 20px !important;
-        }
-        p {
-            color: #000 !important;
-        }
-    </style>
+    {{--<style>--}}
+        {{--.nav-menu > li {--}}
+            {{--margin: 0 20px !important;--}}
+        {{--}--}}
+        {{--p {--}}
+            {{--color: #000 !important;--}}
+        {{--}--}}
+    {{--</style>--}}
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,6 +58,81 @@
 <!--/ Page Loader -->
 
 <!-- Header -->
+{{--<header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">--}}
+    {{--<!-- Navigation Bar -->--}}
+
+    {{--<nav class="navigation-bar" data-become-sticky="600" data-no-placeholder>--}}
+        {{--<div class="container">--}}
+            {{--<div class="hamburger"><a href="#"></a></div>--}}
+
+            {{--<div class="navigation-bar-flex">--}}
+                {{--<!-- Logo TODO: Use 2 images for normal and sticky navigation, or just text -->--}}
+                {{--<div class="logo">--}}
+                    {{--<a href="{{route('home')}}">--}}
+                        {{--<img class="logo-normal" src="{{url('public/images/logo.png')}}" alt=""/>--}}
+                        {{--<img class="logo-sticky" src="{{url('public/images/logo.png')}}" alt=""/>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+                {{--<!--/ Logo -->--}}
+
+                {{--<!-- Dropdown Menu -->--}}
+                {{--<ul class="nav-menu clearfix" itemscope itemtype="http://schema.org/SiteNavigationElement">--}}
+                    {{--<li><a href="{{route('about')}}">About</a></li>--}}
+                    {{--<li><a href="{{route('projects')}}">Projects</a></li>--}}
+                    {{--<li><a href="{{route('rohingya')}}">Rohingya</a></li>--}}
+
+
+
+
+                    {{--<li class="">--}}
+                        {{--<a href="#">Events </a>--}}
+                        {{--<ul>--}}
+                            {{--<li><a href="{{route('upcomingEvents')}}">Upcoming Events</a></li>--}}
+                            {{--<li><a href="{{route('event.showEventsPage')}}">Past Events</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li>--}}
+                        {{--<a href="#">Media Archive</a>--}}
+                        {{--<ul>--}}
+                            {{--<li><a href="{{route('welfare')}}">Children welfare</a></li>--}}
+                            {{--<li><a href="{{route('healthgallery')}}">Health care gallery</a></li>--}}
+                            {{--<li><a href="{{route('videogallery')}}">Video gallery</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+
+                    {{--<li><a href="{{route('faqs')}}">Faqs</a></li>--}}
+                    {{--<li><a href="{{route('contact')}}">Contact</a></li>--}}
+                    {{--@if(Auth::id())--}}
+                        {{--<li>--}}
+                            {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
+                               {{--onclick="event.preventDefault();--}}
+                                                     {{--document.getElementById('logout-form').submit();">--}}
+                                {{--{{ __('Logout') }}--}}
+                            {{--</a>--}}
+
+                            {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+                                {{--@csrf--}}
+                            {{--</form>--}}
+                        {{--</li>--}}
+                        {{--<li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>--}}
+                    {{--@else--}}
+                        {{--<li><a href="{{route('login')}}">Login</a></li>--}}
+                    {{--@endif--}}
+                {{--</ul>--}}
+                {{--<!--/ Dropdown Menu -->--}}
+
+
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</nav>--}}
+
+    {{--<!--/ Navigation Bar -->--}}
+
+
+
+{{--</header>--}}
+
+
 <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
     <!-- Navigation Bar -->
 
@@ -91,6 +166,11 @@
                             <li><a href="{{route('event.showEventsPage')}}">Past Events</a></li>
                         </ul>
                     </li>
+                    <li class="">
+                        <a href="https://www.youtube.com/channel/UCPexN6vVXz2RpN7h4mXke4A" target="_blank">Videos</a>
+
+                    </li>
+                <!--
                     <li>
                         <a href="#">Media Archive</a>
                         <ul>
@@ -99,25 +179,10 @@
                             <li><a href="{{route('videogallery')}}">Video gallery</a></li>
                         </ul>
                     </li>
+-->
 
                     <li><a href="{{route('faqs')}}">Faqs</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
-                    @if(Auth::id())
-                        <li>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
-                        <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                    @else
-                        <li><a href="{{route('login')}}">Login</a></li>
-                    @endif
                 </ul>
                 <!--/ Dropdown Menu -->
 

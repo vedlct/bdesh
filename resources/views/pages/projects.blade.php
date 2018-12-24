@@ -3,7 +3,7 @@
     <!-- Header Image or Video -->
     <section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/current/Multimedia-small-Banner.jpg')}});">
         <div class="fly-header-content">
-            <h1 class="page-title">Bdesh Projects</h1>
+            <h1 class="page-title">Current Projects</h1>
         </div>
     </section>
     <!--/ Header Image or Video -->
