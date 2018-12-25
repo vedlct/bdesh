@@ -107,7 +107,7 @@
                 <div class="col-md-3 col-sm-6">
                     <!-- Widget Gallery -->
                     <div class="widget-footer widget-gallery">
-                        <h4 class="widget-title">Our Fan Page</h4>
+                        <h4 class="widget-title">Social Scroll</h4>
 
                         <div class="item links">
 

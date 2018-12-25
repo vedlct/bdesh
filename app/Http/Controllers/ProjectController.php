@@ -137,6 +137,9 @@ public function deleteProjectthumbnailImage(Request $request){
    }
 
    public function singlePost($slug){
+       if ($slug == 'an-appeal-for-rohingya-refuges'){
+           return redirect()->route('rohingya');
+       }else
         $project = Project::where('slug',$slug)->first();
         $projectImage = ProjectImage::where('fkprojectId',$project->projectId)->get();
         return view('pages.singleProject')->with('project',$project)->with('projectImage',$projectImage);

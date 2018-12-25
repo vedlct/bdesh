@@ -36,7 +36,7 @@
 
                         <div class="event-content">
                             <h3 class="event-title" itemprop="name">
-                                <a href="{{route('event.singleEvent',[$event->eventId])}}">{{$event->evenntName}}</a>
+                                <a href="{{route('event.singleEvent',[$event->eventId])}}">{{$event->eventName}}</a>
                             </h3>
 
                             <div class="event-location">
@@ -48,7 +48,7 @@
 
                             <div class="event-description" itemprop="description">
                                 <p>
-                                    {{$event->eventName}} Date:{{$event->startDate}} Time : {{$event->startTime}} Special Guest : {!! $event->specialGuest !!}
+                                    {{$event->eventName}} Date:{{$event->startDate}} Time : {{$event->startTime}} {!!  substr(strip_tags($event->specialGuest), 0, 150) !!}
                                     Tickets : {{$event->ticketPrice}} Contact :{{$event->contact}}
                                 </p>
                             </div>

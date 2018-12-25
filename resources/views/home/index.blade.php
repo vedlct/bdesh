@@ -32,7 +32,7 @@
             </section>
             <section class="slide" style="background-image: url({{asset('public/images/temp/slide3.jpg')}});">
                 <div class="slide-content">
-                    <a href="#"><h1 class="page-title">BDesh Foundation Annual Dinner</h1></a>
+                    <a href="{{route('event.singleEvent',5)}}"><h1 class="page-title">BDesh Foundation Annual Dinner</h1></a>
 
                     <div class="page-subtitle"> More than 450+ individuals, who attended BDesh's 9th Annual Dinner. The theme of this year's annual dinner was "Save a life, Save Humanity" and because of you the BDesh Foundation was able to make a difference for Rohingya and those in need in our own communities.  </div>
 
@@ -807,7 +807,7 @@
         <div class="section-heading">
             <div class="container">
                 <div class="section-subtitle">CONTACT US</div>
-                <h2 class="section-title">Get in touch with us</h2>
+                <h2 class="section-title">Let’s connect</h2>
             </div>
         </div>
 
