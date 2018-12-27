@@ -92,11 +92,12 @@
                     <div class="widget-footer widget-twitter">
                         <h4 class="widget-title">Links</h4>
 
-                        <p><a style="color: #fff;" href="">Home</a></p>
-                        <p><a style="color: #fff;" href="">About</a></p>
-                        <p><a style="color: #fff;" href="">Service</a></p>
-                        <p><a style="color: #fff;" href="">Donate us</a></p>
-                        <p><a style="color: #fff;" href="">Contact</a></p>
+                        <p><a style="color: #fff;" href="{{route('home')}}">Home</a></p>
+                        <p><a style="color: #fff;" href="{{route('about')}}">About</a></p>
+                        {{--<p><a style="color: #fff;" href="">Service</a></p>--}}
+                        <p><a style="color: #fff;" href="{{route('creditcard')}}">Donate us</a></p>
+                        <p><a style="color: #fff;" href="{{route('contact')}}">Contact</a></p>
+
 
 
                     </div>
@@ -106,7 +107,7 @@
                 <div class="col-md-3 col-sm-6">
                     <!-- Widget Gallery -->
                     <div class="widget-footer widget-gallery">
-                        <h4 class="widget-title">Our Fan Page</h4>
+                        <h4 class="widget-title">Social Scroll</h4>
 
                         <div class="item links">
 

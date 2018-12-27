@@ -43,7 +43,13 @@ class ProjectController extends Controller
            $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
            $file->move('public/HeaderImage', $filename);
        }
+       if ($request->hasFile('thumbnailImage')) {
+           $file2 = $request->file('thumbnailImage');
+           $filename2 = Auth::id() . '-' . rand(1000, 9999) . '.' . $file2->getClientOriginalExtension();
+           $file2->move('public/thumbnailImage', $filename2);
+       }
        $project->headerImage = $filename;
+       $project->thumbnailImage = $filename2;
        $project->save();
 
            foreach($request->file('projectImage') as $photo) {
@@ -76,6 +82,14 @@ public function updateProjectData(Request $request){
             $file = $request->file('headerImage');
             $filename = Auth::id() . '-' . rand(1000, 9999) . '.' . $file->getClientOriginalExtension();
             $file->move('public/HeaderImage', $filename);
+            $project->headerImage = $filename;
+        }
+
+        if ($request->hasFile('thumbnailImage')) {
+            $file2 = $request->file('thumbnailImage');
+            $filename2 = Auth::id() . '-' . rand(1000, 9999) . '.' . $file2->getClientOriginalExtension();
+            $file2->move('public/thumbnailImage', $filename2);
+            $project->thumbnailImage = $filename2;
         }
 //        else{
 //            $project->headerImage = $project->headerImage;
@@ -111,12 +125,21 @@ public function deleteProjectHeaderImage(Request $request){
        $project->save();
        return response()->json('deleted');
 }
+public function deleteProjectthumbnailImage(Request $request){
+       $project = Project::findOrFail($request->id);
+       $project->thumbnailImage=null;
+       $project->save();
+       return response()->json('deleted');
+}
 
    public static function getUserName($id){
        return User::where('userId',$id)->first()->name;
    }
 
    public function singlePost($slug){
+       if ($slug == 'an-appeal-for-rohingya-refuges'){
+           return redirect()->route('rohingya');
+       }else
         $project = Project::where('slug',$slug)->first();
         $projectImage = ProjectImage::where('fkprojectId',$project->projectId)->get();
         return view('pages.singleProject')->with('project',$project)->with('projectImage',$projectImage);

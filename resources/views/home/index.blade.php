@@ -4,11 +4,11 @@
     <!-- Fly Slider -->
     <div class="fly-slider invisible" data-rotation-interval="10000" data-rotation-duration="1000">
         <div class="cube">
-            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-1.jpg')}});">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/slide1.jpg')}});">
                 <div class="slide-content">
-                    <h1 class="page-title">Helping Hands for Everyone</h1>
+                    <a href="{{route('rohingya')}}"><h1 class="page-title">Rohingya Emergency Appeal</h1></a>
 
-                    <div class="page-subtitle">Choose the way to help people in need</div>
+                    <div class="page-subtitle">Due to persecution more than 700,00 Rohingya have fled to Bangladesh. Donate today to <br> help refugee brothers and sisters in camps close to the Myanmar border area. </div>
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
@@ -17,11 +17,11 @@
                     </div>
                 </div>
             </section>
-            <section class="slide" style="background-image: url({{asset('public/images/temp/2.jpg')}});">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/slide2.jpg')}});">
                 <div class="slide-content">
-                    <h1 class="page-title">Helping Hands for Everyone</h1>
+                    <a href="{{route('project.singlePost','project-hasana')}}"><h1 class="page-title">Project Hasana</h1></a>
 
-                    <div class="page-subtitle">Choose the way to help people in need</div>
+                    <div class="page-subtitle">Hasana means "good deed". From donating cars to refugees or volunteering at a shelter - learn <br> how you can make a difference with your good deed. </div>
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
@@ -30,24 +30,11 @@
                     </div>
                 </div>
             </section>
-            <section class="slide" style="background-image: url({{asset('public/images/temp/3.jpg')}});">
+            <section class="slide" style="background-image: url({{asset('public/images/temp/slide3.jpg')}});">
                 <div class="slide-content">
-                    <h1 class="page-title">Helping Hands for Everyone</h1>
+                    <a href="{{route('event.singleEvent',5)}}"><h1 class="page-title">BDesh Foundation Annual Dinner</h1></a>
 
-                    <div class="page-subtitle">Choose the way to help people in need</div>
-
-                    <div class="volunteer-cta">
-                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
-                        <div class="note">no credit card needed / secure payments</div>
-                    </div>
-                </div>
-            </section>
-            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-3.jpg')}});">
-                <div class="slide-content">
-                    <h1 class="page-title">Helping Hands for Everyone</h1>
-
-                    <div class="page-subtitle">Choose the way to help people in need</div>
+                    <div class="page-subtitle"> More than 450+ individuals, who attended BDesh's 9th Annual Dinner. The theme of this year's annual dinner was "Save a life, Save Humanity" and because of you the BDesh Foundation was able to make a difference for Rohingya and those in need in our own communities.  </div>
 
                     <div class="volunteer-cta">
                         <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
@@ -57,88 +44,6 @@
                 </div>
             </section>
 
-            <section class="slide" style="background-image: url({{asset('public/images/temp/6.jpg')}});">
-                <div class="slide-content">
-                    <h1 class="page-title">Helping Hands for Everyone</h1>
-
-                    <div class="page-subtitle">Choose the way to help people in need</div>
-
-                    <div class="volunteer-cta">
-                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
-                        <div class="note">no credit card needed / secure payments</div>
-                    </div>
-                </div>
-            </section>
-            <section class="slide" style="background-image: url({{url('public/images/temp/slide-4.jpg')}});">
-                <div class="slide-content">
-                    <h1 class="page-title">Helping Hands for Everyone</h1>
-
-                    <div class="page-subtitle">Choose the way to help people in need</div>
-
-                    <div class="volunteer-cta">
-                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
-                        <div class="note">no credit card needed / secure payments</div>
-                    </div>
-                </div>
-            </section>
-           
-            <section class="slide" style="background-image: url({{asset('public/images/temp/1.jpg')}});">
-                <div class="slide-content">
-                    <h1 class="page-title">Helping Hands for Everyone</h1>
-
-                    <div class="page-subtitle">Choose the way to help people in need</div>
-
-                    <div class="volunteer-cta">
-                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
-                        <div class="note">no credit card needed / secure payments</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="slide" style="background-image: url({{asset('public/images/temp/4.jpg')}});">
-                <div class="slide-content">
-                    <h2 class="page-title">Helping Hands for Everyone</h2>
-
-                    <div class="page-subtitle">Choose the way to help people in need</div>
-
-                    <div class="volunteer-cta">
-                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
-                        <div class="note">no credit card needed / secure payments</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="slide" style="background-image: url({{asset('public/images/temp/slide-24.jpg')}});">
-                <div class="slide-content">
-                    <h2 class="page-title">Helping Hands for Everyone</h2>
-
-                    <div class="page-subtitle">Choose the way to help people in need</div>
-
-                    <div class="volunteer-cta">
-                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
-                        <div class="note">no credit card needed / secure payments</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="slide" style="background-image: url({{url('public/images/temp/7.jpg')}});">
-                <div class="slide-content">
-                    <h2 class="page-title">Helping Hands for Everyone</h2>
-
-                    <div class="page-subtitle">Choose the way to help people in need</div>
-
-                    <div class="volunteer-cta">
-                        <a href="{{route('contact')}}" class="btn btn-large btn-icon js-wave">BECOME A VOLUNTEER</a>
-                        <a href="{{route('creditcard')}}" class="btn btn-large btn-icon js-wave">DONATE NOW</a>
-                        <div class="note">no credit card needed / secure payments</div>
-                    </div>
-                </div>
-            </section>
         </div>
 
         <a class="slider-control prev js-wave" href="#"><i class="material-icons">keyboard_arrow_left</i></a>
@@ -147,7 +52,7 @@
     <!--/ Fly Slider -->
 
     <!-- Services -->
-    <section class="flex-container fly-services"> 
+    <section class="flex-container fly-services">
         <div class="fly-service">
             <div class="service-content">
                 <i class="material-icons">language</i>
@@ -210,7 +115,7 @@
                     <div class="boxed flip-front">
                         <a class="project-media js-wave" href="{{route('project.singlePost',[$projects->slug])}}" itemprop="url">
 
-                            <img src="{{asset('public/Gallery')}}/{{\App\Http\Controllers\HomeController::getThumnailImage($projects->projectId)}}" alt="" itemprop="image" />
+                            <img src="{{url('public/thumbnailImage')}}/{{$projects->thumbnailImage}}" class="img-thumbnail" alt="">
 
                         </a>
 
@@ -632,269 +537,269 @@
     <!--/ Call To Action -->
 
     <!-- Events -->
-    <section class="section padding-bottom-50 section gray">
-        <div class="section-heading">
-            <div class="container">
-                <div class="section-subtitle">PAST & UPCOMING EVENTS</div>
-                <h2 class="section-title">Events at BDESH</h2>
-            </div>
-        </div>
+    {{--<section class="section padding-bottom-50 section gray">--}}
+        {{--<div class="section-heading">--}}
+            {{--<div class="container">--}}
+                {{--<div class="section-subtitle">PAST & UPCOMING EVENTS</div>--}}
+                {{--<h2 class="section-title">Events at BDESH</h2>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
-        <div class="container">
-            <div class="fly-events flex-container">
-                <div class="column">
-                    <!-- Event -->
-                    <article class="fly-card fly-event fly-flip-effect" itemscope itemtype="http://schema.org/Event">
-                        <div class="boxed flip-front">
-                            <a class="event-media js-wave" href="{{route('familyEvent')}}" itemprop="url">
-                                <img src="{{asset('public/images/events/BDeshFlyer_BANNER.jpg')}}" alt="" itemprop="image" />
-                            </a>
+        {{--<div class="container">--}}
+            {{--<div class="fly-events flex-container">--}}
+                {{--<div class="column">--}}
+                    {{--<!-- Event -->--}}
+                    {{--<article class="fly-card fly-event fly-flip-effect" itemscope itemtype="http://schema.org/Event">--}}
+                        {{--<div class="boxed flip-front">--}}
+                            {{--<a class="event-media js-wave" href="{{route('familyEvent')}}" itemprop="url">--}}
+                                {{--<img src="{{asset('public/images/events/BDeshFlyer_BANNER.jpg')}}" alt="" itemprop="image" />--}}
+                            {{--</a>--}}
 
-                            <div class="event-content">
-                                <h3 class="event-title" itemprop="name">
-                                    <a href="{{route('familyEvent')}}">Family Night & Fund Raising Dinner</a>
-                                </h3>
+                            {{--<div class="event-content">--}}
+                                {{--<h3 class="event-title" itemprop="name">--}}
+                                    {{--<a href="{{route('familyEvent')}}">Family Night & Fund Raising Dinner</a>--}}
+                                {{--</h3>--}}
 
-                                <div class="event-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
-                                    <time class="event-date" datetime="2016-12-12T20:11:00" itemprop="startDate">
-                                        <i class="material-icons">query_builder</i>12 Dec 2016, 11:00 AM
-                                    </time>
-                                </div>
+                                {{--<div class="event-location">--}}
+                                    {{--<a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>--}}
+                                    {{--<time class="event-date" datetime="2016-12-12T20:11:00" itemprop="startDate">--}}
+                                        {{--<i class="material-icons">query_builder</i>12 Dec 2016, 11:00 AM--}}
+                                    {{--</time>--}}
+                                {{--</div>--}}
 
-                                <div class="event-description" itemprop="description">
-                                    <p>
-                                        Family Night & Fund Raising Dinner Date: June 11, 2012 Time: 7:30 PM St Joseph Parish hall 750 Peachtree Street, Herndon, VA 20170 Special Guest: Imam Magid (Executive Director, Imam, ADAMS Center) Br Arif Kabir (Amir, Qabeelah Nurayn, AIMaghrib Instution) Br Mir Ali Bappy (Executive Board Member, BDesh Foundation) Tickets: $15 Contact: Masud Hasan 571-212-2257
-                                    </p>
-                                </div>
+                                {{--<div class="event-description" itemprop="description">--}}
+                                    {{--<p>--}}
+                                        {{--Family Night & Fund Raising Dinner Date: June 11, 2012 Time: 7:30 PM St Joseph Parish hall 750 Peachtree Street, Herndon, VA 20170 Special Guest: Imam Magid (Executive Director, Imam, ADAMS Center) Br Arif Kabir (Amir, Qabeelah Nurayn, AIMaghrib Instution) Br Mir Ali Bappy (Executive Board Member, BDesh Foundation) Tickets: $15 Contact: Masud Hasan 571-212-2257--}}
+                                    {{--</p>--}}
+                                {{--</div>--}}
 
-                                <div class="event-footer">
-                                    <div class="event-buttons">
-                                        <a href="{{route('familyEvent')}}" class="btn btn-transparent btn-icon-left js-wave" itemprop="url">
-                                            <i class="material-icons">arrow_forward</i>Learn More
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                {{--<div class="event-footer">--}}
+                                    {{--<div class="event-buttons">--}}
+                                        {{--<a href="{{route('familyEvent')}}" class="btn btn-transparent btn-icon-left js-wave" itemprop="url">--}}
+                                            {{--<i class="material-icons">arrow_forward</i>Learn More--}}
+                                        {{--</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                        <div class="boxed flip-back">
-                            <div class="card-map" data-placeholder="waiting for map">
-                                <div class="google-map"
-                                     data-map-zoom="14"
-                                     data-map-type="roadmap"
-                                     data-map-style="onehope"
-                                     data-map-address="1998 Hulman Blvd, Speedway, IN, 46222"
-                                     data-map-marker="{{asset('public/images/marker.png')}}"
-                                     data-map-marker-size="[31,46]"
-                                     data-map-marker-anchor="[16,46]">
-                                    <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                                </div>
-                            </div>
+                        {{--<div class="boxed flip-back">--}}
+                            {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                                {{--<div class="google-map"--}}
+                                     {{--data-map-zoom="14"--}}
+                                     {{--data-map-type="roadmap"--}}
+                                     {{--data-map-style="onehope"--}}
+                                     {{--data-map-address="1998 Hulman Blvd, Speedway, IN, 46222"--}}
+                                     {{--data-map-marker="{{asset('public/images/marker.png')}}"--}}
+                                     {{--data-map-marker-size="[31,46]"--}}
+                                     {{--data-map-marker-anchor="[16,46]">--}}
+                                    {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <ul class="card-social">
-                                <li><a href="#" class="fa fa-facebook js-wave"></a></li>
-                                <li><a href="#" class="fa fa-twitter js-wave"></a></li>
-                                <li><a href="#" class="fa fa-instagram js-wave"></a></li>
-                                <li><a href="#" class="fa fa-google js-wave"></a></li>
-                            </ul>
-                        </div>
-                    </article>
-                    <!--/ Event -->
-                </div>
+                            {{--<ul class="card-social">--}}
+                                {{--<li><a href="#" class="fa fa-facebook js-wave"></a></li>--}}
+                                {{--<li><a href="#" class="fa fa-twitter js-wave"></a></li>--}}
+                                {{--<li><a href="#" class="fa fa-instagram js-wave"></a></li>--}}
+                                {{--<li><a href="#" class="fa fa-google js-wave"></a></li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
+                    {{--</article>--}}
+                    {{--<!--/ Event -->--}}
+                {{--</div>--}}
 
-                <div class="column">
-                    <!-- Event -->
-                    <article class="fly-card fly-event fly-flip-effect" itemscope itemtype="http://schema.org/Event">
-                        <div class="boxed flip-front">
-                            <a class="event-media js-wave" href="{{route('familyEvent')}}" itemprop="url">
-                                <img src="{{asset('public/images/events/Family-Night-&-Fund-Raising-Dinner.jpg')}}" alt="" itemprop="image" />
-                            </a>
+                {{--<div class="column">--}}
+                    {{--<!-- Event -->--}}
+                    {{--<article class="fly-card fly-event fly-flip-effect" itemscope itemtype="http://schema.org/Event">--}}
+                        {{--<div class="boxed flip-front">--}}
+                            {{--<a class="event-media js-wave" href="{{route('familyEvent')}}" itemprop="url">--}}
+                                {{--<img src="{{asset('public/images/events/Family-Night-&-Fund-Raising-Dinner.jpg')}}" alt="" itemprop="image" />--}}
+                            {{--</a>--}}
 
-                            <div class="event-content">
-                                <h3 class="event-title" itemprop="name">
-                                    <a href="{{route('familyEvent')}}">Family Night & Fund Raising Dinner</a>
-                                </h3>
+                            {{--<div class="event-content">--}}
+                                {{--<h3 class="event-title" itemprop="name">--}}
+                                    {{--<a href="{{route('familyEvent')}}">Family Night & Fund Raising Dinner</a>--}}
+                                {{--</h3>--}}
 
-                                <div class="event-location">
-                                    <a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>
-                                    <time class="event-date" datetime="2016-12-12T20:14:00" itemprop="startDate">
-                                        <i class="material-icons">query_builder</i>12 Dec 2016, 2:00 PM
-                                    </time>
-                                </div>
+                                {{--<div class="event-location">--}}
+                                    {{--<a href="#" class="flip-button" itemprop="location"><i class="material-icons">location_on</i>United States</a>--}}
+                                    {{--<time class="event-date" datetime="2016-12-12T20:14:00" itemprop="startDate">--}}
+                                        {{--<i class="material-icons">query_builder</i>12 Dec 2016, 2:00 PM--}}
+                                    {{--</time>--}}
+                                {{--</div>--}}
 
-                                <div class="event-description" itemprop="description">
-                                    <p>
-                                        Family Night & Fund Raising Dinner Date: June 11, 2012 Time: 7:30 PM St Joseph Parish hall 750 Peachtree Street, Herndon, VA 20170 Special Guest: Imam Magid (Executive Director, Imam, ADAMS Center) Br Arif Kabir (Amir, Qabeelah Nurayn, AIMaghrib Instution) Br Mir Ali Bappy (Executive Board Member, BDesh Foundation) Tickets: $15 Contact: Masud Hasan 571-212-2257
-                                    </p>
-                                </div>
+                                {{--<div class="event-description" itemprop="description">--}}
+                                    {{--<p>--}}
+                                        {{--Family Night & Fund Raising Dinner Date: June 11, 2012 Time: 7:30 PM St Joseph Parish hall 750 Peachtree Street, Herndon, VA 20170 Special Guest: Imam Magid (Executive Director, Imam, ADAMS Center) Br Arif Kabir (Amir, Qabeelah Nurayn, AIMaghrib Instution) Br Mir Ali Bappy (Executive Board Member, BDesh Foundation) Tickets: $15 Contact: Masud Hasan 571-212-2257--}}
+                                    {{--</p>--}}
+                                {{--</div>--}}
 
-                                <div class="event-footer">
-                                    <div class="event-buttons">
-                                        <a href="{{route('familyEvent')}}" class="btn btn-transparent btn-icon-left js-wave" itemprop="url">
-                                            <i class="material-icons">arrow_forward</i>Learn More
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                {{--<div class="event-footer">--}}
+                                    {{--<div class="event-buttons">--}}
+                                        {{--<a href="{{route('familyEvent')}}" class="btn btn-transparent btn-icon-left js-wave" itemprop="url">--}}
+                                            {{--<i class="material-icons">arrow_forward</i>Learn More--}}
+                                        {{--</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                        <div class="boxed flip-back">
-                            <div class="card-map" data-placeholder="waiting for map">
-                                <div class="google-map"
-                                     data-map-zoom="14"
-                                     data-map-type="roadmap"
-                                     data-map-style="onehope"
-                                     data-map-address="Oklahoma City, OK 73105"
-                                     data-map-marker="{{asset('public/images/marker.png')}}"
-                                     data-map-marker-size="[31,46]"
-                                     data-map-marker-anchor="[16,46]">
-                                    <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                                </div>
-                            </div>
+                        {{--<div class="boxed flip-back">--}}
+                            {{--<div class="card-map" data-placeholder="waiting for map">--}}
+                                {{--<div class="google-map"--}}
+                                     {{--data-map-zoom="14"--}}
+                                     {{--data-map-type="roadmap"--}}
+                                     {{--data-map-style="onehope"--}}
+                                     {{--data-map-address="Oklahoma City, OK 73105"--}}
+                                     {{--data-map-marker="{{asset('public/images/marker.png')}}"--}}
+                                     {{--data-map-marker-size="[31,46]"--}}
+                                     {{--data-map-marker-anchor="[16,46]">--}}
+                                    {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <ul class="card-social">
-                                <li><a href="#" class="fa fa-facebook js-wave"></a></li>
-                                <li><a href="#" class="fa fa-twitter js-wave"></a></li>
-                                <li><a href="#" class="fa fa-instagram js-wave"></a></li>
-                                <li><a href="#" class="fa fa-google js-wave"></a></li>
-                            </ul>
-                        </div>
-                    </article>
-                    <!--/ Event -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/ Events -->
-
-
+                            {{--<ul class="card-social">--}}
+                                {{--<li><a href="#" class="fa fa-facebook js-wave"></a></li>--}}
+                                {{--<li><a href="#" class="fa fa-twitter js-wave"></a></li>--}}
+                                {{--<li><a href="#" class="fa fa-instagram js-wave"></a></li>--}}
+                                {{--<li><a href="#" class="fa fa-google js-wave"></a></li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
+                    {{--</article>--}}
+                    {{--<!--/ Event -->--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
+    {{--<!--/ Events -->--}}
 
 
-    <!-- Recent Posts -->
-    <section class="section padding-bottom-50">
-        <div class="section-heading">
-            <div class="container">
-                <div class="section-subtitle">RECENT BLOGPOSTS</div>
-                <h2 class="section-title">Latest from our Blog</h2>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="fly-articles columns3 flex-container">
-                <div class="column">
-                    <!-- Post -->
-                    <article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">
-                        <div class="boxed">
-                            <a class="post-media js-wave" href="{{route('tubewellSanitation')}}" itemprop="url">
-                                <img src="{{asset('public/images/current/thumb_img_1.png')}}" alt="" itemprop="image" />
-                            </a>
 
-                            <div class="post-content">
-                                <h3 class="post-title" itemprop="name">
-                                    <a href="{{route('tubewellSanitation')}}">Tube Well & Sanitation</a>
-                                </h3>
+    {{--<!-- Recent Posts -->--}}
+    {{--<section class="section padding-bottom-50">--}}
+        {{--<div class="section-heading">--}}
+            {{--<div class="container">--}}
+                {{--<div class="section-subtitle">RECENT BLOGPOSTS</div>--}}
+                {{--<h2 class="section-title">Latest from our Blog</h2>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
-                                <div class="post-meta">
-                                    <time class="post-date" datetime="2016-12-12T20:04:09" itemprop="dateCreated">12 Dec 2016</time>
-                                    <a href="#" class="post-comments"><span itemprop="commentCount">26</span> comments</a>
-                                    <span class="post-category" itemprop="keywords">tagged in <a href="#">volunteer</a></span>
-                                    <!--<span class="post-author" itemprop="author">by <a href="#">John Doe</a></span>-->
-                                </div>
+        {{--<div class="container">--}}
+            {{--<div class="fly-articles columns3 flex-container">--}}
+                {{--<div class="column">--}}
+                    {{--<!-- Post -->--}}
+                    {{--<article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">--}}
+                        {{--<div class="boxed">--}}
+                            {{--<a class="post-media js-wave" href="{{route('tubewellSanitation')}}" itemprop="url">--}}
+                                {{--<img src="{{asset('public/images/current/thumb_img_1.png')}}" alt="" itemprop="image" />--}}
+                            {{--</a>--}}
 
-                                <div class="post-description" itemprop="articleBody">
-                                    <p>
-                                        Our primary objective is to have a healthy and wealthy society. Our health care program is more focus on the proactive measurement. Hundreds of families suffer diarrhea.
-                                    </p>
-                                </div>
+                            {{--<div class="post-content">--}}
+                                {{--<h3 class="post-title" itemprop="name">--}}
+                                    {{--<a href="{{route('tubewellSanitation')}}">Tube Well & Sanitation</a>--}}
+                                {{--</h3>--}}
 
-                                <div class="post-footer">
-                                    <div class="post-buttons">
-                                        <a href="{{route('tubewellSanitation')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!--/ Post -->
-                </div>
+                                {{--<div class="post-meta">--}}
+                                    {{--<time class="post-date" datetime="2016-12-12T20:04:09" itemprop="dateCreated">12 Dec 2016</time>--}}
+                                    {{--<a href="#" class="post-comments"><span itemprop="commentCount">26</span> comments</a>--}}
+                                    {{--<span class="post-category" itemprop="keywords">tagged in <a href="#">volunteer</a></span>--}}
+                                    {{--<!--<span class="post-author" itemprop="author">by <a href="#">John Doe</a></span>-->--}}
+                                {{--</div>--}}
 
-                <div class="column">
-                    <!-- Post -->
-                    <article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">
-                        <div class="boxed">
-                            <a class="post-media js-wave" href="{{route('multimedia')}}" itemprop="url">
-                                <img src="{{asset('public/images/current/Multimedia-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />
-                            </a>
+                                {{--<div class="post-description" itemprop="articleBody">--}}
+                                    {{--<p>--}}
+                                        {{--Our primary objective is to have a healthy and wealthy society. Our health care program is more focus on the proactive measurement. Hundreds of families suffer diarrhea.--}}
+                                    {{--</p>--}}
+                                {{--</div>--}}
 
-                            <div class="post-content">
-                                <h3 class="post-title" itemprop="name">
-                                    <a href="{{route('multimedia')}}">Multimedia Program</a>
-                                </h3>
+                                {{--<div class="post-footer">--}}
+                                    {{--<div class="post-buttons">--}}
+                                        {{--<a href="{{route('tubewellSanitation')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</article>--}}
+                    {{--<!--/ Post -->--}}
+                {{--</div>--}}
 
-                                <div class="post-meta">
-                                    <time class="post-date" datetime="2016-12-12T20:04:09" itemprop="dateCreated">12 Dec 2016</time>
-                                    <a href="#" class="post-comments"><span itemprop="commentCount">26</span> comments</a>
-                                    <span class="post-category" itemprop="keywords">tagged in <a href="#">volunteer</a></span>
-                                    <!--<span class="post-author" itemprop="author">by <a href="#">John Doe</a></span>-->
-                                </div>
+                {{--<div class="column">--}}
+                    {{--<!-- Post -->--}}
+                    {{--<article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">--}}
+                        {{--<div class="boxed">--}}
+                            {{--<a class="post-media js-wave" href="{{route('multimedia')}}" itemprop="url">--}}
+                                {{--<img src="{{asset('public/images/current/Multimedia-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />--}}
+                            {{--</a>--}}
 
-                                <div class="post-description" itemprop="articleBody">
-                                    <p>
-                                        The multimedia program is designed to educated and bring the awareness among the people of every walk of life. It plays dvd and vcd programs on various religious, and social issues.
-                                    </p>
-                                </div>
+                            {{--<div class="post-content">--}}
+                                {{--<h3 class="post-title" itemprop="name">--}}
+                                    {{--<a href="{{route('multimedia')}}">Multimedia Program</a>--}}
+                                {{--</h3>--}}
 
-                                <div class="post-footer">
-                                    <div class="post-buttons">
-                                        <a href="{{route('multimedia')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!--/ Post -->
-                </div>
+                                {{--<div class="post-meta">--}}
+                                    {{--<time class="post-date" datetime="2016-12-12T20:04:09" itemprop="dateCreated">12 Dec 2016</time>--}}
+                                    {{--<a href="#" class="post-comments"><span itemprop="commentCount">26</span> comments</a>--}}
+                                    {{--<span class="post-category" itemprop="keywords">tagged in <a href="#">volunteer</a></span>--}}
+                                    {{--<!--<span class="post-author" itemprop="author">by <a href="#">John Doe</a></span>-->--}}
+                                {{--</div>--}}
 
-                <div class="column">
-                    <!-- Post -->
-                    <article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">
-                        <div class="boxed">
-                            <a class="post-media js-wave" href="{{route('childrenwelfare')}}" itemprop="url">
-                                <img src="{{asset('public/images/current/Childwelfaret-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />
-                            </a>
+                                {{--<div class="post-description" itemprop="articleBody">--}}
+                                    {{--<p>--}}
+                                        {{--The multimedia program is designed to educated and bring the awareness among the people of every walk of life. It plays dvd and vcd programs on various religious, and social issues.--}}
+                                    {{--</p>--}}
+                                {{--</div>--}}
 
-                            <div class="post-content">
-                                <h3 class="post-title" itemprop="name">
-                                    <a href="{{route('childrenwelfare')}}">Children Welfare Program</a>
-                                </h3>
+                                {{--<div class="post-footer">--}}
+                                    {{--<div class="post-buttons">--}}
+                                        {{--<a href="{{route('multimedia')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</article>--}}
+                    {{--<!--/ Post -->--}}
+                {{--</div>--}}
 
-                                <div class="post-meta">
-                                    <time class="post-date" datetime="2016-12-12T20:04:09" itemprop="dateCreated">12 Dec 2016</time>
-                                    <a href="#" class="post-comments"><span itemprop="commentCount">26</span> comments</a>
-                                    <span class="post-category" itemprop="keywords">tagged in <a href="#">volunteer</a></span>
-                                    <!--<span class="post-author" itemprop="author">by <a href="#">John Doe</a></span>-->
-                                </div>
+                {{--<div class="column">--}}
+                    {{--<!-- Post -->--}}
+                    {{--<article class="fly-card fly-article boxed" itemscope itemtype="http://schema.org/Article">--}}
+                        {{--<div class="boxed">--}}
+                            {{--<a class="post-media js-wave" href="{{route('childrenwelfare')}}" itemprop="url">--}}
+                                {{--<img src="{{asset('public/images/current/Childwelfaret-small-Banner-300x200.jpg')}}" alt="" itemprop="image" />--}}
+                            {{--</a>--}}
 
-                                <div class="post-description" itemprop="articleBody">
-                                    <p>
-                                        Today's children are leaders of tomorrow. Unfortunately, the socio-economic environment plays a significant role in children growth and their development as future leaders. Our mission is to create a lasting, positive change in the lives of children in need around the world.
-                                    </p>
-                                </div>
+                            {{--<div class="post-content">--}}
+                                {{--<h3 class="post-title" itemprop="name">--}}
+                                    {{--<a href="{{route('childrenwelfare')}}">Children Welfare Program</a>--}}
+                                {{--</h3>--}}
 
-                                <div class="post-footer">
-                                    <div class="post-buttons">
-                                        <a href="{{route('childrenwelfare')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!--/ Post -->
-                </div>
-            </div>
-        </div>
-    </section>
+                                {{--<div class="post-meta">--}}
+                                    {{--<time class="post-date" datetime="2016-12-12T20:04:09" itemprop="dateCreated">12 Dec 2016</time>--}}
+                                    {{--<a href="#" class="post-comments"><span itemprop="commentCount">26</span> comments</a>--}}
+                                    {{--<span class="post-category" itemprop="keywords">tagged in <a href="#">volunteer</a></span>--}}
+                                    {{--<!--<span class="post-author" itemprop="author">by <a href="#">John Doe</a></span>-->--}}
+                                {{--</div>--}}
+
+                                {{--<div class="post-description" itemprop="articleBody">--}}
+                                    {{--<p>--}}
+                                        {{--Today's children are leaders of tomorrow. Unfortunately, the socio-economic environment plays a significant role in children growth and their development as future leaders. Our mission is to create a lasting, positive change in the lives of children in need around the world.--}}
+                                    {{--</p>--}}
+                                {{--</div>--}}
+
+                                {{--<div class="post-footer">--}}
+                                    {{--<div class="post-buttons">--}}
+                                        {{--<a href="{{route('childrenwelfare')}}" class="btn btn-transparent js-wave" itemprop="url">Read More</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</article>--}}
+                    {{--<!--/ Post -->--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
     <!--/ Recent Posts -->
 
     <!-- Contact Us -->
@@ -902,7 +807,7 @@
         <div class="section-heading">
             <div class="container">
                 <div class="section-subtitle">CONTACT US</div>
-                <h2 class="section-title">Get in touch with us</h2>
+                <h2 class="section-title">Let’s connect</h2>
             </div>
         </div>
 

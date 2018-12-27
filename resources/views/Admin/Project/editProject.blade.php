@@ -94,6 +94,23 @@
 
                         @endif
 
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Project Thumbnail image</label>
+                                <div class="col-sm-10">
+                                    <input type="file" name="thumbnailImage" class="form-control" multiple>
+                                </div>
+                            </div>
+                            @if($projectUpdate->thumbnailImage !=null)
+                                <div class="col-md-3 mt-2" id="thumlainImageLoad" >
+                                    <button type="button" class="btn btn-danger btn-sm" data-Panel-id="{{$projectUpdate->projectId}}" onclick="deletethumbnailImage(this)">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                    <img src="{{url('public/thumbnailImage')}}/{{$projectUpdate->thumbnailImage}}" class="img-thumbnail" alt="">
+                                </div>
+
+                            @endif
+
+
                             <div class="form-group">
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
@@ -148,6 +165,33 @@
                             success: function (data) {
                                 $.alert('Image Deleted!');
                                 $("#headerImageLoad").load(" #headerImageLoad");
+                            }
+                        });
+                    },
+                    cancel: function () {
+                        $.alert('Canceled!');
+                    }
+                }
+            });
+
+        }
+
+        function deletethumbnailImage(x) {
+            var id = $(x).data('panel-id');
+            console.log(id)
+            $.confirm({
+                title: 'Are',
+                content: 'Your Sure!',
+                buttons: {
+                    confirm: function () {
+                        $.ajax({
+                            type: 'POST',
+                            url: "{!! route('project.deletethumbnailImage') !!}",
+                            cache: false,
+                            data: {_token: "{{csrf_token()}}",'id': id},
+                            success: function (data) {
+                                $.alert('Image Deleted!');
+                                $("#thumlainImageLoad").load(" #thumlainImageLoad");
                             }
                         });
                     },

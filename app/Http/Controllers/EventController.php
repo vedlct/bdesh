@@ -106,8 +106,9 @@ class EventController extends Controller
         return view('pages.SingleEvent')->with('event',$event);
     }
 
-public function showEventsPage(){
+    public function showEventsPage(){
+
         $event = Event::get();
-        return view('Pages.pastevents')->with('events',$event);
+        return view('pages.pastevents')->with('events',$event);
 }
 }

@@ -17,16 +17,16 @@
                 <!-- Content -->
                 <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement" class="content">
                     <!-- Map -->
-                    <div class="google-map"
-                         data-map-zoom="15"
-                         data-map-address="1999 Hulman Blvd, Speedway, IN, 46222"
-                         data-map-type="roadmap"
-                         data-map-style="hency"
-                         data-map-marker="{{asset('public/images/marker.png')}}"
-                         data-map-marker-size="[50,64]"
-                         data-map-marker-anchor="[26,64]">
-                        <!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->
-                    </div>
+                    {{--<div class="google-map"--}}
+                         {{--data-map-zoom="15"--}}
+                         {{--data-map-address="1999 Hulman Blvd, Speedway, IN, 46222"--}}
+                         {{--data-map-type="roadmap"--}}
+                         {{--data-map-style="hency"--}}
+                         {{--data-map-marker="{{asset('public/images/marker.png')}}"--}}
+                         {{--data-map-marker-size="[50,64]"--}}
+                         {{--data-map-marker-anchor="[26,64]">--}}
+                        {{--<!-- May use data-map-coords="39.795180;-86.234819" instead of data-map-address -->--}}
+                    {{--</div>--}}
                     <!--/ Map -->
 
 
@@ -36,8 +36,8 @@
                     <div class="row">
 
                         <div class="col-md-4 text-center">
-                            <h3>Get in touch</h3>
-                            <p style="text-align: ">B DESH Foundation, Inc is a non-profit charitable organization involved in poverty alleviation, health and sanitation and educational projects. B Desh Foundation, Inc. is an IRS approved 501c3 organization.</p><br>
+                            <h3>Let’s connect</h3>
+                            <p>B DESH Foundation, Inc is a non-profit charitable organization involved in poverty alleviation, health and sanitation and educational projects. B Desh Foundation, Inc. is an IRS approved 501c3 organization.</p><br>
                         </div>
 
                         <div class="col-md-4 text-center">

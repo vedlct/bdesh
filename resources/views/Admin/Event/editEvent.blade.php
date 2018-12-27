@@ -19,7 +19,7 @@
                                 <input type="hidden" name="id" value="{{$event->eventId}}">
                                 <label class="col-sm-2 col-form-label">Event Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="eventName" value="{{$event->eventName}}"  class="form-control" required placeholder="Event Name">
+                                    <input type="text" name="eventName" value="{{$event->eventName}}"  class="form-control"  placeholder="Event Name">
                                 </div>
                             </div>
 
@@ -27,39 +27,39 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Event Location</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="eLocation" value="{{$event->eLocation}}" class="form-control" required placeholder="Event Location">
+                                    <input type="text" name="eLocation" value="{{$event->eLocation}}" class="form-control"  placeholder="Event Location">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Event Start Date</label>
                                 <div class="col-sm-10">
-                                    <input type="date" name="startDate" value="{{$event->startDate}}" class="form-control" required placeholder="Event Location">
+                                    <input type="date" name="startDate" value="{{$event->startDate}}" class="form-control"  placeholder="Event Location">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Event End Date</label>
                                 <div class="col-sm-10">
-                                    <input type="date" name="EndDate" value="{{$event->EndDate}}" class="form-control" required placeholder="Event Location">
+                                    <input type="date" name="EndDate" value="{{$event->EndDate}}" class="form-control"  placeholder="Event Location">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Event Start Time</label>
                                 <div class="col-sm-10">
-                                    <input type="time" name="startTime" value="{{$event->startTime}}" class="form-control" required placeholder="Event End Time">
+                                    <input type="time" name="startTime" value="{{$event->startTime}}" class="form-control"  placeholder="Event End Time">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Event End Time</label>
                                 <div class="col-sm-10">
-                                    <input type="time" name="endTime" value="{{$event->EndTime}}" class="form-control" required placeholder="Event End Time">
+                                    <input type="time" name="endTime" value="{{$event->EndTime}}" class="form-control"  placeholder="Event End Time">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Event place</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="place" value="{{$event->place}}" class="form-control" required placeholder="Event Place">
+                                    <input type="text" name="place" value="{{$event->place}}" class="form-control"  placeholder="Event Place">
                                 </div>
                             </div>
 

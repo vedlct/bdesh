@@ -3,7 +3,7 @@
     <!-- Header Image or Video -->
     <section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/current/Multimedia-small-Banner.jpg')}});">
         <div class="fly-header-content">
-            <h1 class="page-title">Bdesh Projects</h1>
+            <h1 class="page-title">Current Projects</h1>
         </div>
     </section>
     <!--/ Header Image or Video -->
@@ -19,7 +19,9 @@
                     <article class="fly-card fly-project fly-flip-effect" itemscope itemtype="http://schema.org/DonateAction">
                         <div class="boxed flip-front">
                             <a class="project-media js-wave" href="{{route('project.singlePost',[$project->slug])}}" itemprop="url">
-                                <img src="{{asset('public/Gallery')}}/{{\App\Http\Controllers\HomeController::getThumnailImage($project->projectId)}}" alt="" itemprop="image" />
+                                {{--<img src="{{asset('public/Gallery')}}/{{\App\Http\Controllers\HomeController::getThumnailImage($project->projectId)}}" alt="" itemprop="image" />--}}
+                                <img src="{{url('public/thumbnailImage')}}/{{$project->thumbnailImage}}" class="img-thumbnail" alt="">
+
                                 <span class="progress">
                                     <span class="progress-label">0%</span>
                                     <span class="progress-bar"></span>

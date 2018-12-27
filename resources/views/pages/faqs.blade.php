@@ -12,74 +12,193 @@
 
 <!-- Tutorial: https://www.w3schools.com/howto/howto_js_accordion.asp -->
 <!-- Info: https://en.wikipedia.org/wiki/Markup_language#HTML -->
-            
-            
-            <div style="margin-top:30px; " class="container">
-                <div class="row">
-                    <div class="content">
 
-                        <h2 style="text-align: left;">General Questions</h2>
 
-                        <button class="accordion"><strong> Who we are ?</strong></button>
-                        <div class="panel">
-                            <p style="padding: 5px">BDesh Foundation is a Northern Virginia based non-profit organization dedicated to poverty alleviation, health, sanitation and educational projects. We have no political affiliation. Currently, there are number of on-going projects in Bangladesh for clean water, sanitation, educational, eye camp, children welfare program, etc. Details on our projects are available at <a href="http://bdeshfoundation.org/">www.BDeshFoundation.org</a> Bdesh Foundation is an IRS approved non-profit 501c3 organization and donation to Bdesh is tax deductible. </p>
-                        </div>
+            {{--<div style="margin-top:30px; " class="container">--}}
+                {{--<div class="row">--}}
+                    {{--<div class="content">--}}
 
-                        <button class="accordion"><strong> Can you highlight some of Bdesh Foundation projects ?</strong></button>
-                        <div class="panel">
-                            <p style="padding: 5px"> <strong>Some of our projects are:</strong> 
+                        {{--<h2 style="text-align: left;">General Questions</h2>--}}
 
-                            <p>Economic Empowerment: We have Islamic sharia compliant micro financing program. We provide Qarde hasana, and Zakat toward economic empowerment projects.</p>
+                        {{--<button class="accordion"><strong> Who we are ?</strong></button>--}}
+                        {{--<div class="panel">--}}
+                            {{--<p style="padding: 5px">BDesh Foundation is a Northern Virginia based non-profit organization dedicated to poverty alleviation, health, sanitation and educational projects. We have no political affiliation. Currently, there are number of on-going projects in Bangladesh for clean water, sanitation, educational, eye camp, children welfare program, etc. Details on our projects are available at <a href="http://bdeshfoundation.org/">www.BDeshFoundation.org</a> Bdesh Foundation is an IRS approved non-profit 501c3 organization and donation to Bdesh is tax deductible. </p>--}}
+                        {{--</div>--}}
 
-                            <p>  Children Welfare Program: In this program we sponsor socially disadvantage children (orphan, disable and mentally challenged, abandon by parent and other poor and needy) in shelter, education, healthcare, and food.</p>
+                        {{--<button class="accordion"><strong> Can you highlight some of Bdesh Foundation projects ?</strong></button>--}}
+                        {{--<div class="panel">--}}
+                            {{--<p style="padding: 5px"> <strong>Some of our projects are:</strong>--}}
 
-                            <p>Eye Camp Program: We setup eye camps in different areas of Bangladesh to conduct eye examination and screening for cataract surgery, and general physical health examination. We provide free medication to all needy patients who participate in the camp. We also finance the cataract removal surgery for those patients who need them.</p>
+                            {{--<p>Economic Empowerment: We have Islamic sharia compliant micro financing program. We provide Qarde hasana, and Zakat toward economic empowerment projects.</p>--}}
 
-                            <p>Safe Drinking Water and Sanitation Program: We sponsor installation of tube wells in remote villages in Bangladesh for clean and safe drinking water. We also fund installation of sanitary latrine for a healthy and hygienic community.</p>
+                            {{--<p>  Children Welfare Program: In this program we sponsor socially disadvantage children (orphan, disable and mentally challenged, abandon by parent and other poor and needy) in shelter, education, healthcare, and food.</p>--}}
 
-                            <p>Food Basket: During the month of Ramdan we provide food basket to poor and needy people in Bangladesh and in the USA. We also provide food basket during natural disasters and food shortages.</p>
+                            {{--<p>Eye Camp Program: We setup eye camps in different areas of Bangladesh to conduct eye examination and screening for cataract surgery, and general physical health examination. We provide free medication to all needy patients who participate in the camp. We also finance the cataract removal surgery for those patients who need them.</p>--}}
 
-                            <p> Vocational Training: We provide vocational training on how to form cooperative and cooperative management, entrepreneurship and small business development. We also provide training to farmers for soil testing, seed preservation, palm tree plantation, producing bio-fertilizer and bio-gas, and running nurseries.</p>
+                            {{--<p>Safe Drinking Water and Sanitation Program: We sponsor installation of tube wells in remote villages in Bangladesh for clean and safe drinking water. We also fund installation of sanitary latrine for a healthy and hygienic community.</p>--}}
 
-                                Multimedia Program: We provide educational seminars in various socio-economical subjects using multimedia players such as TV, DVD, Big screen projector, laptop etc.</p>
-                        </div>
-                        
-                    <button class="accordion"><strong> Why do you work in Bangladesh ?</strong></button>
-                    <div class="panel">
-                        <p style="padding: 5px">We form partnership with the registered NGOs in Bangladesh who has proven record of accomplishments and whose mission and objectives are aligned with Bdesh’s mission and visions. We verify their NGO status and legitimacy using State department’s database. </p>
+                            {{--<p>Food Basket: During the month of Ramdan we provide food basket to poor and needy people in Bangladesh and in the USA. We also provide food basket during natural disasters and food shortages.</p>--}}
+
+                            {{--<p> Vocational Training: We provide vocational training on how to form cooperative and cooperative management, entrepreneurship and small business development. We also provide training to farmers for soil testing, seed preservation, palm tree plantation, producing bio-fertilizer and bio-gas, and running nurseries.</p>--}}
+
+                                {{--Multimedia Program: We provide educational seminars in various socio-economical subjects using multimedia players such as TV, DVD, Big screen projector, laptop etc.</p>--}}
+                        {{--</div>--}}
+
+                    {{--<button class="accordion"><strong> Why do you work in Bangladesh ?</strong></button>--}}
+                    {{--<div class="panel">--}}
+                        {{--<p style="padding: 5px">We form partnership with the registered NGOs in Bangladesh who has proven record of accomplishments and whose mission and objectives are aligned with Bdesh’s mission and visions. We verify their NGO status and legitimacy using State department’s database. </p>--}}
+                    {{--</div>--}}
+
+                    {{--<button class="accordion"><strong> How do you monitor your projects and make sure money is spent in right cause ?</strong></button>--}}
+                    {{--<div class="panel">--}}
+                        {{--<p style="padding: 5px">We have representative in the field to supervise Bdesh sponsored projects. Also, we conduct independent audit and survey in order to validate the project execution and expenses. In addition, we have Key Performance Indicator matrix associated with all of our projects and we strictly measure performance of our project against those matrix.  </p>--}}
+                    {{--</div>--}}
+
+                    {{--<button class="accordion"><strong> What is your Overhead expense ?</strong></button>--}}
+                    {{--<div class="panel">--}}
+                        {{--<p style="padding: 5px">We maintain very low administrative expenses. Most of our administrative expenses are covered from donations received from our board of directors. We try our best to keep our overhead cost low. All of our board of directors and the advisors work on volunteer basis and are not compensated for their work. </p>--}}
+                    {{--</div>--}}
+
+                    {{--<button class="accordion"><strong> How can we help ?</strong></button>--}}
+                    {{--<div class="panel">--}}
+                        {{--<p style="padding: 5px">--}}
+                            {{--You can pay your Zakat or Sadaqa (donation) towards any of the Bdesh sponsors projects.  You can donate online at <a href="#">http://www.bdeshfoundation.org</a> or mail your check payable to BDesh Foundation at the following address:--}}
+                        {{--</p>--}}
+                        {{--<pre style="padding: 5px;text-align: left;">--}}
+
+                             {{--BDesh Foundation, Inc.--}}
+                             {{--6 Silo Mill Ct,--}}
+                             {{--Sterling, VA 20164.--}}
+                         {{--</pre>--}}
+
+                        {{--<p style="padding: 5px">Check our website and support a program you like. Your donation and support can improve the lives of many half away across the world. If you have any question, concern or suggestion, please feel free to contact us by  info@bdeshfoundation.org  or by phone at (571)306-2523.</p>--}}
+                    {{--</div>--}}
+
+
+
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+
+    <div style="margin-top:30px; " class="container">
+        <div class="row">
+            <div class="content">
+
+                <h2 style="text-align: left;">General Questions</h2>
+
+                <!--
+                                        <button class="accordion"><strong> Who we are ?</strong></button>
+                                        <div class="panel">
+                                            <p style="padding: 5px">BDesh Foundation is a Northern Virginia based non-profit organization dedicated to poverty alleviation, health, sanitation and educational projects. We have no political affiliation. Currently, there are number of on-going projects in Bangladesh for clean water, sanitation, educational, eye camp, children welfare program, etc. Details on our projects are available at <a href="http://bdeshfoundation.org/">www.BDeshFoundation.org</a> Bdesh Foundation is an IRS approved non-profit 501c3 organization and donation to Bdesh is tax deductible. </p>
+                                        </div>
+
+                                        <button class="accordion"><strong> Can you highlight some of Bdesh Foundation projects ?</strong></button>
+                                        <div class="panel">
+                                            <p style="padding: 5px"> <strong>Some of our projects are:</strong>
+
+                                            <p>Economic Empowerment: We have Islamic sharia compliant micro financing program. We provide Qarde hasana, and Zakat toward economic empowerment projects.</p>
+
+                                            <p>  Children Welfare Program: In this program we sponsor socially disadvantage children (orphan, disable and mentally challenged, abandon by parent and other poor and needy) in shelter, education, healthcare, and food.</p>
+
+                                            <p>Eye Camp Program: We setup eye camps in different areas of Bangladesh to conduct eye examination and screening for cataract surgery, and general physical health examination. We provide free medication to all needy patients who participate in the camp. We also finance the cataract removal surgery for those patients who need them.</p>
+
+                                            <p>Safe Drinking Water and Sanitation Program: We sponsor installation of tube wells in remote villages in Bangladesh for clean and safe drinking water. We also fund installation of sanitary latrine for a healthy and hygienic community.</p>
+
+                                            <p>Food Basket: During the month of Ramdan we provide food basket to poor and needy people in Bangladesh and in the USA. We also provide food basket during natural disasters and food shortages.</p>
+
+                                            <p> Vocational Training: We provide vocational training on how to form cooperative and cooperative management, entrepreneurship and small business development. We also provide training to farmers for soil testing, seed preservation, palm tree plantation, producing bio-fertilizer and bio-gas, and running nurseries.</p>
+
+                                                Multimedia Program: We provide educational seminars in various socio-economical subjects using multimedia players such as TV, DVD, Big screen projector, laptop etc.</p>
+                                        </div>
+
+                                    <button class="accordion"><strong> Why do you work in Bangladesh ?</strong></button>
+                                    <div class="panel">
+                                        <p style="padding: 5px">We form partnership with the registered NGOs in Bangladesh who has proven record of accomplishments and whose mission and objectives are aligned with Bdesh’s mission and visions. We verify their NGO status and legitimacy using State department’s database. </p>
+                                    </div>
+
+                                    <button class="accordion"><strong> How do you monitor your projects and make sure money is spent in right cause ?</strong></button>
+                                    <div class="panel">
+                                        <p style="padding: 5px">We have representative in the field to supervise Bdesh sponsored projects. Also, we conduct independent audit and survey in order to validate the project execution and expenses. In addition, we have Key Performance Indicator matrix associated with all of our projects and we strictly measure performance of our project against those matrix.  </p>
+                                    </div>
+
+                                    <button class="accordion"><strong> What is your Overhead expense ?</strong></button>
+                                    <div class="panel">
+                                        <p style="padding: 5px">We maintain very low administrative expenses. Most of our administrative expenses are covered from donations received from our board of directors. We try our best to keep our overhead cost low. All of our board of directors and the advisors work on volunteer basis and are not compensated for their work. </p>
+                                    </div>
+
+                                    <button class="accordion"><strong> How can we help ?</strong></button>
+                                    <div class="panel">
+                                        <p style="padding: 5px">
+                                            You can pay your Zakat or Sadaqa (donation) towards any of the Bdesh sponsors projects.  You can donate online at <a href="#">http://www.bdeshfoundation.org</a> or mail your check payable to BDesh Foundation at the following address:
+                                        </p>
+                                        <pre style="padding: 5px;text-align: left;">
+
+                 BDesh Foundation, Inc.
+                 6 Silo Mill Ct,
+                 Sterling, VA 20164.
+                                         </pre>
+
+                                        <p style="padding: 5px">Check our website and support a program you like. Your donation and support can improve the lives of many half away across the world. If you have any question, concern or suggestion, please feel free to contact us by  info@bdeshfoundation.org  or by phone at (571)306-2523.</p>
+                                    </div>
+                -->
+
+                <section class="ac-container">
+                    <div>
+                        <input id="ac-1" name="accordion-1" type="radio">
+                        <label for="ac-1">Who we are ?</label>
+                        <article>
+                            <p style="">BDesh Foundation is a Northern Virginia based non-profit organization dedicated to poverty alleviation, health, sanitation and educational projects. We have no political affiliation. Currently, there are number of on-going projects in Bangladesh for clean water, sanitation, education, health, children welfare, etc. Details of our projects are available at                                 <a href="http://bdeshfoundation.org/">www.BDeshFoundation.org </a> BDesh Foundation is an IRS approved non-profit 501c3 organization and donations to BDesh are tax deductible. </p>
+                        </article>
                     </div>
-                        
-                    <button class="accordion"><strong> How do you monitor your projects and make sure money is spent in right cause ?</strong></button>
-                    <div class="panel">
-                        <p style="padding: 5px">We have representative in the field to supervise Bdesh sponsored projects. Also, we conduct independent audit and survey in order to validate the project execution and expenses. In addition, we have Key Performance Indicator matrix associated with all of our projects and we strictly measure performance of our project against those matrix.  </p>
+                    <div>
+                        <input id="ac-2" name="accordion-1" type="radio">
+                        <label for="ac-2"> How do you work in Bangladesh? </label>
+                        <article>
+
+                            <p style="">We have formed partnership with registered NGOs in Bangladesh who have a proven record of accomplishments. Their missions and objectives are aligned with BDesh. We verify their NGO status and legitimacy using the state department’s database.
+                            </p>
+
+                        </article>
                     </div>
-                        
-                    <button class="accordion"><strong> What is your Overhead expense ?</strong></button>
-                    <div class="panel">
-                        <p style="padding: 5px">We maintain very low administrative expenses. Most of our administrative expenses are covered from donations received from our board of directors. We try our best to keep our overhead cost low. All of our board of directors and the advisors work on volunteer basis and are not compensated for their work. </p>
+                    <div>
+                        <input id="ac-3" name="accordion-1" type="radio">
+                        <label for="ac-3">How do you monitor your projects and ensure the money is spent on the correct causes?</label>
+                        <article>
+                            <p>We have representatives in the field to supervise BDesh sponsored projects. Also, we conduct independent audits and surveys in order to validate project execution and expenses. In addition, we have a Key Performance Indicator matrix associated with all of our projects and we strictly measure performance of our projects against the matrix.
+                            </p>
+                        </article>
                     </div>
-                        
-                    <button class="accordion"><strong> How can we help ?</strong></button>
-                    <div class="panel">
-                        <p style="padding: 5px">
-                            You can pay your Zakat or Sadaqa (donation) towards any of the Bdesh sponsors projects.  You can donate online at <a href="#">http://www.bdeshfoundation.org</a> or mail your check payable to BDesh Foundation at the following address:
-                        </p>
-                        <pre style="padding: 5px;text-align: left;">
-                        
- BDesh Foundation, Inc.
- 6 Silo Mill Ct,
- Sterling, VA 20164. 
-                         </pre>
-                        
-                        <p style="padding: 5px">Check our website and support a program you like. Your donation and support can improve the lives of many half away across the world. If you have any question, concern or suggestion, please feel free to contact us by  info@bdeshfoundation.org  or by phone at (571)306-2523.</p>
+                    <div>
+                        <input id="ac-4" name="accordion-1" type="radio">
+                        <label for="ac-4"> What are your overhead expenses?</label>
+                        <article>
+                            <p>We maintain very low administrative expenses. Most of our administrative expenses are covered from donations received from our board of directors. We try our best to keep our overhead cost low. All of our board of directors and the advisors work on a volunteer basis and are not compensated for their work.
+                            </p>
+                        </article>
                     </div>
 
-                       
+                    <div>
+                        <input id="ac-6" name="accordion-1" type="radio">
+                        <label for="ac-6">  How can we help?</label>
+                        <article>
+                            <p> You can pay your Zakat or Sadaqa (donation) towards any of the Bdesh sponsors projects.  You can donate online at <a href="#">http://www.bdeshfoundation.org</a> or mail your check payable to BDesh Foundation at the following address: <br> <br>
 
+                                BDesh Foundation, Inc. <br>
+                                6 Silo Mill Ct, <br>
+                                Sterling, VA 20164.  <br> <br>
+
+
+
+                            </p>
+                        </article>
                     </div>
-                </div>
+                </section>
+
+
+
             </div>
-
+        </div>
+    </div>
 
     <!--/ Projects Grid Style -->
 

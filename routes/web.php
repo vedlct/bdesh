@@ -81,6 +81,10 @@ Route::post('/Donation','PaymentController@makeDonation')->name('payment.donatio
 Route::get('/Serve-A-Meal','ProjectController@serveameal')->name('serveameal');
 
 
+Route::get('/event/show/all', 'EventController@showEventsPage')->name('event.showEventsPage');
+Route::get('event/show/single/{id}','EventController@singleEvent')->name('event.singleEvent');
+
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -99,6 +103,7 @@ Route::group(['middleware' => ['auth']],function () {
     Route::post('/project/delete', 'ProjectController@deleteProject')->name('project.delete');
     Route::post('delete/image', 'ProjectController@deleteProjctImage')->name('project.image.delete');
     Route::post('delete/header/image', 'ProjectController@deleteProjectHeaderImage')->name('project.deleteHeaderImage');
+    Route::post('delete/thumnail/image', 'ProjectController@deleteProjectthumbnailImage')->name('project.deletethumbnailImage');
     Route::post('/saveToHome','ProjectController@saveToHome')->name('project.saveToHome');
 
     /*
@@ -117,8 +122,7 @@ Route::group(['middleware' => ['auth']],function () {
     /*
      * Event Page Home
      */
-    Route::get('/event/show/all', 'EventController@showEventsPage')->name('event.showEventsPage');
-    Route::get('event/show/single/{id}','EventController@singleEvent')->name('event.singleEvent');
+
 
     /*
      * Rohingya Projects

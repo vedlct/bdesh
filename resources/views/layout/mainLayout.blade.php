@@ -6,3 +6,4 @@
 </div>
 
 @include('include.footer')
+@yield('foot-js')
