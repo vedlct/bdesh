@@ -67,20 +67,16 @@
                     </div>
 
 
-
-
-
-
-
                     <!-- Contact Form -->
-                    <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+                    <form action="{{route('contact.sendMail')}}" method="post" class="wpcf7-form" novalidate="novalidate">
+                        {{csrf_field()}}
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group required">
                                     <label for="your-name">NAME</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-name">
-                                        <input type="text" name="your-name" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="your-name" placeholder="enter your name"/>
+                                        <input type="text" name="name" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="your-name" placeholder="enter your name"/>
                                     </span>
                                 </div>
 
@@ -88,7 +84,7 @@
                                     <label for="your-email">Email address</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-email">
-                                        <input type="email" name="your-email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="your-email" placeholder="enter your email"/>
+                                        <input type="email" name="email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="your-email" placeholder="enter your email"/>
                                     </span>
                                 </div>
 
@@ -96,7 +92,7 @@
                                     <label for="your-phone">PHONE</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-phone">
-                                        <input type="text" name="your-phone" value="" class="wpcf7-form-control wpcf7-text" id="your-phone" placeholder="enter your phone number" />
+                                        <input type="text" name="phone" value="" class="wpcf7-form-control wpcf7-text" id="your-phone" placeholder="enter your phone number" />
                                     </span>
                                 </div>
 
@@ -104,7 +100,7 @@
                                     <label for="your-subject">subject</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-subject">
-                                        <input type="text" name="your-subject" value="" class="wpcf7-form-control wpcf7-text" id="your-subject" placeholder="subject" />
+                                        <input type="text" name="subject" value="" class="wpcf7-form-control wpcf7-text" id="your-subject" placeholder="subject" />
                                     </span>
                                 </div>
                             </div>
@@ -114,7 +110,7 @@
                                     <label for="your-message">message</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-message">
-                                        <textarea name="your-message" class="wpcf7-form-control wpcf7-textarea" id="your-message" placeholder="type in your message"></textarea>
+                                        <textarea name="message" class="wpcf7-form-control wpcf7-textarea" id="your-message" placeholder="type in your message"></textarea>
                                     </span>
                                 </div>
 
@@ -132,5 +128,60 @@
     </div>
     <!--/ Page -->
 
+
+
+
+    @endsection
+
+@section('foot-js')
+
+    <script>
+
+        @if(Session::has('mail-message'))
+
+        @if(Session::get('mail-message')=='0')
+
+            $.alert({
+            title: 'Alert!',
+            type: 'red',
+            content: 'Mail does not sent ,please try again',
+            buttons: {
+                tryAgain: {
+                    text: 'Ok',
+                    btnClass: 'btn-blue',
+                    action: function () {
+
+
+                    }
+                }
+
+            }
+        });
+
+        @elseif(Session::get('mail-message')=='1')
+
+            $.alert({
+            title: 'Alert!',
+            type: 'green',
+            content: 'Mail sent successfully',
+            buttons: {
+                tryAgain: {
+                    text: 'Ok',
+                    btnClass: 'btn-blue',
+                    action: function () {
+
+
+                    }
+                }
+
+            }
+        });
+
+        @endif
+
+
+
+        @endif
+    </script>
 
     @endsection
