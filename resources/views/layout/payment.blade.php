@@ -330,7 +330,7 @@
         <div class="col-sm-4">
             <div class="form-group">
                 <label for="message">Project</label>
-                <select class="select2" name="cardExpireYear" id="cardExpireYear">
+                <select class="select2" name="projectName" id="projectName">
                     <option value="">Bdesh</option>
                     @foreach($projectName as $name)
                     <option @if( strtoupper(basename(Request::url()))  == strtoupper($name->slug) ) selected @endif value="{{$name->projectId}}">{{strtoupper($name->pName)}}</option>
@@ -450,6 +450,8 @@
         var amount=$('#amount').val();
         var company=$('#company').val();
         var projectId = $('#projectId').val();
+
+
 
         if(firstName ==""){
             alertMsg("First Name is required");

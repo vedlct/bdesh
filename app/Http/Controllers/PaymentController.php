@@ -55,6 +55,7 @@ class PaymentController extends Controller
     }
     public function makeDonation(Request $r){
 
+        //return $r;
 
 
         $payment = new BluePay();
