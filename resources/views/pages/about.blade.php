@@ -1,7 +1,7 @@
 @extends('layout.mainLayout')
 @section('content')
     <!-- Header Image or Video -->
-    <section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/temp/slide-25.jpg')}});">
+    <section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/current/Childwelfaret-small-Banner.jpg')}});">
         <div class="fly-header-content">
             <h1 class="page-title">About us</h1>
         </div>

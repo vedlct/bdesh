@@ -21,8 +21,6 @@ Route::get('/single-project/{slug}','ProjectController@singlePost')->name('proje
 //})->name('rohingya');
 
 Route::get('/rohingya', 'RohingyaController@index')->name('rohingya');
-
-
 Route::get('/about',function (){
     return view('pages.about');
 })->name('about');
@@ -34,8 +32,6 @@ Route::get('/projects',function (){
 Route::get('/contact',function (){
     return view('pages.contact');
 })->name('contact');
-
-Route::post('contact-Mail', 'ContactController@sendMail')->name('contact.sendMail');
 
 Route::get('/tubewell-sanitation',function (){
     return view('pages.tubewellSanitation');

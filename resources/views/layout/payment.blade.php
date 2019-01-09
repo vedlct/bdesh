@@ -1,5 +1,6 @@
 {{--<form action="{{route('payment.donationPay')}}" method="post" id="donateForm" class="donate-form">--}}
     {{--{{csrf_field()}}--}}
+<div id="donateForm">
     <h4 class="title-styled">Make a donation</h4>
 
     <div class="row">
@@ -8,6 +9,8 @@
                 <label for="country">COUNTRY</label>
                 <select name="country" id="country" class="select2" data-placeholder="- select a country -">
                     <option value="">&nbsp;</option>
+                    <option value="US">U.S.</option>
+                    <option value="BD">Bangladesh</option>
                     <option value="AF">Afghanistan</option>
                     <option value="AL">Albania</option>
                     <option value="AU">Australia</option>
@@ -23,7 +26,6 @@
                     <option value="AZ">Azerbaijan</option>
                     <option value="BS">Bahamas</option>
                     <option value="BH">Bahrain</option>
-                    <option value="BD">Bangladesh</option>
                     <option value="BB">Barbados</option>
                     <option value="BY">Belarus</option>
                     <option value="BE">Belgium</option>
@@ -211,7 +213,7 @@
                     <option value="UA">Ukraine</option>
                     <option value="AE">U.A.E.</option>
                     <option value="UK">U.K.</option>
-                    <option value="US">U.S.</option>
+
                     <option value="UY">Uruguay</option>
                     <option value="UZ">Uzbekistan</option>
                     <option value="VU">Vanuatu</option>
@@ -332,6 +334,14 @@
                 <label for="message">Project</label>
                 <select class="select2" name="projectName" id="projectName">
                     <option value="">Bdesh</option>
+                    <option value="Rohingya: Orphan Care">Rohingya: Orphan Care</option>
+                    <option value="Rohingya: Medical Care">Rohingya: Medical Care</option>
+                    <option value="Rohingya: Women’s Care"> Rohingya: Women’s Care</option>
+                    <option value="Rohingya: WASH Project">Rohingya: WASH Project</option>
+                    <option value="Shojub Polly (Economic Livelihood - General)"> Shojub Polly (Economic Livelihood - General)</option>
+                    <option value="Tube Well & Sanitation (General - Bangladesh)">Tube Well & Sanitation (General - Bangladesh)</option>
+                    <option value="Zakat">Zakat</option>
+                    <option value="Sadaqa">Sadaqa</option>
                     @foreach($projectName as $name)
                     <option @if( strtoupper(basename(Request::url()))  == strtoupper($name->slug) ) selected @endif value="{{$name->projectId}}">{{strtoupper($name->pName)}}</option>
                     @endforeach
@@ -410,6 +420,7 @@
             </div>
         </div>
     </div>
+</div>
 {{--</form>--}}
 
 <script>
@@ -450,8 +461,6 @@
         var amount=$('#amount').val();
         var company=$('#company').val();
         var projectId = $('#projectId').val();
-
-
 
         if(firstName ==""){
             alertMsg("First Name is required");

@@ -65,7 +65,7 @@
 
                                             {{$event->place}} <br> <br>
 
-                                             <br> <br>
+                                            Special Guest: <br> <br>
 
                                             {!! $event->specialGuest !!}
 

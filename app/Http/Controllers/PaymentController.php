@@ -55,7 +55,6 @@ class PaymentController extends Controller
     }
     public function makeDonation(Request $r){
 
-        //return $r;
 
 
         $payment = new BluePay();
@@ -71,10 +70,16 @@ class PaymentController extends Controller
             'phone' => $r->phone,
             'email' =>$r->email
         ));
+        
+        $pad_length = 2;
+        $pad_char = 0;
+
+        // output 0123
+        $month = str_pad($r->cardExpireMonth, $pad_length, $pad_char, STR_PAD_LEFT);
 
         $payment->setCCInformation(array(
             'cardNumber' => $r->cardNumber, // Card Number: 4111111111111111
-            'cardExpire' => $r->cardExpireMonth.$r->cardExpireYear, // Card Expire: 12/25
+            'cardExpire' => $month.$r->cardExpireYear, // Card Expire: 12/25
             'cvv2' => $r->cvv2 // Card CVV2: 123
         ));
 

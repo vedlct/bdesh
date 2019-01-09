@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Header Image or Video -->
-    <section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/temp/slide-26.jpg')}});">
+    <section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/rohinga/4.jpg')}});">
         <div class="fly-header-content">
             <div class="page-subtitle">Hello There</div>
             <h1 class="page-title">Contact us</h1>
@@ -45,7 +45,6 @@
                                 <h4>United States:</h4>
                                 <p>B Desh Foundation, Inc.<br>
                                     6 Silo Mill CT. Sterling, VA 20164<br>
-                                    Contact Person: Sohel Ahmed<br>
                                     Ph# (571)306-2523<br>
                                     E-Mail : info@bdeshfoundation.org<br></p>
 
@@ -56,7 +55,6 @@
                             <address>
                                 <h4>Bangladesh:</h4>
                                 <p>B Desh Foundation, Inc.<br>
-                                    Contact Person: Abul Towhid<br>
                                     <!-- Ph# 011-880-171-205-6905<br> -->
                                     Ph# 011-880-1882-722227<br>
                                     E-mail:atowhid9@gmail.com<br></p>
@@ -67,16 +65,20 @@
                     </div>
 
 
+
+
+
+
+
                     <!-- Contact Form -->
-                    <form action="{{route('contact.sendMail')}}" method="post" class="wpcf7-form" novalidate="novalidate">
-                        {{csrf_field()}}
+                    <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group required">
                                     <label for="your-name">NAME</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-name">
-                                        <input type="text" name="name" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="your-name" placeholder="enter your name"/>
+                                        <input type="text" name="your-name" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="your-name" placeholder="enter your name"/>
                                     </span>
                                 </div>
 
@@ -84,7 +86,7 @@
                                     <label for="your-email">Email address</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-email">
-                                        <input type="email" name="email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="your-email" placeholder="enter your email"/>
+                                        <input type="email" name="your-email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="your-email" placeholder="enter your email"/>
                                     </span>
                                 </div>
 
@@ -92,7 +94,7 @@
                                     <label for="your-phone">PHONE</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-phone">
-                                        <input type="text" name="phone" value="" class="wpcf7-form-control wpcf7-text" id="your-phone" placeholder="enter your phone number" />
+                                        <input type="text" name="your-phone" value="" class="wpcf7-form-control wpcf7-text" id="your-phone" placeholder="enter your phone number" />
                                     </span>
                                 </div>
 
@@ -100,7 +102,7 @@
                                     <label for="your-subject">subject</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-subject">
-                                        <input type="text" name="subject" value="" class="wpcf7-form-control wpcf7-text" id="your-subject" placeholder="subject" />
+                                        <input type="text" name="your-subject" value="" class="wpcf7-form-control wpcf7-text" id="your-subject" placeholder="subject" />
                                     </span>
                                 </div>
                             </div>
@@ -110,7 +112,7 @@
                                     <label for="your-message">message</label>
                                     <br/>
                                     <span class="wpcf7-form-control-wrap your-message">
-                                        <textarea name="message" class="wpcf7-form-control wpcf7-textarea" id="your-message" placeholder="type in your message"></textarea>
+                                        <textarea name="your-message" class="wpcf7-form-control wpcf7-textarea" id="your-message" placeholder="type in your message"></textarea>
                                     </span>
                                 </div>
 
@@ -128,60 +130,5 @@
     </div>
     <!--/ Page -->
 
-
-
-
-    @endsection
-
-@section('foot-js')
-
-    <script>
-
-        @if(Session::has('mail-message'))
-
-        @if(Session::get('mail-message')=='0')
-
-            $.alert({
-            title: 'Alert!',
-            type: 'red',
-            content: 'Mail does not sent ,please try again',
-            buttons: {
-                tryAgain: {
-                    text: 'Ok',
-                    btnClass: 'btn-blue',
-                    action: function () {
-
-
-                    }
-                }
-
-            }
-        });
-
-        @elseif(Session::get('mail-message')=='1')
-
-            $.alert({
-            title: 'Alert!',
-            type: 'green',
-            content: 'Mail sent successfully',
-            buttons: {
-                tryAgain: {
-                    text: 'Ok',
-                    btnClass: 'btn-blue',
-                    action: function () {
-
-
-                    }
-                }
-
-            }
-        });
-
-        @endif
-
-
-
-        @endif
-    </script>
 
     @endsection

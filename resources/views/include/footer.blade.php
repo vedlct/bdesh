@@ -281,6 +281,7 @@
     });
 </script>
 
+@yield('foot-js')
 {{--<!--goal meter js-->--}}
 {{--<script src="{{url('GoalMeter/js/goalmeter.js')}}"></script>--}}
 {{--<script src="{{url('GoalMeter/js/demo.js')}}"></script>--}}

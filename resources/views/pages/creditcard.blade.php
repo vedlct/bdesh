@@ -1,7 +1,7 @@
 @extends('layout.mainLayout')
 @section('content')
 <!-- Header Image or Video -->
-<section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/temp/post-8.jpg')}});">
+<section class="fly-header parallax overlay" style="background-image: url({{asset('public/images/current/12.png')}});">
     <div class="fly-header-content">
         <div class="page-subtitle"></div>
         <h1 class="page-title">Donate Now</h1>

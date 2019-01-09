@@ -216,7 +216,7 @@
 
                                     <div class="" >
                                         {{--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XKAGUQDFSPFCJ" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</a>--}}
-                                        <button onclick="donation()" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</button>
+                                        <a id="donateform" href="#donateForm" class="btn btn-yellow js-wave anchor" itemprop="potentialAction">Donate</a>
                                     </div>
 
 
@@ -466,7 +466,6 @@
                     <!--/ Project Details -->
 
                     @include('layout.payment')
-
                 </main>
                 <!--/ Content -->
 
@@ -480,16 +479,16 @@
     </div>
     <!--/ Page -->
 
-@endsection
+
+    @endsection
 
 @section('foot-js')
-
-   <script>
-       function donation() {
-
-           $('html, body').animate({
-               scrollTop: $(".up").offset().top
-           }, 1500);
-       }
-   </script>
-@endsection
+    <script>
+        // $('#donateform').click(function() {
+        //     alert('sdfsf');
+        //     $('html, body').animate({
+        //         scrollTop: $('#payment').offset().top
+        //     }, 1000)
+        // });
+            </script>
+    @endsection
