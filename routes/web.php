@@ -148,3 +148,5 @@ Route::get('/test',function (){
 //    return \Carbon\Carbon::today()->format('Y-m-d');
 
 });
+
+Route::post('contact-Mail', 'ContactController@sendMail')->name('contact.sendMail');
