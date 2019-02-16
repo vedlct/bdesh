@@ -334,16 +334,21 @@
                 <label for="message">Project</label>
                 <select class="select2" name="projectName" id="projectName">
                     <option value="">Bdesh</option>
-                    <option value="Rohingya: Orphan Care">Rohingya: Orphan Care</option>
-                    <option value="Rohingya: Medical Care">Rohingya: Medical Care</option>
-                    <option value="Rohingya: Women’s Care"> Rohingya: Women’s Care</option>
-                    <option value="Rohingya: WASH Project">Rohingya: WASH Project</option>
-                    <option value="Shojub Polly (Economic Livelihood - General)"> Shojub Polly (Economic Livelihood - General)</option>
-                    <option value="Tube Well & Sanitation (General - Bangladesh)">Tube Well & Sanitation (General - Bangladesh)</option>
                     <option value="Zakat">Zakat</option>
                     <option value="Sadaqa">Sadaqa</option>
+                    <option value="Rohingya: Orphan Care">Rohingya Children Care </option>
+                    <option value="Rohingya: Medical Care">Rohingya: Medical Care</option>
+                    <option value="Rohingya: Women’s Care"> Rohingya: Women’s Care</option>
+                    <!--<option value="Clean Water & Sanitation">Clean Water & Sanitation</option>-->
+                    <!--<option value="Chidren Care Programn">Chidren Care Program</option>-->
+                    <!--<option value="Eye Care">Eye Care</option>-->
+                    <!--<option value="Serve A Meal">Serve A Meal</option>-->
+                    <!--<option value="Ramadan Food Basket">Ramadan Food Basket</option>-->
+                  
                     @foreach($projectName as $name)
+                 
                     <option @if( strtoupper(basename(Request::url()))  == strtoupper($name->slug) ) selected @endif value="{{$name->projectId}}">{{strtoupper($name->pName)}}</option>
+                  
                     @endforeach
 
                 </select>

@@ -6689,7 +6689,7 @@ a.comment-reply {
 .fly-project.vertical .project-buttons {
   float: right;
   width: 30%;
-  flex-basis: 30%;
+  flex-basis: 100%;
   margin-bottom: -4px;
 }
 @media only screen and (max-width: 479px) {

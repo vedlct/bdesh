@@ -22,10 +22,10 @@
                                 {{--<img src="{{asset('public/Gallery')}}/{{\App\Http\Controllers\HomeController::getThumnailImage($project->projectId)}}" alt="" itemprop="image" />--}}
                                 <img src="{{url('public/thumbnailImage')}}/{{$project->thumbnailImage}}" class="img-thumbnail" alt="">
 
-                                <span class="progress">
-                                    <span class="progress-label">0%</span>
-                                    <span class="progress-bar"></span>
-                                </span>
+                                <!--<span class="progress">-->
+                                <!--    <span class="progress-label">0%</span>-->
+                                <!--    <span class="progress-bar"></span>-->
+                                <!--</span>-->
                             </a>
 
                             <div class="project-content">
@@ -43,16 +43,16 @@
                                 </div>
 
                                 <div class="project-footer">
-                                    <ul class="project-stats">
-                                        <li>
-                                            <div class="label">raised</div>
-                                            <div class="value" data-raised="{{$project->pRaised}}"><sup>$</sup>{{$project->pRaised}}</div>
-                                        </li>
-                                        <li>
-                                            <div class="label">goal</div>
-                                            <div class="value" data-goal="{{$project->pGoal}}" itemprop="target"><sup>$</sup>{{$project->pGoal}}</div>
-                                        </li>
-                                    </ul>
+                                    <!--<ul class="project-stats">-->
+                                    <!--    <li>-->
+                                    <!--        <div class="label">raised</div>-->
+                                    <!--        <div class="value" data-raised="{{$project->pRaised}}"><sup>$</sup>{{$project->pRaised}}</div>-->
+                                    <!--    </li>-->
+                                    <!--    <li>-->
+                                    <!--        <div class="label">goal</div>-->
+                                    <!--        <div class="value" data-goal="{{$project->pGoal}}" itemprop="target"><sup>$</sup>{{$project->pGoal}}</div>-->
+                                    <!--    </li>-->
+                                    <!--</ul>-->
 
                                     <div class="project-buttons">
                                         <a href="{{route('project.singlePost',[$project->slug])}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>

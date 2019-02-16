@@ -38,12 +38,7 @@
 
                             </div>
 
-                            <div class="post-content" itemprop="articleBody">
-                                <h3 class="post-title"><a href="#" itemprop="name"><i class="fa fa-user"></i>
-                                        Contact Person: Sohel Ahmed </a></h3>
-
-
-                            </div>
+                            
 
                             <div class="post-content" itemprop="articleBody">
                                 <h3 class="post-title"><a href="#" itemprop="name"> <i class="fa fa-phone"></i>
@@ -69,10 +64,7 @@
                                 <h3 class="post-title"><a href="#" itemprop="name"> <i class="fa fa-home"></i>
                                         B Desh Foundation, Inc. </a></h3>
                             </div>
-                            <div class="post-content" itemprop="articleBody">
-                                <h3 class="post-title"><a href="#" itemprop="name"> <i class="fa fa-user"></i>
-                                        Contact Person: Abul Towhid </a></h3>
-                            </div>
+                            
                             <div class="post-content" itemprop="articleBody">
                                 <h3 class="post-title"><a href="#" itemprop="name"> <i class="fa fa-phone"></i>
                                         011-880-1882-722227 </a></h3>

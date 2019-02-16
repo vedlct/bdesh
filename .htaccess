@@ -4,6 +4,9 @@
     </IfModule>
 
 
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     RewriteEngine On
 
@@ -22,3 +25,38 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType text/html "access 1 month"
+  ExpiresByType application/pdf "access 1 month"
+  ExpiresByType text/x-javascript "access 1 month"
+  ExpiresByType application/x-shockwave-flash "access 1 month"
+  ExpiresDefault "access 1 month"
+</IfModule>
+
+<IfModule mod_expires.c>
+  <FilesMatch "\.(js|css)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 weeks"
+  </FilesMatch>
+</IfModule>
+# END Expires-Headers
+
+# BEGIN Cache-Control-Headers
+<ifmodule mod_headers.c>
+  <filesmatch "(gif|ico|jpeg|jpe|jpg|svg|png|css|js)$">
+    Header set Cache-Control "max-age=604800, public"
+  </filesmatch>
+</ifmodule>
+
+RewriteEngine On
+
+# check if hostname includes "static"
+RewriteCond %{HTTP_HOST} static
+
+# and the request isn't for a file ending with one of these extensions
+RewriteCond %{REQUEST_URI} !\.(css|js|jpe?g|gid|png)$ [NC]
+
+# then redirect whatever the request is to the parent domain
+RewriteRule ^(.*)$ http://parent.domain.com/$1 [L,R=301]

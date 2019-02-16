@@ -136,16 +136,16 @@
                             </div>
 
                             <div class="project-footer">
-                                <ul class="project-stats">
-                                    <li>
-                                        <div class="label">raised</div>
-                                        <div class="value" data-raised="{{$projects->pRaised}}"><sup>$</sup>{{$projects->pRaised}}</div>
-                                    </li>
-                                    <li>
-                                        <div class="label">goal</div>
-                                        <div class="value" data-goal="{{$projects->pGoal}}" itemprop="target"><sup>$</sup>{{$projects->pGoal}}</div>
-                                    </li>
-                                </ul>
+                                <!--<ul class="project-stats">-->
+                                <!--    <li>-->
+                                <!--        <div class="label">raised</div>-->
+                                <!--        <div class="value" data-raised="{{$projects->pRaised}}"><sup>$</sup>{{$projects->pRaised}}</div>-->
+                                <!--    </li>-->
+                                <!--    <li>-->
+                                <!--        <div class="label">goal</div>-->
+                                <!--        <div class="value" data-goal="{{$projects->pGoal}}" itemprop="target"><sup>$</sup>{{$projects->pGoal}}</div>-->
+                                <!--    </li>-->
+                                <!--</ul>-->
 
                                 <div class="project-buttons">
                                     <a href="{{route('project.singlePost',[$projects->slug])}}/#donateForm" class="btn btn-yellow js-wave" itemprop="potentialAction">Donate</a>
