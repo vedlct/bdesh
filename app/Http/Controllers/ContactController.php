@@ -20,8 +20,10 @@ class ContactController extends Controller
         $data = array('name'=>$r->name,'email'=>$r->email,'phone'=>$r->phone,'subject'=>$r->subject,'text'=>$r->message);
         try{
             Mail::send('mail.contact',$data, function ($messages) use ($data) {
-                $messages->to('md.sakibrahman@gmail.com','BDesh foundation.org')->subject($data['subject']);
-               // $messages->from('support@bdeshfoundation.org',$data['name']);
+
+                $messages->to('Info@bdeshfoundation.org','BDesh foundation.org')->subject($data['subject']);
+                $messages->from($data['email'],$data['name']);
+
             });
             Session::flash('mail-message', '1');
             //return back();
