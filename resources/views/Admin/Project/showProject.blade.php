@@ -25,6 +25,7 @@
                                     <th>Location</th>
                                     <th>Goal</th>
                                     <th>Added By</th>
+                                    <td>serial</td>
                                     <td>Homepage</td>
                                     <th width="10%">Action</th>
                                 </tr>
@@ -39,6 +40,7 @@
                                     <td>{{$project->pGoal}}</td>
 
                                     <td>{{\App\Http\Controllers\ProjectController::getUserName($project->fkuserId)}}</td>
+                                    <td>{{$project->serial}}</td>
                                     <td>
                                         <form >
                                             <div class="form-group">

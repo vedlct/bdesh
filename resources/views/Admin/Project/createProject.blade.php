@@ -79,6 +79,13 @@
                                               </div>
                                           </div>
 
+                                          <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label">serial</label>
+                                              <div class="col-sm-10">
+                                                  <input type="number" name="serial" class="form-control" >
+                                              </div>
+                                          </div>
+                                          
 
                                           <div class="form-group">
                                               <div>

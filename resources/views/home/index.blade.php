@@ -867,7 +867,7 @@
     <!--/ Contact Us -->
 @endsection
 
-@endsection
+
 
 @section('foot-js')
 

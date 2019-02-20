@@ -37,6 +37,7 @@ class ProjectController extends Controller
        $project->bdeshDescription = $request->bdeshDescription;
        $project->pGoal = $request->pGoal;
        $project->pRaised = $request->pRaised;
+       $project->serial = $request->serial;
        $project->fkuserId =Auth::id();
        if ($request->hasFile('headerImage')) {
            $file = $request->file('headerImage');
@@ -77,6 +78,7 @@ public function updateProjectData(Request $request){
         $project->bdeshDescription = $request->bdeshDescription;
         $project->pRaised = $request->pRaised;
         $project->pGoal = $request->pGoal;
+        $project->serial = $request->serial;
         $project->fkuserId =Auth::id();
         if ($request->hasFile('headerImage')) {
             $file = $request->file('headerImage');
