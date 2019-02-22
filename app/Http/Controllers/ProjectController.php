@@ -22,7 +22,7 @@ class ProjectController extends Controller
    }
 
    public function showProject(){
-       $project = Project::get();
+       $project = Project::where('active', '1')->get();
       // return $project;
         return view('Admin.Project.showProject')->with('projects',$project);
    }
@@ -63,14 +63,14 @@ class ProjectController extends Controller
            }
            return redirect()->route('project.show');
    }
-public function deleteProject(Request $request){
+    public function deleteProject(Request $request){
        $projectImage = ProjectImage::where('fkprojectId',$request->id)->delete();
        $project = Project::findOrFail($request->id)->delete();
 //       Session::put('message',"Project Deleted Successfuly");
        return response()->json('project deleted');
-}
+    }
 
-public function updateProjectData(Request $request){
+    public function updateProjectData(Request $request){
         $project = Project::findOrfail($request->id);
         $project->pName = $request->projectName;
         $project->pLocation=$request->projectLocation;
@@ -114,49 +114,49 @@ public function updateProjectData(Request $request){
            }
        }
 
-    return redirect()->route('project.show');
-}
-public function deleteProjctImage(Request $request){
-       $project = ProjectImage::findOrFail($request->id)->delete();
-       return response()->json('deleted');
-}
+         return redirect()->route('project.show');
+        }
+        public function deleteProjctImage(Request $request){
+               $project = ProjectImage::findOrFail($request->id)->delete();
+               return response()->json('deleted');
+        }
 
-public function deleteProjectHeaderImage(Request $request){
-       $project = Project::findOrFail($request->id);
-       $project->headerImage=null;
-       $project->save();
-       return response()->json('deleted');
-}
-public function deleteProjectthumbnailImage(Request $request){
-       $project = Project::findOrFail($request->id);
-       $project->thumbnailImage=null;
-       $project->save();
-       return response()->json('deleted');
-}
+        public function deleteProjectHeaderImage(Request $request){
+               $project = Project::findOrFail($request->id);
+               $project->headerImage=null;
+               $project->save();
+               return response()->json('deleted');
+        }
+        public function deleteProjectthumbnailImage(Request $request){
+               $project = Project::findOrFail($request->id);
+               $project->thumbnailImage=null;
+               $project->save();
+               return response()->json('deleted');
+        }
 
-   public static function getUserName($id){
-       return User::where('userId',$id)->first()->name;
-   }
+           public static function getUserName($id){
+               return User::where('userId',$id)->first()->name;
+           }
 
-   public function singlePost($slug){
-       if ($slug == 'an-appeal-for-rohingya-refuges'){
-          return redirect()->route('rohingya');
-       }else
-        $project = Project::where('slug',$slug)->first();
-        $projectImage = ProjectImage::where('fkprojectId',$project->projectId)->get();
-        return view('pages.singleProject')->with('project',$project)->with('projectImage',$projectImage);
-   }
-   public function saveToHome(Request $request){
-       $project = Project::findOrFail($request->id);
-           $project->home = $request->id1;
-           $project->save();
+           public function singlePost($slug){
+               if ($slug == 'an-appeal-for-rohingya-refuges'){
+                  return redirect()->route('rohingya');
+               }else
+                $project = Project::where('slug',$slug)->first();
+                $projectImage = ProjectImage::where('fkprojectId',$project->projectId)->get();
+                return view('pages.singleProject')->with('project',$project)->with('projectImage',$projectImage);
+           }
+           public function saveToHome(Request $request){
+               $project = Project::findOrFail($request->id);
+                   $project->home = $request->id1;
+                   $project->save();
 
-       return $project;
-   }
+               return $project;
+           }
 
-   public function serveameal(){
-       $slug = 'serve-a-meal';
+           public function serveameal(){
+               $slug = 'serve-a-meal';
 
-       return $this->singlePost($slug);
-   }
-}
+               return $this->singlePost($slug);
+           }
+        }

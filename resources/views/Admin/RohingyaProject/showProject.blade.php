@@ -23,6 +23,7 @@
                                     <th>Title</th>
                                     <th>Image Title</th>
                                     <th>Image</th>
+                                    <th>serial</th>
                                     <th width="10%">Action</th>
                                 </tr>
                                 </thead>
@@ -32,9 +33,7 @@
                                     <td>{{$project->title}}</td>
                                     <td>{!! $project->imagetitle !!}</td>
                                     <td>{{$project->image}}</td>
-
-
-
+                                    <td>{{$project->serial}}</td>
                                     <td>
                                         <span class="ml-3"></span>
                                         <a href="{{route('rohingya.edit',[$project->rohingyaprojectId])}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i></a>
@@ -42,7 +41,7 @@
                                         <button class="btn btn-danger btn-sm" data-panel-id="{{$project->rohingyaprojectId}}" onclick="deleteProject(this)"><i class="fa fa-trash"></i></button>
                                     </td>
                                 </tr>
-                                    @endforeach
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

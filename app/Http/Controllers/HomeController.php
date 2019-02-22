@@ -25,7 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $project = Project::where('home','1')->take(5)->orderBy('created_at','desc')->get();
+
+         $project = Project::where('home','1')
+            ->where('active',1)
+            ->orderBy('created_at','desc')
+            ->take(5)
+            ->get();
+
         $projectImage = ProjectImage::get();
         return view('home.index')->with('projectsHome',$project)->with('projectImage',$projectImage);
     }

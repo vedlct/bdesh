@@ -18,7 +18,8 @@ class DonationController extends Controller
         return view('Admin.Donation.show');
     }
     public function getDonationData(Request $request){
-        $donation = Donation::select('donations.*');
+        $donation = Donation::select('donations.*', 'projects.pName')
+        ->leftjoin('projects', 'fkprojectId','projectId');
         $datatables = DataTables::of($donation);
         return $datatables->make(true);
     }

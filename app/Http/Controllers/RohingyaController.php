@@ -41,6 +41,7 @@ class RohingyaController extends Controller
        $rProject->title = $request->projectName;
        $rProject->details = $request->details;
        $rProject->video = $request->videoUrl;
+       $rProject->serial = $request->serial;
        $rProject->imagetitle = $request->imageTitle;
 
            if ($request->hasFile('rImage')) {
@@ -80,6 +81,7 @@ class RohingyaController extends Controller
             $rProject->title = $request->projectName;
             $rProject->details = $request->details;
             $rProject->imagetitle = $request->imageTitle;
+            $rProject->serial = $request->serial;
             $rProject->video = $request->videoUrl;
 
             if ($request->hasFile('rImage')) {

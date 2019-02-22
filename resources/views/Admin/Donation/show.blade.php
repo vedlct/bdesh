@@ -26,6 +26,7 @@
                         <th>addr1</th>
                         <th>addr2</th>
                         <th>zip</th>
+                        <th>Project Name</th>
                     </tr>
                     </thead>
                 </table>
@@ -71,6 +72,7 @@
                     { data: 'addr1', name: 'donations.addr1'},
                     { data: 'addr2', name: 'donations.addr2'},
                     { data: 'zip', name: 'donations.zip'},
+                    { data: 'pName', name: 'projects.pName'},
 
                 ]
             });

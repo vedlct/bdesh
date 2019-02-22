@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Project;
+use App\RohingyaProject;
 use Illuminate\Support\ServiceProvider;
 use View;
 class AppServiceProvider extends ServiceProvider
@@ -18,8 +19,9 @@ class AppServiceProvider extends ServiceProvider
         {
             $project = Project::where('home','1')->take(5)->orderBy('created_at','desc')->get();
             $allProject = Project::get();
-            $projectName = Project::select('pName','projectId','slug')->get();
-            $view->with('projectsProvider',$project)->with('allProjects',$allProject)->with('projectName',$projectName);
+            $projectName = Project::select('pName','projectId','slug')->orderBy('serial','asc')->get();
+            $rogingaprojectName = RohingyaProject::select('title','rohingyaprojectId')->orderBy('serial','asc')->get();
+            $view->with('projectsProvider',$project)->with('allProjects',$allProject)->with('projectName',$projectName)->with('rogingaprojectname', $rogingaprojectName);
         });
     }
 

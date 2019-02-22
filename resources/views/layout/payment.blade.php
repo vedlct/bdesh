@@ -336,9 +336,11 @@
                     <option value="">Bdesh</option>
                     <option value="Zakat">Zakat</option>
                     <option value="Sadaqa">Sadaqa</option>
-                    <option value="Rohingya: Orphan Care">Rohingya Children Care </option>
-                    <option value="Rohingya: Medical Care">Rohingya: Medical Care</option>
-                    <option value="Rohingya: Women’s Care"> Rohingya: Women’s Care</option>
+                    @foreach($rogingaprojectname as $roginga)
+
+                        <option  value="{{$roginga->rohingyaprojectId}}">{{strtoupper($roginga->title)}}</option>
+
+                    @endforeach
                     <!--<option value="Clean Water & Sanitation">Clean Water & Sanitation</option>-->
                     <!--<option value="Chidren Care Programn">Chidren Care Program</option>-->
                     <!--<option value="Eye Care">Eye Care</option>-->

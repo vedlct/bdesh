@@ -46,6 +46,13 @@
                                               </div>
                                           </div>
 
+                                          <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label">serial</label>
+                                              <div class="col-sm-10">
+                                                  <input type="text" name="serial" class="form-control"  placeholder="serial">
+                                              </div>
+                                          </div>
+
                                           {{--<div class="form-group row">--}}
                                               {{--<label class="col-sm-2 col-form-label">Average Cost</label>--}}
                                               {{--<div class="col-sm-5">--}}

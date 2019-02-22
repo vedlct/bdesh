@@ -110,7 +110,7 @@
         <div class="container">
             <div class="fly-projects alternate-layout">
                 <!-- Project -->
-                @foreach($projectsProvider as $projects)
+                @foreach($projectsHome as $projects)
                 <article class="fly-card fly-project fly-flip-effect vertical" itemscope itemtype="http://schema.org/DonateAction">
                     <div class="boxed flip-front">
                         <a class="project-media js-wave" href="{{route('project.singlePost',[$projects->slug])}}" itemprop="url">
