@@ -333,9 +333,9 @@
             <div class="form-group">
                 <label for="message">Project</label>
                 <select class="select2" name="projectName" id="projectName">
-                    <option value="">Bdesh</option>
-                    <option value="Zakat">Zakat</option>
-                    <option value="Sadaqa">Sadaqa</option>
+                    <option value="36">Bdesh</option>
+                    <option value="34">Zakat</option>
+                    <option value="35">Sadaqa</option>
                     @foreach($rogingaprojectname as $roginga)
 
                         <option  value="{{$roginga->rohingyaprojectId}}">{{strtoupper($roginga->title)}}</option>
